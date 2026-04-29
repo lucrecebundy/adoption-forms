@@ -89,7 +89,7 @@
     {
       "@type": "Question",
       "name": "What forms do I need for a Nebraska stepparent adoption?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A Nebraska stepparent adoption typically requires a Petition for Adoption, parental consent forms, a Notice of Hearing, a proposed Decree of Adoption, and supporting documents such as background check authorizations and proof of marriage. Adoption Forms Express provides all required forms compliant with Neb. Rev. Stat. § 43-101 et seq." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A Nebraska stepparent adoption typically requires a Petition for Adoption, parental consent forms, a Notice of Adoption, a proposed Decree of Adoption, and supporting documents such as background check authorizations and proof of marriage. Adoption Forms Express provides all required forms compliant with Neb. Rev. Stat. § 43-101 et seq." }
     },
     {
       "@type": "Question",
@@ -968,6 +968,24 @@ section { scroll-margin-top: 80px; }
   max-width: 720px;
 }
 .faq-item.open .faq-a { max-height: 600px; }
+.faq-footnote {
+  text-align: center;
+  margin-top: 2.75rem;
+  font-size: 0.97rem;
+  color: var(--color-text-muted);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
+}
+.faq-footnote a {
+  color: var(--color-primary);
+  font-weight: 600;
+  border-bottom: 1.5px solid var(--color-accent);
+  padding-bottom: 1px;
+  transition: color 0.2s ease;
+}
+.faq-footnote a:hover { color: var(--color-accent); }
 
 /* ------------------------------------------------------------------
    Counties
@@ -1164,7 +1182,8 @@ section { scroll-margin-top: 80px; }
       </div>
       <div class="hero-ctas">
         <a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener" class="btn btn-primary">See If You Qualify (60-Second Quiz)</a>
-        <a href="https://adoptionformsexpress.com/nebraska-adoption-forms-sneak-preview/" class="btn-link">Preview the Forms</a>
+        <!-- TODO: replace href="#" with /starter-guide URL once the lead-magnet landing page is built -->
+        <a href="#" class="btn-link">Get the Free Nebraska Adoption Guide</a>
       </div>
       <p class="hero-price-line">Forms starting at <strong>$299</strong> · Court filing costs not included</p>
     </div>
@@ -1399,8 +1418,8 @@ section { scroll-margin-top: 80px; }
         <h3>The Forms</h3>
         <ul>
           <li>Petition for Adoption</li>
-          <li>Consent forms (custodial + non-custodial parent, where applicable)</li>
-          <li>Notice of Hearing</li>
+          <li>Consent forms</li>
+          <li>Notice of Adoption</li>
           <li>Decree of Adoption (proposed)</li>
           <li>Other Nebraska-required supporting documents based on your situation</li>
         </ul>
@@ -1478,7 +1497,7 @@ section { scroll-margin-top: 80px; }
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What forms do I need for a Nebraska stepparent adoption?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">A Nebraska stepparent adoption typically requires a Petition for Adoption, parental consent forms, a Notice of Hearing, a proposed Decree of Adoption, and supporting documents such as background check authorizations and proof of marriage. Adoption Forms Express provides all required forms compliant with Neb. Rev. Stat. § 43-101 et seq.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">A Nebraska stepparent adoption typically requires a Petition for Adoption, parental consent forms, a Notice of Adoption, a proposed Decree of Adoption, and supporting documents such as background check authorizations and proof of marriage. Adoption Forms Express provides all required forms compliant with Neb. Rev. Stat. § 43-101 et seq.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What if the other biological parent won't consent?<span class="faq-icon">+</span></button>
@@ -1501,6 +1520,9 @@ section { scroll-margin-top: 80px; }
         <div class="faq-a"><div class="faq-a-inner">No. Most uncontested Nebraska stepparent adoption hearings are short and procedural. Your forms package includes a court hearing prep guide with the questions a judge is most likely to ask. Adoption Forms Express is a forms service — not a law firm — so if the judge requires you to have an attorney at the hearing, you can contact Bundy Law LLC, our affiliated full-service Nebraska adoption practice, to discuss your case.</div></div>
       </div>
     </div>
+
+    <!-- TODO: replace href="#" with /starter-guide URL once the lead-magnet landing page is built -->
+    <p class="faq-footnote">Still have questions? <a href="#">Get the free Nebraska Adoption Guide</a> — covers timelines, costs, and the Nebraska-specific filing process.</p>
   </div>
 </section>
 
@@ -1541,7 +1563,8 @@ section { scroll-margin-top: 80px; }
       <p>Take the 60-second quiz to see if your Nebraska stepparent adoption qualifies for our forms.</p>
       <div class="hero-ctas">
         <a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener" class="btn btn-primary">Take the Qualifier Quiz</a>
-        <a href="https://adoptionformsexpress.com/nebraska-adoption-forms-sneak-preview/" class="btn btn-secondary">Preview the Forms</a>
+        <!-- TODO: replace href="#" with /starter-guide URL once the lead-magnet landing page is built -->
+        <a href="#" class="btn btn-secondary">Get the Free Nebraska Adoption Guide</a>
       </div>
       <p class="final-cta-note">Don't qualify? We'll route you to the right next step — including our affiliated law practice for contested cases.</p>
     </div>
@@ -1566,7 +1589,8 @@ section { scroll-margin-top: 80px; }
         <ul>
           <li><a href="https://adoptionformsexpress.com/diy-adoption-templates/">DIY Adoption Forms</a></li>
           <li><a href="https://adoptionformsexpress.com/customized-adoption-forms/">Done-For-You Forms</a></li>
-          <li><a href="https://adoptionformsexpress.com/nebraska-adoption-forms-sneak-preview/">Form Sneak Peek</a></li>
+          <!-- TODO: replace href="#" with /starter-guide URL once the lead-magnet landing page is built -->
+          <li><a href="#">Free Nebraska Adoption Guide</a></li>
           <li><a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener">Qualifier Quiz</a></li>
         </ul>
       </div>

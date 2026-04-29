@@ -5,9 +5,9 @@
 **URL:** `/qualified/done-for-you-adult/`
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-minor-child-page-v1.md` (minor-child equivalent)
-**Version:** 1.4
+**Version:** 1.5
 **Last updated:** April 29, 2026
-**Status:** Draft — ready for review
+**Status:** Draft — ready for HTML build (mirrors locked minor-child structure)
 
 ---
 
@@ -167,15 +167,16 @@ Get My Done-For-You Forms — $499
 **Two-column layout:**
 
 **Column 1 — The Forms (completed by us)**
-- Petition for Adult Adoption (Nebraska form, completed with your information)
-- Consent forms — adult adoptee, plus your spouse's consent
-- Notice of Hearing
+- Petition for Adoption (Nebraska form, completed with your information)
+- Consent forms
+- Notice of Adoption
 - Decree of Adoption (proposed)
 - All other Nebraska-required supporting documents based on your specific situation
 
 **Column 2 — The Guidance**
 - Step-by-step filing instructions specific to your Nebraska county court
 - Court hearing prep document with the questions a Nebraska judge is most likely to ask in adult adoption cases
+- Background check instructions — you complete the checks yourself; we provide step-by-step guidance for what your county requires
 - New birth certificate ordering instructions (your adult stepchild's name change, if applicable)
 - **Two free 15-minute calls** with Lucrece Bundy, Esq. (a licensed Nebraska adoption attorney with adult-adoption experience) — scoped to questions about your forms
 
@@ -183,7 +184,7 @@ Get My Done-For-You Forms — $499
 *Court filing fees (~$60–$90 depending on county) and certified copy fees are paid directly to your local court and not included.*
 
 **Notes:**
-- Adult adoption requires *fewer* forms than minor-child adoption (no biological-parent-consent forms, no background check authorizations). This is intentionally accurate, not abridged.
+- The adult-adoption package list mirrors the minor-child list exactly — same items, same wording. Internal context: a Nebraska adult-adoption case requires consent from both biological parents plus the adult adoptee themselves. Background check requirements are the same as minor-child cases — each adult party completes their own, with step-by-step guidance included.
 - "Adult adoption experience" specifically called out in the calls description because it's the differentiator — most attorneys don't do many of these
 - Note for Lucrece: confirm whether the adult adoptee's name change is automatic or requires a separate filing in Nebraska. Update copy accordingly.
 
@@ -193,7 +194,7 @@ Get My Done-For-You Forms — $499
 
 **Eyebrow:** WHAT HAPPENS NEXT
 
-**H2:** From order to filed forms in 3 business days.
+**H2:** From order to inbox in 3 business days.
 
 **4-step horizontal layout:**
 
@@ -201,10 +202,10 @@ Get My Done-For-You Forms — $499
 After payment, you'll get a link to a confidential intake form. You'll provide names, dates, and key details — most adult adoption intakes take less than 10 minutes because the documentation needed is simpler than for minor-child cases.
 
 **Step 2 — Our team prepares your forms (1–3 business days)**
-A trained paralegal completes your forms, and Lucrece personally reviews every package. No rush, no template-fill — every detail is checked against Nebraska statute.
+Our team completes your forms, and Lucrece personally reviews every package. No rush, no template-fill — every detail is checked against Nebraska statute.
 
 **Step 3 — You receive your completed package by email**
-You'll get a PDF package with: every form filled out and ready to file, your county-specific filing checklist, your court hearing prep guide, and the new birth certificate ordering instructions.
+Your package will include every form filled out and ready to file, your county-specific filing checklist, your court hearing prep guide, and the new birth certificate ordering instructions.
 
 **Step 4 — You file with your county court**
 Take your forms to your county court clerk. Pay the filing fee (~$60–$90). Get your hearing date. Adult adoptions in Nebraska typically finalize in **6–10 weeks** from filing.
@@ -420,6 +421,7 @@ No `FAQPage` schema. Page is gated; rich results aren't desired.
 | 2026-04-29 | v1.2 — Section 4.5 testimonials locked: Catrice Jackson (full text, explicitly mentions adult adoption), Gary Boettcher (truncated — pull full from Google), Patty Bales (truncated — pull full from Google). All three are confirmed adult-adoption clients. Open Question #1 resolved. New open item: pull full Google text for Boettcher and Bales before HTML build. | Claude / Tyler |
 | 2026-04-29 | v1.3 — Gary Boettcher full review text added. Notes and Open Question #1 updated. Bales remains truncated. | Claude / Tyler |
 | 2026-04-29 | v1.4 — Patty Bales full review text added. All three adult-adoption testimonials are now full Google-verified text. Page is fully testimonial-locked. Bales's "very reasonable with no hidden fees" line is a strong unexpected asset for cost-anxious visitors. | Claude / Tyler |
+| 2026-04-29 | v1.5 — Cross-doc consistency edits to mirror locked minor-child spec. Section 4.3 (What's Included) Column 1 rewritten so adult page now matches minor-child word-for-word: "Petition for Adult Adoption" → "Petition for Adoption", consent line simplified from "adult adoptee, plus your spouse's consent" → just "Consent forms" (note: Tyler corrected an earlier inaccurate claim — adult adoption requires consent from BOTH biological parents AND the adult adoptee themselves), "Notice of Hearing" → "Notice of Adoption" (form-name correction). Background check guidance line added to Column 2 with same "you complete the checks yourself" framing as minor-child page. Internal note rewritten to reflect that adult-adoption package contents mirror minor-child rather than being a reduced subset. Section 4.4 (What Happens Next): H2 "From order to filed forms in 3 business days" → "From order to inbox in 3 business days"; step 2 "trained paralegal" → "Our team"; step 3 PDF mention removed. | Claude / Tyler |
 
 ---
 *End of v1.0 — DFY Adult Page Working Document*

@@ -3,8 +3,8 @@
 **Document type:** Master / index for the entire site redesign
 **Owner:** Lucrece H. Bundy / Tyler
 **Site:** adoptionformsexpress.com
-**Version:** 1.0
-**Last updated:** April 28, 2026
+**Version:** 1.3
+**Last updated:** April 29, 2026
 **Status:** Active
 
 ---
@@ -72,18 +72,17 @@ Every page on the redesigned site, what it's for, what doc holds its spec, and w
 | Homepage | `/` | Top of funnel, qualifier entry | `homepage-redesign-v1.md` + `homepage.html` | 🟢 Built, testimonials locked, ready for review and deploy |
 | Qualifier quiz | `/qualify` | 60-second eligibility quiz | `qualifier-quiz-v1.md` | ⚪ Not started |
 | Pricing | `/pricing` | Standalone pricing comparison | `pricing-page-v1.md` | ⚪ Not started |
-| DFY checkout — minor child | `/qualified/done-for-you-minor-child/` | Post-qualification checkout (gated, noindex) | `dfy-minor-child-page-v1.md` | 🟢 Spec v1.3 — testimonials locked, ready for HTML build |
-| DFY checkout — adult | `/qualified/done-for-you-adult/` | Post-qualification checkout (gated, noindex) | `dfy-adult-page-v1.md` | 🟢 Spec v1.4 — testimonials locked, ready for HTML build |
+| DFY checkout — minor child | `/qualified/done-for-you-minor-child/` | Post-qualification checkout (gated, noindex) | `dfy-minor-child-page-v1.md` + `dfy-minor-child.html` | 🔵 Built — HTML written (`dfy-minor-child.html`), ready for WordPress deploy |
+| DFY checkout — adult | `/qualified/done-for-you-adult/` | Post-qualification checkout (gated, noindex) | `dfy-adult-page-v1.md` | 🟢 Spec v1.5 — testimonials locked, mirrors minor-child structure, ready for HTML build |
 | DFY pillar (public SEO) | `/done-for-you-adoption-forms-nebraska/` | Indexed pillar page funneling to quiz | `dfy-pillar-page-v1.md` | ⚪ Not started |
 | Adult adoption pillar (public SEO) | `/adult-stepparent-adoption-nebraska/` | Indexed pillar page targeting underserved adult-adoption keywords | `adult-adoption-pillar-v1.md` | ⚪ Not started |
 | About / Founder | `/about` | Lucrece bio, firm story, credentials | `about-page-v1.md` | ⚪ Not started |
 | How It Works | `/how-it-works` | Long-form process walkthrough | `how-it-works-v1.md` | ⚪ Not started |
-| Sneak Peek | `/sneak-peek` | Form preview (existing, may need refresh) | `sneak-peek-v1.md` | ⚪ Not started |
 | FAQ (full) | `/faq` | Expanded FAQ standalone page | `faq-page-v1.md` | ⚪ Not started |
 | County landing pages | `/counties/[county-slug]` | Local SEO — 1 page per priority county | `county-landing-pages-v1.md` | ⚪ Not started |
 | Blog | `/blog` | SEO content engine | `seo-content-calendar-v1.md` | ⚪ Not started |
 | Conversational AI intake | TBD | Phase 3 AI flow replacing/augmenting qualifier | `conversational-ai-intake-v1.md` | ⚪ Not started |
-| Lead magnet landing | `/starter-guide` | Email capture + free PDF | `lead-magnet-v1.md` | ⚪ Not started |
+| Lead magnet landing | `/starter-guide` | Email capture + free PDF ("Free Nebraska Adoption Guide") | `lead-magnet-v1.md` | ⚪ Not started — but already referenced as the secondary CTA on homepage (hero + final CTA + FAQ footnote) and in the homepage + DFY footer. Currently stubbed to `#` in HTML. |
 | Terms of Use | `/terms-of-use` | Legal — keep current, audit copy | `legal-pages-v1.md` | ⚪ Not started |
 | Privacy Policy | `/privacy-policy` | Legal — keep current, audit copy | `legal-pages-v1.md` | ⚪ Not started |
 | 404 / Disqualified | `/not-a-fit` | Where disqualified visitors land | `disqualified-routing-v1.md` | ⚪ Not started |
@@ -435,6 +434,8 @@ End every session with an entry here. This is the cross-document log; individual
 | 2026-04-29 | Homepage doc, Homepage HTML, **Master** | Homepage doc → v2.5: Sarah Hall swapped out for Ruby Leonard in three-up testimonials. Reason: Ruby's review is the only forms-product-specific Google review in the entire 142-review set. Sarah Hall reserved for future DIY checkout page. Master doc: new Section 11.5 Testimonial Registry created — permanent home for placement, reserves, candidates, and known forms-product customers (Megan Findeis logged). | Claude / Tyler |
 | 2026-04-29 | Homepage doc, Homepage HTML, DFY minor-child, **Master** | Three swaps in one batch. (1) Catherine Day full text added to homepage three-up — used a curated excerpt including her strongest customer-voice line ("all I had to do essentially, was pay and show up to the court"). Homepage doc → v2.6. (2) Kevin Shafer swapped out of DFY minor-child card 3 in favor of Robyn Wallace, whose review uniquely validates procedural rails ("detailed instructions on how to fill out the forms and updates and reminders"). DFY minor-child doc → v1.3. Kevin moved to testimonial reserve. (3) Master testimonial registry updated to reflect new placements. Megan Findeis moved to "Do not use" per Tyler. Both homepage and DFY minor-child page now status 🟢 (testimonials locked, ready for HTML build / deploy). | Claude / Tyler |
 | 2026-04-29 | Homepage doc, Homepage HTML, **Master** | Featured testimonial restructured. Kristin's testimonial now serves as the featured pull quote with a circular photo (Kristin.png in WordPress media). Amanda's "$10K + 3 lawyers" testimonial moved into three-up card 2 (replacing Kevin Shafer). Kevin moves to testimonial reserve. New CSS class `.review-featured-photo` added. Master doc: testimonial registry reflects new placements; new open decision #20 added re: photo-release documentation as project-wide practice. Homepage doc → v2.7. | Claude / Tyler |
+| 2026-04-29 | DFY minor-child doc + new HTML, DFY adult doc, Homepage doc, Homepage HTML, **Master** | Big cross-doc consistency session + new HTML build. (1) **`dfy-minor-child.html` built** — single self-contained HTML file inheriting all `homepage.html` design tokens (Fraunces + Manrope, color palette, FAQ accordion mechanic). Sections: stripped checkout-style nav, qualification-confirmation hero with success-green eyebrow + recap callout, "What's Included" two-column, "What Happens Next" 4-step timeline, Lucrece signature block (small circular photo) + 3 forms-product testimonials, 5-question pre-purchase FAQ (no FAQPage schema by design), navy final-CTA, escape hatch. `noindex,nofollow` + `Product` schema only. Buy buttons placeholder-linked (`#`) with TODO comments for Stripe URL. (2) **Form-name correction** — "Notice of Hearing" → "Notice of Adoption" propagated across `homepage.html`, `homepage-redesign-v1.md`, `dfy-minor-child-page-v1.md`, `dfy-adult-page-v1.md`, `dfy-minor-child.html` (5 files). `index.html` deliberately left untouched — confirmed legacy file. (3) **Background check authorization moved** from Forms column to Guidance column on both DFY page docs and the minor-child HTML, with new framing — "you complete the checks yourself; we provide step-by-step guidance for what your county requires." (4) **Consent forms simplified** across all package descriptions to just "Consent forms" (no specification) so the package list is unified across all pages. (5) **Adult page Forms column** rewritten to mirror minor-child page word-for-word (Tyler corrected an earlier inaccurate claim — adult adoption requires consent from BOTH biological parents AND the adult adoptee themselves; doesn't require *fewer* forms). (6) **"What Happens Next" section** edits across both DFY docs + minor-child HTML: H2 "From order to filed forms in 3 business days" → "From order to inbox in 3 business days" (3-day window is delivery, not filing); step 2 "trained paralegal" → "Our team"; step 3 PDF mention removed (delivery via Google Drive link in practice, but not surfaced in copy). Versions bumped: `homepage-redesign-v1.md` → v2.8, `dfy-minor-child-page-v1.md` → v2.1 (with HTML build at v2.0), `dfy-adult-page-v1.md` → v1.5. Site architecture row for DFY minor-child updated to 🔵 Built. | Claude / Tyler |
+| 2026-04-29 | Homepage doc, Homepage HTML, DFY minor-child doc + HTML, **Master** | Form Sneak Peek retired across the entire project; lead-magnet freebie ("Free Nebraska Adoption Guide") takes its place. **Homepage:** hero secondary CTA, final CTA secondary button, and footer Services link all swapped from sneak-peek to the freebie (homepage doc + homepage.html). **New addition** — homepage FAQ section now ends with a soft sub-CTA footnote: "Still have questions? Get the free Nebraska Adoption Guide…" (new `.faq-footnote` CSS class). This is the lead magnet's dedicated conversion point on the homepage, catching FAQ readers who aren't ready for the quiz. **DFY minor-child:** footer Services link swapped (HTML only — body of DFY page deliberately stays purchase-focused, no freebie in the hero / final CTA / escape hatch). **Master architecture:** Sneak Peek row removed from Section 2 + Section 11 (working doc index). Lead magnet landing row updated with note that it's now referenced from homepage and DFY footer. **All freebie links currently stubbed to `#`** with TODO comments — wire to `/starter-guide` once the lead-magnet landing page is built. Resolves homepage doc Open Question #7 (lead magnet on homepage). Versions bumped: `homepage-redesign-v1.md` → v2.9, `dfy-minor-child-page-v1.md` → v2.2, master → v1.3. | Claude / Tyler |
 | | | | |
 
 ---
@@ -445,18 +446,17 @@ Every doc in the project, with location and current version.
 
 | Doc | Filename | Latest version | Status |
 |---|---|---|---|
-| **Master** | `website-redesign-master.md` | v1.0 | 🟡 Active |
-| Homepage | `homepage-redesign-v1.md` | v2.7 | 🟢 Testimonials locked, ready for HTML build |
+| **Master** | `website-redesign-master.md` | v1.3 | 🟡 Active |
+| Homepage | `homepage-redesign-v1.md` | v2.9 | 🔵 Built (`homepage.html`), ready for WordPress deploy |
 | Qualifier quiz | `qualifier-quiz-v1.md` | — | ⚪ Not started |
 | Pricing | `pricing-page-v1.md` | — | ⚪ Not started |
-| DFY checkout — minor child | `dfy-minor-child-page-v1.md` | v1.3 | 🟢 Testimonials locked, ready for HTML build |
-| DFY checkout — adult | `dfy-adult-page-v1.md` | v1.4 | 🟢 Testimonials locked, ready for HTML build |
+| DFY checkout — minor child | `dfy-minor-child-page-v1.md` | v2.2 | 🔵 Built (`dfy-minor-child.html`), ready for WordPress deploy |
+| DFY checkout — adult | `dfy-adult-page-v1.md` | v1.5 | 🟢 Testimonials locked, mirrors minor-child structure, ready for HTML build |
 | DFY public pillar (SEO) | `dfy-pillar-page-v1.md` | — | ⚪ Not started |
 | Adult adoption pillar (SEO) | `adult-adoption-pillar-v1.md` | — | ⚪ Not started |
 | About / Founder | `about-page-v1.md` | — | ⚪ Not started |
 | How It Works | `how-it-works-v1.md` | — | ⚪ Not started |
 | FAQ standalone | `faq-page-v1.md` | — | ⚪ Not started |
-| Sneak Peek | `sneak-peek-v1.md` | — | ⚪ Not started |
 | County landing pages | `county-landing-pages-v1.md` | — | ⚪ Not started |
 | SEO content calendar | `seo-content-calendar-v1.md` | — | ⚪ Not started |
 | Lead magnet | `lead-magnet-v1.md` | — | ⚪ Not started |

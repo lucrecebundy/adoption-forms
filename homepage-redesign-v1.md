@@ -3,7 +3,7 @@
 **Document type:** Living working document
 **Owner:** Lucrece H. Bundy / Tyler
 **Site:** adoptionformsexpress.com
-**Version:** 2.7
+**Version:** 2.9
 **Last updated:** April 29, 2026
 **Status:** Draft — ready for review, then handoff to Claude Code
 
@@ -60,7 +60,7 @@ Move Adoption Forms Express from a side product into the primary business so Luc
 
 ### Conversion goal hierarchy
 1. **Primary:** Take the qualifier quiz
-2. **Secondary:** Preview the forms (sneak peek)
+2. **Secondary:** Get the free Nebraska Adoption Guide (lead magnet)
 3. **Tertiary:** Book a paid consult (for non-qualifying or contested cases)
 
 ### UPL guardrails (non-negotiable)
@@ -208,7 +208,7 @@ Created by Lucrece H. Bundy, Esq. · Licensed Nebraska Adoption Attorney · 200+
 See If You Qualify (Free 60-Second Quiz)
 
 **Secondary CTA (text link):**
-Preview the Forms →
+Get the Free Nebraska Adoption Guide →
 
 **Price callout (small text below CTAs):**
 Forms starting at **$299** · Court filing costs not included
@@ -407,8 +407,8 @@ What You Get with Adoption Forms Express
 
 **The Forms**
 - Petition for Adoption
-- Consent forms (custodial parent + non-custodial where applicable)
-- Notice of Hearing
+- Consent forms
+- Notice of Adoption
 - Decree of Adoption (proposed)
 - Other Nebraska-required supporting documents based on your situation
 
@@ -485,7 +485,7 @@ Most uncontested Nebraska stepparent adoptions finalize in 4 to 6 months from th
 Yes. Nebraska law does not require you to retain an attorney to file or finalize a stepparent adoption. Many uncontested cases are completed pro se using attorney-prepared forms like the ones available through Adoption Forms Express.
 
 **Q: What forms do I need for a Nebraska stepparent adoption?**
-A Nebraska stepparent adoption typically requires a Petition for Adoption, parental consent forms, a Notice of Hearing, a proposed Decree of Adoption, and supporting documents such as background check authorizations and proof of marriage. Adoption Forms Express provides all required forms compliant with Neb. Rev. Stat. § 43-101 et seq.
+A Nebraska stepparent adoption typically requires a Petition for Adoption, parental consent forms, a Notice of Adoption, a proposed Decree of Adoption, and supporting documents such as background check authorizations and proof of marriage. Adoption Forms Express provides all required forms compliant with Neb. Rev. Stat. § 43-101 et seq.
 
 **Q: What if the other biological parent won't consent?**
 If the absent biological parent has abandoned the child for at least 6 months prior to filing, Nebraska courts may waive the consent requirement under Neb. Rev. Stat. § 43-104. Abandonment must be proven to the court, and contested cases are generally outside the scope of DIY forms — we recommend consulting an adoption attorney such as Bundy Law LLC.
@@ -505,10 +505,14 @@ DIY forms are designed for uncontested cases only. If your case is contested —
 **Q: Do I still need an attorney for the court hearing?**
 No. Most uncontested Nebraska stepparent adoption hearings are short and procedural. Your forms package includes a court hearing prep guide with the questions a judge is most likely to ask.
 
+**FAQ footnote (sub-CTA below the accordion list):**
+*Still have questions? [Get the free Nebraska Adoption Guide] — covers timelines, costs, and the Nebraska-specific filing process.*
+
 **Notes:**
 - Each Q must have `Question` schema (see section 8)
 - Answer-first structure is critical for AI Overviews
 - Statute citations protect us with the algorithm AND with visitors
+- The FAQ footnote is the lead-magnet's natural conversion point on the homepage — catches visitors who've finished reading the FAQ and aren't yet ready for the quiz, capturing email instead of letting them bounce
 
 ---
 
@@ -550,7 +554,7 @@ Ready to Make It Official?
 Take the 60-second quiz to see if your Nebraska stepparent adoption qualifies for our forms.
 
 **Primary CTA:** Take the Qualifier Quiz →
-**Secondary CTA:** Preview the Forms
+**Secondary CTA:** Get the Free Nebraska Adoption Guide
 
 **Reassurance line below:**
 Don't qualify? We'll route you to the right next step — including our affiliated law practice for contested cases.
@@ -566,7 +570,7 @@ Don't qualify? We'll route you to the right next step — including our affiliat
 **Column 2 — Services:**
 - DIY Adoption Forms
 - Pre-Filled Adoption Forms
-- Sneak Peek
+- Free Nebraska Adoption Guide
 - Take the Qualifier Quiz
 
 **Column 3 — About:**
@@ -736,7 +740,7 @@ Tracked here so we can resolve in subsequent sessions:
 4. **Tech stack decision:** Stay on WordPress for the redesign, or migrate to Next.js to align with future AI intake build?
 5. **Form list accuracy:** Confirm exact list of Nebraska forms in the package (section 5.10) before publishing — Lucrece sign-off needed.
 6. **Bar credentials:** Pull Lucrece's exact bar admission date + bar number for the credibility line.
-7. **Lead magnet:** Should we add an email-capture lead magnet ("Free Nebraska Stepparent Adoption Starter Guide") to this homepage, or hold for Phase 2?
+7. **Lead magnet:** ✅ Resolved 2026-04-29 — added to homepage. The "Free Nebraska Adoption Guide" replaces the retired Form Sneak Peek as the homepage's secondary CTA (hero + final CTA + footer) plus a new soft sub-CTA footnote at the end of the FAQ section. The `/starter-guide` landing page itself still doesn't exist; all freebie links are currently stubbed to `#` until the lead-magnet build session.
 8. **Affiliated practice routing:** Lock the language that routes contested / non-qualifying visitors to Bundy Law LLC.
 9. **County landing pages:** Build all 10 priority counties at once, or roll out 1/week for content-velocity SEO?
 10. **Review widget:** Continue with Trustindex, or migrate to native Google Reviews API?
@@ -785,6 +789,8 @@ End every session by adding an entry here. Format: date — what changed — who
 | 2026-04-29 | v2.5 — Sarah Hall swapped out for Ruby Leonard in three-up. Reason: Ruby's review is the only Google review in the entire 142-review set that explicitly mentions purchasing the DIY adoption documents as a product — strongest single asset for forms-product social proof. New trio: Catherine (authority), Kevin (satisfaction + use again), Ruby (forms-product validation). Sarah Hall's testimonial moved into reserve for future DIY checkout page. Notes section updated to flag Ruby's strategic uniqueness. | Claude / Tyler |
 | 2026-04-29 | v2.6 — Catherine Day full review text now in spec and HTML. Used a curated excerpt that includes the strongest line from her review ("she said she handled everything, and boy, she was not lying. In the end, all I had to do essentially, was pay and show up to the court") which is arguably the single most powerful customer-voice line on the entire homepage. Untruncated. | Claude / Tyler |
 | 2026-04-29 | v2.7 — Featured testimonial restructured: Kristin's testimonial now serves as the featured pull quote, paired with her circular photo (URL: `/wp-content/uploads/2026/04/Kristin.png`). Amanda's "$10K + 3 lawyers" testimonial moved into the three-up as card 2 (replacing Kevin Shafer). Kevin moves to testimonial reserve. New CSS class `.review-featured-photo` added to homepage HTML for circular photo styling (88px, white border, soft shadow). The featured testimonial is the only one with a photo by design — creates a single visual anchor for the social-proof section. Photo-release note added flagging the need to document Kristin's marketing-use consent. | Claude / Tyler |
+| 2026-04-29 | v2.8 — Cross-doc form-name and consent-line consistency edits propagated to homepage. Section 5.10 (What's Included): "Notice of Hearing" → "Notice of Adoption" (form-name correction Tyler caught while reviewing the DFY minor-child page); "Consent forms (custodial parent + non-custodial where applicable)" simplified to just "Consent forms" so the visible package list is unified across all pages. Section 5.12 FAQ Q4 ("What forms do I need?") answer: "Notice of Hearing" → "Notice of Adoption" (kept "parental consent forms" wording — generic enough not to trigger the simplification). homepage.html updated to match: 3 "Notice of Hearing" → "Notice of Adoption" replacements (forms list + FAQ accordion answer + FAQPage schema), and 1 consent-line simplification in the What's Included section. | Claude / Tyler |
+| 2026-04-29 | v2.9 — Form Sneak Peek removed from the homepage and replaced with the lead-magnet freebie throughout. Section 1 conversion goal hierarchy: "Secondary: Preview the forms (sneak peek)" → "Secondary: Get the free Nebraska Adoption Guide (lead magnet)". Section 5.2 hero secondary text-link CTA: "Preview the Forms →" → "Get the Free Nebraska Adoption Guide →". Section 5.14 final CTA secondary button: "Preview the Forms" → "Get the Free Nebraska Adoption Guide". Section 5.15 footer Services list: "Sneak Peek" → "Free Nebraska Adoption Guide". **New addition:** Section 5.12 FAQ now ends with a sub-CTA footnote — "Still have questions? Get the free Nebraska Adoption Guide — covers timelines, costs, and the Nebraska-specific filing process." This is the lead-magnet's dedicated conversion point on the homepage, catching FAQ readers who aren't yet ready for the quiz. homepage.html updated to match across all four placements + new `.faq-footnote` CSS class added. All freebie links currently stubbed to `#` with TODO comments — wire up once `/starter-guide` lead-magnet landing page exists. Resolves homepage doc Open Question #7 (lead magnet on homepage). | Claude / Tyler |
 | | | |
 
 ---

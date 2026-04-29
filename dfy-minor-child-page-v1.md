@@ -5,9 +5,9 @@
 **URL:** `/qualified/done-for-you-minor-child/`
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-adult-page-v1.md` (adult-adoption equivalent)
-**Version:** 1.3
+**Version:** 2.2
 **Last updated:** April 29, 2026
-**Status:** Draft — ready for review
+**Status:** Built — HTML page written (`dfy-minor-child.html`), ready for WordPress deploy
 
 ---
 
@@ -161,15 +161,15 @@ The full product spelled out. No mystery, no padding.
 
 **Column 1 — The Forms (completed by us)**
 - Petition for Adoption (Nebraska form, completed with your information)
-- Consent forms — custodial parent, plus non-custodial where applicable
-- Notice of Hearing
+- Consent forms
+- Notice of Adoption
 - Decree of Adoption (proposed)
-- Background check authorizations
 - All other Nebraska-required supporting documents based on your specific situation
 
 **Column 2 — The Guidance**
 - Step-by-step filing instructions specific to your Nebraska county court
 - Court hearing prep document with the exact questions a Nebraska judge is most likely to ask
+- Background check instructions — you complete the checks yourself; we provide step-by-step guidance for what your county requires
 - New birth certificate ordering instructions
 - **Two free 15-minute calls** with Lucrece Bundy, Esq. (a licensed Nebraska adoption attorney) to answer questions about your forms
 
@@ -190,7 +190,7 @@ This is the section that closes the deal for hesitant buyers. They want to know 
 
 **Eyebrow:** WHAT HAPPENS NEXT
 
-**H2:** From order to filed forms in 3 business days.
+**H2:** From order to inbox in 3 business days.
 
 **4-step horizontal layout:**
 
@@ -198,10 +198,10 @@ This is the section that closes the deal for hesitant buyers. They want to know 
 After payment, you'll get a link to a confidential intake form. You'll provide the names, dates, addresses, and details our team needs to fill out your forms accurately. Most families finish in 10–15 minutes.
 
 **Step 2 — Our team prepares your forms (1–3 business days)**
-A trained paralegal completes your forms, and Lucrece personally reviews every package before it goes out. No rush, no template-fill — every detail is checked against Nebraska statute and your specific situation.
+Our team completes your forms, and Lucrece personally reviews every package before it goes out. No rush, no template-fill — every detail is checked against Nebraska statute and your specific situation.
 
 **Step 3 — You receive your completed package by email**
-You'll get a PDF package with: every form filled out and ready to file, your county-specific filing checklist, your court hearing prep guide, and the ordering instructions for your new birth certificate.
+Your package will include every form filled out and ready to file, your county-specific filing checklist, your court hearing prep guide, and the ordering instructions for your new birth certificate.
 
 **Step 4 — You file with your county court**
 Take your forms to your county court clerk. Pay the filing fee (~$60–$90). Get your hearing date. Your two free 15-minute attorney calls are available throughout — schedule them whenever you need them.
@@ -438,6 +438,9 @@ Minimal — we don't want this page generating rich results in search since it s
 | 2026-04-29 | v1.1 — Section 4.3: removed "Waiver of Notice" from forms list; removed "Email access for follow-up questions" from guidance list; clarified the 2 attorney calls are scoped to questions about the forms package. Section 4.4: timeline updated from 2–4 months to 4–6 months (and matching reference in notes). Section 4.6 FAQ Q4: removed reference to email support to stay consistent with package change. | Claude / Tyler |
 | 2026-04-29 | v1.2 — Section 4.5 testimonials locked: Jennifer Jenkins (truncated — pull full from Google), Sarah Hall (full text), Kevin Shafer (full text). All Google-verified stepparent-adoption clients. Open Question #1 resolved. | Claude / Tyler |
 | 2026-04-29 | v1.3 — Kevin Shafer swapped out for Robyn Wallace in Section 4.5 (third testimonial slot). Reason: Robyn's review uniquely validates the procedural rails of the product ("detailed instructions on how to fill out the forms and updates and reminders as the process progressed") — much stronger for a checkout page than Kevin's general satisfaction. Kevin moved into testimonial reserve registry for future page placement. New trio: Jennifer (anxiety relief), Sarah (DFY promise), Robyn (procedural specifics). | Claude / Tyler |
+| 2026-04-29 | v2.0 — Built `dfy-minor-child.html`: single self-contained HTML file matching `homepage.html`'s design language (Fraunces + Manrope, same color palette, same FAQ accordion mechanic). Includes: stripped checkout-style nav, qualification-confirmation hero with success-green eyebrow + qualification recap callout, "What's Included" two-column section, "What Happens Next" 4-step timeline, Lucrece signature block (small circular photo) + 3 forms-product-specific testimonials, 5-question pre-purchase FAQ (no FAQPage schema by design), navy final-CTA band, escape hatch for contested-case routing. Schema: Product only (`noindex,nofollow`). Buy buttons placeholder-linked to `#` with TODO comments for Stripe URL. | Claude / Tyler |
+| 2026-04-29 | v2.1 — Content edits made during build review, propagated to both spec doc and HTML. Section 4.3 (What's Included): "Notice of Hearing" → "Notice of Adoption" (form-name correction); "Background check authorizations" moved from Forms column to Guidance column with new framing — "Background check instructions — you complete the checks yourself; we provide step-by-step guidance for what your county requires"; "Consent forms — custodial parent, plus non-custodial where applicable" simplified to just "Consent forms". Section 4.4 (What Happens Next): H2 "From order to filed forms in 3 business days" → "From order to inbox in 3 business days" (the 3-day window is delivery, not filing — visitors won't necessarily file the day they receive forms); step 2 "A trained paralegal completes your forms" → "Our team completes your forms"; step 3 "You'll get a PDF package with…" rewritten to "Your package will include…" (we deliver via Google Drive link in practice, but the page no longer specifies delivery format). | Claude / Tyler |
+| 2026-04-29 | v2.2 — Form Sneak Peek removed across the project; lead-magnet freebie replaces it. dfy-minor-child.html footer: "Form Sneak Peek" link → "Free Nebraska Adoption Guide" (stubbed `#` with TODO for the future `/starter-guide` URL). No on-page-content changes — DFY checkout page deliberately stays focused on purchase, so the freebie only appears in the footer (not in the body, hero, or final CTA). Spec doc Section 4.9 still says "Same footer as homepage, with the standard UPL disclaimer. No changes." — that statement remains accurate; the homepage footer just gained a different Services link. | Claude / Tyler |
 | | | |
 
 ---
