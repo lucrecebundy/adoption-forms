@@ -69,9 +69,13 @@ Every page on the redesigned site, what it's for, what doc holds its spec, and w
 
 | Page | URL | Purpose | Doc | Status |
 |---|---|---|---|---|
-| Homepage | `/` | Top of funnel, qualifier entry | `homepage-redesign-v1.md` | 🟡 Draft v1.1 — review pending |
+| Homepage | `/` | Top of funnel, qualifier entry | `homepage-redesign-v1.md` + `homepage.html` | 🟢 Built, testimonials locked, ready for review and deploy |
 | Qualifier quiz | `/qualify` | 60-second eligibility quiz | `qualifier-quiz-v1.md` | ⚪ Not started |
 | Pricing | `/pricing` | Standalone pricing comparison | `pricing-page-v1.md` | ⚪ Not started |
+| DFY checkout — minor child | `/qualified/done-for-you-minor-child/` | Post-qualification checkout (gated, noindex) | `dfy-minor-child-page-v1.md` | 🟢 Spec v1.3 — testimonials locked, ready for HTML build |
+| DFY checkout — adult | `/qualified/done-for-you-adult/` | Post-qualification checkout (gated, noindex) | `dfy-adult-page-v1.md` | 🟢 Spec v1.4 — testimonials locked, ready for HTML build |
+| DFY pillar (public SEO) | `/done-for-you-adoption-forms-nebraska/` | Indexed pillar page funneling to quiz | `dfy-pillar-page-v1.md` | ⚪ Not started |
+| Adult adoption pillar (public SEO) | `/adult-stepparent-adoption-nebraska/` | Indexed pillar page targeting underserved adult-adoption keywords | `adult-adoption-pillar-v1.md` | ⚪ Not started |
 | About / Founder | `/about` | Lucrece bio, firm story, credentials | `about-page-v1.md` | ⚪ Not started |
 | How It Works | `/how-it-works` | Long-form process walkthrough | `how-it-works-v1.md` | ⚪ Not started |
 | Sneak Peek | `/sneak-peek` | Form preview (existing, may need refresh) | `sneak-peek-v1.md` | ⚪ Not started |
@@ -385,7 +389,7 @@ Cross-cutting decisions that apply to multiple pages. Page-specific open questio
 
 | # | Decision | Status | Notes |
 |---|---|---|---|
-| 1 | Tech stack: WordPress vs. Next.js | Open | Recommend Path A for now, decide formally next session |
+| 1 | Tech stack: WordPress vs. Next.js | ✅ Resolved 2026-04-28 | **Path A — WordPress** locked. Homepage built as a self-contained HTML file (`homepage.html`) that drops into a WordPress page or Custom HTML block. Future Phase 3 AI intake may live as a separate Next.js subdomain or embedded widget. |
 | 2 | Final color palette | Open | Proposed in Section 4 — confirm in Phase B |
 | 3 | Typography choice (Lora / Source Serif / Fraunces) | Open | Decide in Phase B |
 | 4 | Photography direction: real families vs. stock | Open | Real preferred — needs photo release process |
@@ -397,6 +401,14 @@ Cross-cutting decisions that apply to multiple pages. Page-specific open questio
 | 10 | Review widget: keep Trustindex or move to native Google Reviews | Open | Trustindex is fine for now; revisit post-launch |
 | 11 | Email platform: ConvertKit vs. MailerLite | Open | Decide before lead magnet build |
 | 12 | Professional email address (move off gmail.com) | Open | Recommend `lucrece@adoptionformsexpress.com` or `hello@` |
+| 13 | DFY page architecture: split into minor-child and adult URLs | ✅ Resolved 2026-04-28 | Two separate post-quiz URLs (`/qualified/done-for-you-minor-child/` and `/qualified/done-for-you-adult/`). Sister working docs created. |
+| 14 | Old `/customized-adoption-forms/` URL — what to do with it | ✅ Resolved 2026-04-28 | Retire the page. 301 redirect to homepage `/` so existing SEO equity flows somewhere useful. |
+| 15 | Quiz routing logic — confirm Typeform supports branching to two checkout URLs | Open | Verify before publishing the new pages. Quiz logic must route minor-child qualifying → minor-child URL, adult qualifying → adult URL, disqualified → disqualified routing page. |
+| 16 | Adult-adoption SEO pillar — priority? | Open | Adult stepparent adoption is an underserved keyword cluster in Nebraska. Recommend prioritizing the pillar page in Phase D as a high-leverage SEO play. |
+| 17 | Forms-product-specific testimonials | Open | Both DFY pages currently use placeholder reviews from broader Bundy Law cases. Need 3 specifically about the Done-For-You minor-child product and 3 specifically about adult adoption product. |
+| 18 | Support email — dedicated address for these pages | Open | Both DFY page docs reference a `[support email]` placeholder. Recommend creating `support@adoptionformsexpress.com` before publishing. |
+| 19 | Review count is hardcoded across pages | ✅ Resolved 2026-04-29 | Decision: visitor-facing review count displays as **"140+"** for durability. Exact `reviewCount` in schema markup remains precise (currently 142) and gets updated quarterly. Revisit live-feed widget integration (option C) post-launch. |
+| 20 | Photo-release documentation for testimonials with photos | Open | Kristin's photo is now placed on the homepage. Recommend creating a simple email-based photo-release process: every time a testimonial-with-photo is added, send a one-line confirmation email asking "we'd like to feature your name, testimonial, and photo on the public Adoption Forms Express homepage — is that okay?" and save the email reply. Low-risk for Google-public photos but documents intent for any future dispute. Decide whether to formalize this in a simple template before more photo-paired testimonials are added. |
 
 ---
 
@@ -409,6 +421,20 @@ End every session with an entry here. This is the cross-document log; individual
 | 2026-04-28 | Homepage | v1.0 — Initial homepage redesign spec drafted | Claude / Tyler |
 | 2026-04-28 | Homepage | v1.1 — Added Executive Summary section near top | Claude / Tyler |
 | 2026-04-28 | **Master** | v1.0 — Master working document created; site architecture, shared standards, master roadmap, master open decisions, change log all established | Claude / Tyler |
+| 2026-04-28 | **Master** | v1.1 — Stack decision locked (Path A, WordPress). Homepage status updated to Built. | Claude / Tyler |
+| 2026-04-28 | Homepage | v2.0 — Built `homepage.html` — single self-contained HTML file with inline CSS, JSON-LD schema (LegalService, AggregateRating, FAQPage), FAQ accordion, all 15 sections from spec, both professional photos placed (hero + founder spotlight). WordPress-ready. | Claude / Tyler |
+| 2026-04-28 | DFY pages, **Master** | Split old `/customized-adoption-forms/` page into two post-qualification checkout pages: `dfy-minor-child-page-v1.md` v1.0 and `dfy-adult-page-v1.md` v1.0. Both gated (noindex), entered only via qualifier quiz routing. Old URL to be 301 redirected to homepage. Master doc updated: site architecture, working doc index, two new resolved decisions (#13, #14) plus four new open decisions (#15–#18). Two future SEO pillar pages registered as not-started. | Claude / Tyler |
+| 2026-04-29 | DFY minor-child | v1.1 — Removed "Waiver of Notice" from forms list. Removed email support from package (only 2 attorney calls included, scoped to questions about the forms). Timeline updated 2–4 months → 4–6 months. FAQ updated to match. **Note: same edits may need to apply to homepage doc/HTML and dfy-adult-page-v1 — flagged to user for decision.** | Claude / Tyler |
+| 2026-04-29 | Homepage doc, Homepage HTML, DFY adult | Cross-doc consistency edits propagated. Homepage doc → v2.1 (timeline updated, Waiver of Notice removed, call line scoped to forms). Homepage HTML updated to match (FAQ schema, FAQ accordion, How It Works, Section 5.10 forms list, both pricing cards). DFY adult → v1.1 (email access removed, calls scoped to forms). | Claude / Tyler |
+| 2026-04-29 | Homepage doc, Homepage HTML, **Master** | Review count updated 118 → 142 across the homepage doc (v2.2) and homepage HTML (4 places: schema `reviewCount`, hero credibility, image badge, trust strip). Master doc: new open decision #19 added flagging the hardcoding issue and recommending a more durable solution (live-feed widget, or "150+" rounded). |  Claude / Tyler |
+| 2026-04-29 | Homepage doc, Homepage HTML, **Master** | Open decision #19 resolved: visitor-facing review count rounded to "140+" across all visible spots in HTML and doc. Schema markup retains exact count for Google compliance. Homepage doc → v2.3. | Claude / Tyler |
+| 2026-04-29 | DFY adult | v1.2 — Three testimonials locked for Section 4.5: Catrice Jackson, Gary Boettcher, Patty Bales (all adult-adoption clients, all Google-verified). Catrice's review is full text; Boettcher and Bales are truncated and need full text pulled from Google before HTML build. Page-level Open Question #1 resolved. | Claude / Tyler |
+| 2026-04-29 | DFY minor-child, Homepage doc, Homepage HTML | DFY minor-child v1.2: testimonials locked (Jennifer Jenkins, Sarah Hall, Kevin Shafer); Open Question #1 resolved. Homepage doc v2.4: Section 5.11 three-up swapped to Catherine Day, Kevin Shafer, Sarah Hall. Homepage HTML updated to match. Each page now uses Google-verified testimonials curated for its specific audience. | Claude / Tyler |
+| 2026-04-29 | DFY adult | v1.3 — Gary Boettcher full review text added (was previously truncated). Bales remains the only truncated testimonial across all four pages with locked testimonials. | Claude / Tyler |
+| 2026-04-29 | DFY adult | v1.4 — Patty Bales full review text added. DFY adult page is now fully testimonial-locked with all three Google-verified texts. Status moved from 🟡 Draft to 🟢 Ready for HTML build. | Claude / Tyler |
+| 2026-04-29 | Homepage doc, Homepage HTML, **Master** | Homepage doc → v2.5: Sarah Hall swapped out for Ruby Leonard in three-up testimonials. Reason: Ruby's review is the only forms-product-specific Google review in the entire 142-review set. Sarah Hall reserved for future DIY checkout page. Master doc: new Section 11.5 Testimonial Registry created — permanent home for placement, reserves, candidates, and known forms-product customers (Megan Findeis logged). | Claude / Tyler |
+| 2026-04-29 | Homepage doc, Homepage HTML, DFY minor-child, **Master** | Three swaps in one batch. (1) Catherine Day full text added to homepage three-up — used a curated excerpt including her strongest customer-voice line ("all I had to do essentially, was pay and show up to the court"). Homepage doc → v2.6. (2) Kevin Shafer swapped out of DFY minor-child card 3 in favor of Robyn Wallace, whose review uniquely validates procedural rails ("detailed instructions on how to fill out the forms and updates and reminders"). DFY minor-child doc → v1.3. Kevin moved to testimonial reserve. (3) Master testimonial registry updated to reflect new placements. Megan Findeis moved to "Do not use" per Tyler. Both homepage and DFY minor-child page now status 🟢 (testimonials locked, ready for HTML build / deploy). | Claude / Tyler |
+| 2026-04-29 | Homepage doc, Homepage HTML, **Master** | Featured testimonial restructured. Kristin's testimonial now serves as the featured pull quote with a circular photo (Kristin.png in WordPress media). Amanda's "$10K + 3 lawyers" testimonial moved into three-up card 2 (replacing Kevin Shafer). Kevin moves to testimonial reserve. New CSS class `.review-featured-photo` added. Master doc: testimonial registry reflects new placements; new open decision #20 added re: photo-release documentation as project-wide practice. Homepage doc → v2.7. | Claude / Tyler |
 | | | | |
 
 ---
@@ -420,9 +446,13 @@ Every doc in the project, with location and current version.
 | Doc | Filename | Latest version | Status |
 |---|---|---|---|
 | **Master** | `website-redesign-master.md` | v1.0 | 🟡 Active |
-| Homepage | `homepage-redesign-v1.md` | v1.1 | 🟡 Draft, review pending |
+| Homepage | `homepage-redesign-v1.md` | v2.7 | 🟢 Testimonials locked, ready for HTML build |
 | Qualifier quiz | `qualifier-quiz-v1.md` | — | ⚪ Not started |
 | Pricing | `pricing-page-v1.md` | — | ⚪ Not started |
+| DFY checkout — minor child | `dfy-minor-child-page-v1.md` | v1.3 | 🟢 Testimonials locked, ready for HTML build |
+| DFY checkout — adult | `dfy-adult-page-v1.md` | v1.4 | 🟢 Testimonials locked, ready for HTML build |
+| DFY public pillar (SEO) | `dfy-pillar-page-v1.md` | — | ⚪ Not started |
+| Adult adoption pillar (SEO) | `adult-adoption-pillar-v1.md` | — | ⚪ Not started |
 | About / Founder | `about-page-v1.md` | — | ⚪ Not started |
 | How It Works | `how-it-works-v1.md` | — | ⚪ Not started |
 | FAQ standalone | `faq-page-v1.md` | — | ⚪ Not started |
@@ -434,6 +464,60 @@ Every doc in the project, with location and current version.
 | Disqualified routing | `disqualified-routing-v1.md` | — | ⚪ Not started |
 | Legal pages audit | `legal-pages-v1.md` | — | ⚪ Not started |
 | Schema library (future) | `schema-library-v1.md` | — | ⚪ Not started |
+
+---
+
+## 11.5 Testimonial Registry
+
+A live registry of every testimonial we've evaluated, where it's placed (or reserved), and any notes. Update this any time a testimonial is added, swapped, or reserved for a future page.
+
+**Currently placed (locked):**
+
+| Reviewer | Source | Page | Status |
+|---|---|---|---|
+| Kristin | Google (Sep 2019) | Homepage — featured pull quote (with photo) | ✅ Live in HTML — paired with circular photo at `/wp-content/uploads/2026/04/Kristin.png`. Photo-release consent recommended before publish. |
+| Catherine Day | Google (Sep 2024, Local Guide) | Homepage — three-up card 1 | ✅ Full text in HTML — strongest customer-voice line on the page ("all I had to do essentially, was pay and show up to the court") |
+| Amanda Rumelhart | Google (Jul 2023) | Homepage — three-up card 2 | ✅ Full text in HTML — "$10K + 3 lawyers" competitive comparison |
+| Ruby Leonard | Google (Local Guide, edited 2024) | Homepage — three-up card 3 | ✅ Full text in HTML — only forms-product-specific Google review in the entire 142-review set |
+| Jennifer Jenkins | Google (Apr 2025) | DFY minor-child — card 1 | 🟡 In doc spec, truncated, pull full text |
+| Sarah Hall | Google (Sep 2022) | DFY minor-child — card 2 | ✅ Full text in doc spec |
+| Robyn Wallace | Google (Oct 2020) | DFY minor-child — card 3 | ✅ Full text in doc spec — uniquely validates procedural rails ("detailed instructions on how to fill out the forms and updates and reminders") |
+| Catrice Jackson | Google (Aug 2022) | DFY adult — card 1 | ✅ Full text in doc spec — only Google review explicitly mentioning adult adoption |
+| Gary Boettcher | Google (May 2019) | DFY adult — card 2 | ✅ Full text in doc spec |
+| Patty Bales | Google (Sep 2020) | DFY adult — card 3 | ✅ Full text in doc spec — strong "no hidden fees" line |
+
+**Reserved for future pages (do not use elsewhere without trade analysis):**
+
+| Reviewer | Source | Reserved for | Reason |
+|---|---|---|---|
+| Sarah Hall | Google (Sep 2022) | Future DIY checkout page (`/qualified/diy-minor-child/`) | "Handled everything" reads perfectly for any product. Currently also placed on DFY minor-child; she can be on both pages since the audiences don't overlap. |
+| Kevin Shafer | Google (Jan 2022) | Future page TBD — strong general satisfaction + "would absolutely use again" line | Held in reserve. Strong candidate for About / Founder page, qualifier-results page, or any page needing a generic-but-warm satisfaction quote. |
+
+**Known forms-product customers — candidates for future testimonial requests:**
+
+These are clients Lucrece has confirmed purchased the forms product, but whose existing Google reviews don't specifically mention the product or aren't yet collected. They're prime candidates to ask for a *new* written testimonial when we build the DIY checkout page or expand the homepage's product-specific social proof.
+
+| Reviewer | Existing Google review? | Notes |
+|---|---|---|
+| Hein | Unknown | Mentioned by Lucrece as adult-adoption client; review status TBD |
+| Strebin | Unknown | Mentioned by Lucrece as adult-adoption client; review status TBD |
+| McVay | Unknown | Mentioned by Lucrece as adult-adoption client; review status TBD |
+
+**Do not use:**
+
+| Reviewer | Reason |
+|---|---|
+| Megan Findeis | Decision logged 2026-04-29: do not use this testimonial. |
+
+**Strong candidates surfaced from review review (potential future use):**
+
+| Reviewer | Source | Best fit |
+|---|---|---|
+| LaCyndria McClarty | Google (Dec 2020) | Future "switched from another attorney" angle — *"After getting the runaround for several years from other attorneys…"* |
+| Adam Buda | Google (Dec 2022) | Same angle — *"Lucrece was the adoption lawyer that we had been looking for for years. Finally finding her was the Godsend we needed…"* |
+| Angie Busch | Google (Oct 2022) | Same angle — *"We had been with another lawyer before for two years…"* |
+
+These are strong candidates for a future "we tried other attorneys first" social proof block on a comparison or pillar page.
 
 ---
 

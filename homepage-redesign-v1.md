@@ -3,8 +3,8 @@
 **Document type:** Living working document
 **Owner:** Lucrece H. Bundy / Tyler
 **Site:** adoptionformsexpress.com
-**Version:** 1.1
-**Last updated:** April 28, 2026
+**Version:** 2.7
+**Last updated:** April 29, 2026
 **Status:** Draft — ready for review, then handoff to Claude Code
 
 ---
@@ -22,7 +22,7 @@ Each section is structured as: **Spec → Copy → Notes**. Claude Code can impl
 ### Biggest changes from the current site
 
 - **Single hero, locked pricing.** The live site currently shows three different prices ($299, $499, $599) within one page — a major trust killer. The new spec locks $299 / $499 throughout.
-- **Reviews moved up.** 118 five-star reviews are the single strongest conversion asset on the site and currently sit halfway down the page. New layout features a trust strip immediately under the hero plus a full review wall before the final CTA.
+- **Reviews moved up.** 140+ five-star reviews are the single strongest conversion asset on the site and currently sit halfway down the page. New layout features a trust strip immediately under the hero plus a full review wall before the final CTA.
 - **Founder spotlight section.** Lucrece's name, face, and credentials get a dedicated authority block — the biggest E-E-A-T move on the page and the strongest signal both Google and AI search engines look for.
 - **Honest "do you qualify" gate.** Mirrors the Neb. Rev. Stat. § 43-101 eligibility framework. Routes contested cases to Bundy Law LLC. UPL shield and conversion-quality booster in one move.
 - **Traditional attorney vs. Adoption Forms Express comparison table** ($3K–$10K vs. $299–$499). AI summarizers like Perplexity and Google AI Overviews extract these tables almost verbatim.
@@ -86,7 +86,7 @@ Move Adoption Forms Express from a side product into the primary business so Luc
 2. **Nebraska-specific** — not retrofitted from another state
 3. **Transparent pricing** — competitors hide it
 4. **AI-assisted, attorney-supervised** workflow (the differentiator we're building toward)
-5. **118 verified five-star reviews** — strongest social proof in the category
+5. **140+ verified five-star reviews** — strongest social proof in the category
 
 ---
 
@@ -202,7 +202,7 @@ Make Your Blended Family Official with Nebraska Stepparent Adoption Forms
 You already get all the hugs and kisses. Now get the legal status your family deserves — without the $5,000+ attorney bill.
 
 **Credibility line (small caps, under subhead):**
-Created by Lucrece H. Bundy, Esq. · Licensed Nebraska Adoption Attorney · 200+ Adoptions Finalized · 118 Five-Star Reviews
+Created by Lucrece H. Bundy, Esq. · Licensed Nebraska Adoption Attorney · 200+ Adoptions Finalized · 140+ Five-Star Reviews
 
 **Primary CTA button:**
 See If You Qualify (Free 60-Second Quiz)
@@ -228,7 +228,7 @@ Photo: Lucrece in professional setting OR celebratory family-with-finalized-adop
 A horizontal band, light background, immediately under hero:
 
 ```
-★★★★★ 5.0  ·  118 Verified Reviews  ·  Licensed Nebraska Attorney  ·  Nebraska-Compliant Forms
+★★★★★ 5.0  ·  140+ Verified Reviews  ·  Licensed Nebraska Attorney  ·  Nebraska-Compliant Forms
 ```
 
 **Notes:**
@@ -354,7 +354,7 @@ DIY (you fill out the forms) or Done-For-You (we fill them out from your informa
 Get your Nebraska-compliant forms with step-by-step filing instructions and what-to-expect guidance for the court hearing.
 
 **Step 4 — File and Finalize**
-File with your county court. Most uncontested Nebraska stepparent adoptions finalize within 2–4 months.
+File with your county court. Most uncontested Nebraska stepparent adoptions finalize within 4–6 months.
 
 **Notes:**
 - Each step gets a number badge + short icon
@@ -374,7 +374,7 @@ Choose Your Option
 - Step-by-step instructions for filling out and filing
 - Court hearing prep guide + likely judge questions
 - New birth certificate ordering instructions
-- (1) free 15-minute call with Lucrece Bundy, Esq.
+- (1) free 15-minute call with Lucrece Bundy, Esq. — scoped to questions about your forms
 
 **[CTA button: Get DIY Forms — $299]**
 
@@ -383,7 +383,7 @@ Choose Your Option
 **OPTION 2 — WE DO IT FOR YOU — $499 ⭐ Most Popular**
 Everything in DIY, plus:
 - Forms completed for you using the information you provide
-- (2) free 15-minute calls with Lucrece Bundy, Esq.
+- (2) free 15-minute calls with Lucrece Bundy, Esq. — scoped to questions about your forms
 - Priority 3-business-day turnaround
 
 **[CTA button: Get Done-For-You — $499]**
@@ -409,7 +409,6 @@ What You Get with Adoption Forms Express
 - Petition for Adoption
 - Consent forms (custodial parent + non-custodial where applicable)
 - Notice of Hearing
-- Waiver of Notice (where applicable)
 - Decree of Adoption (proposed)
 - Other Nebraska-required supporting documents based on your situation
 
@@ -418,7 +417,7 @@ What You Get with Adoption Forms Express
 - Background check instructions
 - Court hearing prep document with likely judge questions
 - New birth certificate ordering walk-through
-- Direct attorney call(s) with Lucrece Bundy, Esq.
+- Direct attorney call(s) with Lucrece Bundy, Esq. — scoped to questions about your forms
 
 **Notes:**
 - Listing the actual form names is a big AI-search and Google trust signal — it tells both the algorithm and the visitor that this is the real package
@@ -432,13 +431,26 @@ What You Get with Adoption Forms Express
 What Nebraska Families Are Saying
 
 **Lead-in:**
-118 verified five-star reviews. A few favorites:
+140+ verified five-star reviews. A few favorites:
 
-**Featured testimonial (large pull quote):**
-> "We had spent $10,000+ and gone through 3 different lawyers who promised they could get our stepparent adoption done but didn't. Lucrece moved quickly and had my stepparent adoption finalized in about 4 months!!!"
-> — **Amanda**
+**Featured testimonial (large pull quote, with circular photo above):**
 
-**Three-up additional testimonials (Shawri, Kristin, Halewya — already on site)**
+[Photo: Kristin's professional headshot, circular crop, subtle shadow, white border]
+URL: `https://adoptionformsexpress.com/wp-content/uploads/2026/04/Kristin.png`
+
+> "We hired Lucrece to finalize our adoption, and while of course she did an amazing job with the legal side of things, what really sets her apart is her love for her clients. She is so caring, while maintaining professionalism, and was genuinely there for our family. She was highly responsive and answered all of our questions in a timely manner. We will absolutely use her again in future adoptions!"
+> — **Kristin**
+
+**Three-up additional testimonials (Google-verified — curated for product-mix the homepage sells):**
+
+> "Lucrece did a phenomenal job with my stepparent adoption case. She was more knowledgeable than any other family law attorney we spoke with, and she has many adoption cases under her belt. From the adopting parent: 'She said she handled everything, and boy, she was not lying. In the end, all I had to do essentially, was pay and show up to the court.'"
+> — **Catherine Day** (Sep 2024)
+
+> "We had spent $10,000+ and gone through 3 different lawyers who promised they could get our stepparent adoption done but didn't. Lucrece moved quickly and had my stepparent adoption finalized in about 4 months."
+> — **Amanda** (Jul 2023)
+
+> "We ended up purchasing the DIY Adoption documents for step-parent adoption and it was so easy to do and understand. When I had questions she would answer my emails promptly. She is very professional and very helpful."
+> — **Ruby Leonard** (Local Guide, edited 2024)
 
 **Below testimonials:**
 [Embedded Trustindex widget — keep current implementation]
@@ -446,6 +458,13 @@ What Nebraska Families Are Saying
 **Notes:**
 - Move this section UP from its current placement (currently sits below the fold, well after pricing). Reviews are a top conversion driver — they should appear before pricing for hesitant visitors AND after pricing for closers
 - Consider duplicating: a 3-quote teaser BEFORE pricing, full review wall AFTER pricing
+- **The featured testimonial is the only one with a photo** — that's intentional. A photo creates a visual focal point that anchors the social-proof section. Adding photos to the three-up cards would dilute that anchor and create photo-asymmetry headaches if not every card has one.
+- Kristin's testimonial does relational work (caring, genuine, responsive); Catherine, Amanda, and Ruby do practical work (authority, competitive comparison, forms-product validation). The four together cover all the trust angles a hesitant visitor cares about.
+- Ruby Leonard's review is the **only Google review in the entire 142-review set that explicitly mentions purchasing the DIY adoption documents as a product**. It's the strongest single asset for forms-product social proof and should not be moved off the homepage without a replacement of equal or greater specificity.
+- Sarah Hall and Kevin Shafer testimonials are in reserve — see master doc Section 11.5.
+
+**Photo-release note for legal protection:**
+Confirm Kristin has consented to the use of her name and photo on the marketing homepage before publishing. Recommended: keep a written/email record of the consent. This is a low-risk testimonial use (her review and photo are already public on Google) but documenting the explicit marketing-use consent is good practice.
 
 ---
 
@@ -460,7 +479,7 @@ Each question is an H3 with a direct answer in the first sentence. This structur
 With a traditional attorney, a Nebraska stepparent adoption typically costs $3,000 to $10,000. With Adoption Forms Express, attorney-prepared forms start at $299, plus a county filing fee of roughly $60–$90 paid directly to the court.
 
 **Q: How long does a stepparent adoption take in Nebraska?**
-Most uncontested Nebraska stepparent adoptions finalize in 2 to 4 months from the date you file your petition with the county court, though timelines vary by county and case complexity.
+Most uncontested Nebraska stepparent adoptions finalize in 4 to 6 months from the date you file your petition with the county court, though timelines vary by county and case complexity.
 
 **Q: Can I do a stepparent adoption in Nebraska without a lawyer?**
 Yes. Nebraska law does not require you to retain an attorney to file or finalize a stepparent adoption. Many uncontested cases are completed pro se using attorney-prepared forms like the ones available through Adoption Forms Express.
@@ -680,7 +699,7 @@ Deploy these structured data blocks via JSON-LD in the page `<head>`:
   "@type": "AggregateRating",
   "itemReviewed": { "@type": "Service", "name": "Nebraska Stepparent Adoption Forms" },
   "ratingValue": "5.0",
-  "reviewCount": "118"
+  "reviewCount": "142"
 }
 ```
 
@@ -758,6 +777,14 @@ End every session by adding an entry here. Format: date — what changed — who
 |---|---|---|
 | 2026-04-28 | v1.0 — Initial homepage redesign spec drafted (full document) | Claude / Tyler |
 | 2026-04-28 | v1.1 — Added Executive Summary section near top covering biggest changes vs. current site, layered keyword strategy, and AI search optimization principles | Claude / Tyler |
+| 2026-04-28 | v2.0 — Built `homepage.html`: single self-contained HTML file, inline CSS using master design tokens, Fraunces + Manrope typography, JSON-LD schema (LegalService, AggregateRating, FAQPage), CSS-only animations on hero, vanilla JS FAQ accordion. Hero photo: 497A2248-scaled.jpg. Founder spotlight photo: 497A2015-scaled.jpg. WordPress-ready. | Claude / Tyler |
+| 2026-04-29 | v2.1 — Cross-doc consistency edits to align with DFY package changes: (1) timeline updated 2–4 months → 4–6 months in How It Works step 4 and FAQ Q2; (2) "Waiver of Notice" removed from Section 5.10 forms list; (3) attorney call line clarified as "scoped to questions about your forms" in Section 5.10 and both pricing cards. **Homepage HTML still needs matching edits — flagged for next build session.** | Claude / Tyler |
+| 2026-04-29 | v2.2 — Review count updated 118 → 142 across the doc and homepage HTML (4 places in HTML: schema markup `reviewCount`, hero credibility line, hero image badge, trust strip; 6 places in doc: executive summary, hero copy, trust strip, founder credibility, lead-in to reviews section, AggregateRating schema spec). **Note: review count is currently hardcoded — see new master open decision about live-feed integration.** | Claude / Tyler |
+| 2026-04-29 | v2.3 — Visible review count rounded to "140+" in 4 HTML spots and 5 visible doc spots (resolves master open decision #19, option B). Schema markup `reviewCount` retains exact 142 (Google schema requires precise numerics; not visitor-facing). | Claude / Tyler |
+| 2026-04-29 | v2.4 — Section 5.11 three-up testimonials swapped from Shawri/Kristin/Halewya to Catherine Day, Kevin Shafer, Sarah Hall. Homepage HTML updated to match. Featured testimonial (Amanda) unchanged. Each new card hits a different angle: Catherine (authority claim — "more knowledgeable than any other family law"), Kevin (post-purchase satisfaction + "would use again"), Sarah ("handled everything for us" — DFY product promise). Catherine's review is truncated; pull full text from Google before final HTML build. | Claude / Tyler |
+| 2026-04-29 | v2.5 — Sarah Hall swapped out for Ruby Leonard in three-up. Reason: Ruby's review is the only Google review in the entire 142-review set that explicitly mentions purchasing the DIY adoption documents as a product — strongest single asset for forms-product social proof. New trio: Catherine (authority), Kevin (satisfaction + use again), Ruby (forms-product validation). Sarah Hall's testimonial moved into reserve for future DIY checkout page. Notes section updated to flag Ruby's strategic uniqueness. | Claude / Tyler |
+| 2026-04-29 | v2.6 — Catherine Day full review text now in spec and HTML. Used a curated excerpt that includes the strongest line from her review ("she said she handled everything, and boy, she was not lying. In the end, all I had to do essentially, was pay and show up to the court") which is arguably the single most powerful customer-voice line on the entire homepage. Untruncated. | Claude / Tyler |
+| 2026-04-29 | v2.7 — Featured testimonial restructured: Kristin's testimonial now serves as the featured pull quote, paired with her circular photo (URL: `/wp-content/uploads/2026/04/Kristin.png`). Amanda's "$10K + 3 lawyers" testimonial moved into the three-up as card 2 (replacing Kevin Shafer). Kevin moves to testimonial reserve. New CSS class `.review-featured-photo` added to homepage HTML for circular photo styling (88px, white border, soft shadow). The featured testimonial is the only one with a photo by design — creates a single visual anchor for the social-proof section. Photo-release note added flagging the need to document Kristin's marketing-use consent. | Claude / Tyler |
 | | | |
 
 ---

@@ -60,7 +60,7 @@
   "@type": "AggregateRating",
   "itemReviewed": { "@type": "Service", "name": "Nebraska Stepparent Adoption Forms" },
   "ratingValue": "5.0",
-  "reviewCount": "118",
+  "reviewCount": "142",
   "bestRating": "5"
 }
 </script>
@@ -79,12 +79,12 @@
     {
       "@type": "Question",
       "name": "How long does a stepparent adoption take in Nebraska?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Most uncontested Nebraska stepparent adoptions finalize in 2 to 4 months from the date you file your petition with the county court, though timelines vary by county and case complexity." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Most uncontested Nebraska stepparent adoptions finalize in 4 to 6 months from the date you file your petition with the county court, though timelines vary by county and case complexity." }
     },
     {
       "@type": "Question",
       "name": "Can I do a stepparent adoption in Nebraska without a lawyer?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Nebraska law does not require you to retain an attorney to file or finalize a stepparent adoption. Many uncontested cases are completed pro se using attorney-prepared forms like the ones available through Adoption Forms Express." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Nebraska law does not require you to retain an attorney to file or finalize a stepparent adoption. But unlike many family-court matters, Nebraska adoption forms aren't available at the courthouse or at self-help desks — pro se families have nowhere to find them. That's the gap Adoption Forms Express was built to close: attorney-prepared Nebraska forms put within reach of qualifying families who want to file on their own." }
     },
     {
       "@type": "Question",
@@ -94,12 +94,7 @@
     {
       "@type": "Question",
       "name": "What if the other biological parent won't consent?",
-      "acceptedAnswer": { "@type": "Answer", "text": "If the absent biological parent has abandoned the child for at least 6 months prior to filing, Nebraska courts may waive the consent requirement under Neb. Rev. Stat. § 43-104. Abandonment must be proven to the court, and contested cases are generally outside the scope of DIY forms — we recommend consulting an adoption attorney such as Bundy Law LLC." }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the requirements to be a stepparent adopter in Nebraska?",
-      "acceptedAnswer": { "@type": "Answer", "text": "You must be at least 19 years old, at least 10 years older than the child, legally married to the child's biological parent, and the child must reside in your home for at least 6 months before finalization." }
+      "acceptedAnswer": { "@type": "Answer", "text": "This would be considered a contested case. Contested cases are generally outside the scope of DIY forms — we recommend consulting an adoption attorney such as Bundy Law LLC." }
     },
     {
       "@type": "Question",
@@ -119,7 +114,7 @@
     {
       "@type": "Question",
       "name": "Do I still need an attorney for the court hearing?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Most uncontested Nebraska stepparent adoption hearings are short and procedural. Your forms package includes a court hearing prep guide with the questions a judge is most likely to ask." }
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Most uncontested Nebraska stepparent adoption hearings are short and procedural. Your forms package includes a court hearing prep guide with the questions a judge is most likely to ask. Adoption Forms Express is a forms service — not a law firm — so if the judge requires you to have an attorney at the hearing, you can contact Bundy Law LLC, our affiliated full-service Nebraska adoption practice, to discuss your case." }
     }
   ]
 }
@@ -852,6 +847,22 @@ section { scroll-margin-top: 80px; }
   opacity: 0.25;
   line-height: 1;
 }
+.review-featured-photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(31, 58, 95, 0.18);
+  border: 4px solid white;
+  position: relative;
+  z-index: 1;
+}
+.review-featured-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .review-featured blockquote {
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.4vw, 1.75rem);
@@ -1022,6 +1033,23 @@ section { scroll-margin-top: 80px; }
 .final-cta .btn-secondary { color: white; border-color: rgba(255, 255, 255, 0.5); }
 .final-cta .btn-secondary:hover { background: white; color: var(--color-primary); }
 .final-cta-note { margin-top: 1.75rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); font-style: italic; }
+.final-cta-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+.final-cta-image {
+  width: 100%;
+  max-width: 760px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 16 / 9;
+  background: var(--color-cream-deep);
+}
+.final-cta-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.final-cta-copy { width: 100%; max-width: 640px; }
 
 /* ------------------------------------------------------------------
    Footer
@@ -1130,7 +1158,7 @@ section { scroll-margin-top: 80px; }
       <div class="hero-credibility">
         <span>200+ Adoptions Finalized</span>
         <span class="sep">·</span>
-        <span>118 Five-Star Reviews</span>
+        <span>140+ Five-Star Reviews</span>
         <span class="sep">·</span>
         <span>Nebraska-Specific Forms</span>
       </div>
@@ -1142,11 +1170,11 @@ section { scroll-margin-top: 80px; }
     </div>
     <div class="hero-image-wrap">
       <div class="hero-image">
-        <img src="https://adoptionformsexpress.com/wp-content/uploads/2023/11/recognition.jpg" alt="Nebraska stepparent with adopted child">
+        <img src="https://adoptionformsexpress.com/wp-content/uploads/2023/09/497A2248-scaled.jpg" alt="Lucrece H. Bundy, licensed Nebraska adoption attorney and founder of Adoption Forms Express">
       </div>
       <div class="hero-image-badge">
         <div class="stars">★★★★★</div>
-        <div class="label">5.0 Rating<small>118 verified reviews</small></div>
+        <div class="label">5.0 Rating<small>140+ verified reviews</small></div>
       </div>
     </div>
   </div>
@@ -1157,7 +1185,7 @@ section { scroll-margin-top: 80px; }
   <div class="container trust-strip-inner">
     <span class="stars">★★★★★ 5.0</span>
     <span class="sep"></span>
-    <span>118 Verified Reviews</span>
+    <span>140+ Verified Reviews</span>
     <span class="sep"></span>
     <span>Licensed Nebraska Attorney</span>
     <span class="sep"></span>
@@ -1243,7 +1271,7 @@ section { scroll-margin-top: 80px; }
     <div class="founder-grid">
       <div class="founder-image-wrap">
         <div class="founder-image">
-          <img src="https://adoptionformsexpress.com/wp-content/uploads/2023/09/497A2248-scaled.jpg" alt="Lucrece H. Bundy, Esq. — licensed Nebraska adoption attorney and founder of Adoption Forms Express">
+          <img src="https://adoptionformsexpress.com/wp-content/uploads/2026/04/IMG_20240604_213901_122-scaled.webp" alt="Lucrece H. Bundy, Esq. — licensed Nebraska adoption attorney and founder of Adoption Forms Express">
         </div>
       </div>
       <div class="founder-content">
@@ -1270,9 +1298,9 @@ section { scroll-margin-top: 80px; }
     <div class="qualify-checklist">
       <div class="qualify-item"><span class="qualify-check">✓</span>You are legally married to the child's biological parent</div>
       <div class="qualify-item"><span class="qualify-check">✓</span>The child has lived with you for at least 6 months</div>
-      <div class="qualify-item"><span class="qualify-check">✓</span>You are at least 19 years old and at least 10 years older than the child</div>
-      <div class="qualify-item"><span class="qualify-check">✓</span>You or the child reside in Nebraska</div>
-      <div class="qualify-item"><span class="qualify-check">✓</span>The other biological parent will consent — or has abandoned the child for at least 6 months</div>
+      <div class="qualify-item"><span class="qualify-check">✓</span>You are at least 19 years old</div>
+      <div class="qualify-item"><span class="qualify-check">✓</span>You reside in Nebraska with the child and his/her biological parent</div>
+      <div class="qualify-item"><span class="qualify-check">✓</span>The other biological parent will consent, is deceased, or their parental rights have been terminated</div>
       <div class="qualify-item"><span class="qualify-check">✓</span>Your case is uncontested</div>
     </div>
 
@@ -1309,7 +1337,7 @@ section { scroll-margin-top: 80px; }
       <div class="step">
         <span class="step-num">04</span>
         <h3>File and finalize</h3>
-        <p>Most uncontested Nebraska stepparent adoptions finalize within 2–4 months.</p>
+        <p>Most uncontested Nebraska stepparent adoptions finalize within 4–6 months.</p>
       </div>
     </div>
   </div>
@@ -1334,7 +1362,7 @@ section { scroll-margin-top: 80px; }
           <li>Step-by-step instructions for filling out and filing</li>
           <li>Court hearing prep guide + likely judge questions</li>
           <li>New birth certificate ordering instructions</li>
-          <li>One free 15-minute call with Lucrece Bundy, Esq.</li>
+          <li>One free 15-minute call with Lucrece Bundy, Esq. — scoped to questions about your forms</li>
         </ul>
         <a href="#" class="btn btn-secondary">Get DIY Forms — $299</a>
       </div>
@@ -1347,10 +1375,9 @@ section { scroll-margin-top: 80px; }
         <span class="price-includes-title">Everything in DIY, plus</span>
         <ul class="price-list">
           <li>Forms completed for you using your information</li>
-          <li>Two free 15-minute calls with Lucrece Bundy, Esq.</li>
+          <li>Two free 15-minute calls with Lucrece Bundy, Esq. — scoped to questions about your forms</li>
           <li>Priority 3-business-day turnaround</li>
           <li>Personalized case review</li>
-          <li>White-glove email support</li>
         </ul>
         <a href="#" class="btn btn-primary">Get Done-For-You — $499</a>
       </div>
@@ -1374,7 +1401,6 @@ section { scroll-margin-top: 80px; }
           <li>Petition for Adoption</li>
           <li>Consent forms (custodial + non-custodial parent, where applicable)</li>
           <li>Notice of Hearing</li>
-          <li>Waiver of Notice (where applicable)</li>
           <li>Decree of Adoption (proposed)</li>
           <li>Other Nebraska-required supporting documents based on your situation</li>
         </ul>
@@ -1386,8 +1412,7 @@ section { scroll-margin-top: 80px; }
           <li>Background check instructions</li>
           <li>Court hearing prep document with likely judge questions</li>
           <li>New birth certificate ordering walk-through</li>
-          <li>Direct attorney call(s) with Lucrece Bundy, Esq.</li>
-          <li>Email access for follow-up questions</li>
+          <li>Direct attorney call(s) with Lucrece Bundy, Esq. — scoped to questions about your forms</li>
         </ul>
       </div>
     </div>
@@ -1403,25 +1428,28 @@ section { scroll-margin-top: 80px; }
     </div>
 
     <div class="review-featured">
-      <blockquote>We had spent $10,000+ and gone through 3 different lawyers who promised they could get our stepparent adoption done but didn't. Lucrece moved quickly and had my stepparent adoption finalized in about 4 months.</blockquote>
-      <cite>— Amanda</cite>
+      <div class="review-featured-photo">
+        <img src="https://adoptionformsexpress.com/wp-content/uploads/2026/04/Kristin.png" alt="Kristin, stepparent adoption client of Adoption Forms Express">
+      </div>
+      <blockquote>We hired Lucrece to finalize our adoption, and while of course she did an amazing job with the legal side of things, what really sets her apart is her love for her clients. She is so caring, while maintaining professionalism, and was genuinely there for our family. She was highly responsive and answered all of our questions in a timely manner. We will absolutely use her again in future adoptions!</blockquote>
+      <cite>— Kristin</cite>
     </div>
 
     <div class="reviews-grid">
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>We chose to do a stepparent adoption. Ms. Bundy was the third attorney I had retained for this same purpose and is the only attorney who was able to get us to where we are today.</p>
-        <cite>— Shawri</cite>
+        <p>Lucrece did a phenomenal job with my stepparent adoption case. She was more knowledgeable than any other family law attorney we spoke with, and she has many adoption cases under her belt. From the adopting parent: "She said she handled everything, and boy, she was not lying. In the end, all I had to do essentially, was pay and show up to the court."</p>
+        <cite>— Catherine Day</cite>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>My husband and I recently worked with Lucrece for a stepparent adoption and Lucrece exceeded our already high expectations. She is extremely knowledgeable and made the process as quick and easy on us as possible.</p>
-        <cite>— Kristin</cite>
+        <p>We had spent $10,000+ and gone through 3 different lawyers who promised they could get our stepparent adoption done but didn't. Lucrece moved quickly and had my stepparent adoption finalized in about 4 months.</p>
+        <cite>— Amanda</cite>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>I hired Bundy Law because it was the only firm I found that could do step-parent international adoption the right way. She walked me through the process in detail and made me feel that I was in good hands.</p>
-        <cite>— Halewya</cite>
+        <p>We ended up purchasing the DIY Adoption documents for step-parent adoption and it was so easy to do and understand. When I had questions she would answer my emails promptly. She is very professional and very helpful.</p>
+        <cite>— Ruby Leonard</cite>
       </div>
     </div>
   </div>
@@ -1442,11 +1470,11 @@ section { scroll-margin-top: 80px; }
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">How long does a stepparent adoption take in Nebraska?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Most uncontested Nebraska stepparent adoptions finalize in 2 to 4 months from the date you file your petition with the county court, though timelines vary by county and case complexity.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Most uncontested Nebraska stepparent adoptions finalize in 4 to 6 months from the date you file your petition with the county court, though timelines vary by county and case complexity.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">Can I do a stepparent adoption in Nebraska without a lawyer?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. Nebraska law does not require you to retain an attorney to file or finalize a stepparent adoption. Many uncontested cases are completed pro se using attorney-prepared forms like the ones available through Adoption Forms Express.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Nebraska law does not require you to retain an attorney to file or finalize a stepparent adoption. But unlike many family-court matters, Nebraska adoption forms aren't available at the courthouse or at self-help desks — pro se families have nowhere to find them. That's the gap Adoption Forms Express was built to close: attorney-prepared Nebraska forms put within reach of qualifying families who want to file on their own.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What forms do I need for a Nebraska stepparent adoption?<span class="faq-icon">+</span></button>
@@ -1454,11 +1482,7 @@ section { scroll-margin-top: 80px; }
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What if the other biological parent won't consent?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">If the absent biological parent has abandoned the child for at least 6 months prior to filing, Nebraska courts may waive the consent requirement under Neb. Rev. Stat. § 43-104. Abandonment must be proven to the court, and contested cases are generally outside the scope of DIY forms — we recommend consulting an adoption attorney such as Bundy Law LLC.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What are the requirements to be a stepparent adopter in Nebraska?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">You must be at least 19 years old, at least 10 years older than the child, legally married to the child's biological parent, and the child must reside in your home for at least 6 months before finalization.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">This would be considered a contested case. Contested cases are generally outside the scope of DIY forms — we recommend consulting an adoption attorney such as Bundy Law LLC.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">Are these forms accepted in Nebraska county courts?<span class="faq-icon">+</span></button>
@@ -1474,7 +1498,7 @@ section { scroll-margin-top: 80px; }
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">Do I still need an attorney for the court hearing?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">No. Most uncontested Nebraska stepparent adoption hearings are short and procedural. Your forms package includes a court hearing prep guide with the questions a judge is most likely to ask.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">No. Most uncontested Nebraska stepparent adoption hearings are short and procedural. Your forms package includes a court hearing prep guide with the questions a judge is most likely to ask. Adoption Forms Express is a forms service — not a law firm — so if the judge requires you to have an attorney at the hearing, you can contact Bundy Law LLC, our affiliated full-service Nebraska adoption practice, to discuss your case.</div></div>
       </div>
     </div>
   </div>
@@ -1508,14 +1532,19 @@ section { scroll-margin-top: 80px; }
 
 <!-- ============== FINAL CTA ============== -->
 <section class="section final-cta">
-  <div class="container">
-    <h2>Ready to make it <em>official?</em></h2>
-    <p>Take the 60-second quiz to see if your Nebraska stepparent adoption qualifies for our forms.</p>
-    <div class="hero-ctas">
-      <a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener" class="btn btn-primary">Take the Qualifier Quiz</a>
-      <a href="https://adoptionformsexpress.com/nebraska-adoption-forms-sneak-preview/" class="btn btn-secondary">Preview the Forms</a>
+  <div class="container final-cta-grid">
+    <div class="final-cta-image">
+      <img src="https://adoptionformsexpress.com/wp-content/uploads/2026/04/Godlewski.webp" alt="The Godlewski family after a finalized Nebraska stepparent adoption">
     </div>
-    <p class="final-cta-note">Don't qualify? We'll route you to the right next step — including our affiliated law practice for contested cases.</p>
+    <div class="final-cta-copy">
+      <h2>Ready to make it <em>official?</em></h2>
+      <p>Take the 60-second quiz to see if your Nebraska stepparent adoption qualifies for our forms.</p>
+      <div class="hero-ctas">
+        <a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener" class="btn btn-primary">Take the Qualifier Quiz</a>
+        <a href="https://adoptionformsexpress.com/nebraska-adoption-forms-sneak-preview/" class="btn btn-secondary">Preview the Forms</a>
+      </div>
+      <p class="final-cta-note">Don't qualify? We'll route you to the right next step — including our affiliated law practice for contested cases.</p>
+    </div>
   </div>
 </section>
 
