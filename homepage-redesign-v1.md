@@ -568,10 +568,10 @@ Don't qualify? We'll route you to the right next step — including our affiliat
 **Column 1 — Adoption Forms Express logo + tagline + social icons** (Instagram, Facebook, YouTube)
 
 **Column 2 — Services:**
-- DIY Adoption Forms
-- Pre-Filled Adoption Forms
-- Free Nebraska Adoption Guide
-- Take the Qualifier Quiz
+- Qualifier Quiz *(linked)*
+- Free Nebraska Adoption Guide *(linked to `/starter-guide` once built)*
+- DIY Adoption Forms *(no link — visitors must qualify via the quiz first to reach the product)*
+- Done-For-You Forms *(no link — visitors must qualify via the quiz first to reach the product)*
 
 **Column 3 — About:**
 - About Lucrece
