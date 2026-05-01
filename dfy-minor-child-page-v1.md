@@ -2,12 +2,12 @@
 
 **Document type:** Page-level working document
 **Owner:** Lucrece H. Bundy / Tyler
-**URL:** `/qualified/done-for-you-minor-child/`
+**URL:** `/buy-doneforyou-minor/`
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-adult-page-v1.md` (adult-adoption equivalent)
-**Version:** 2.2
-**Last updated:** April 29, 2026
-**Status:** Built — HTML page written (`dfy-minor-child.html`), ready for WordPress deploy
+**Version:** 2.3
+**Last updated:** April 30, 2026
+**Status:** Built — HTML page written (`dfy-minor-child.html`); URL aligned to live address; ThriveCart embed snippet captured, ready for WordPress deploy
 
 ---
 
@@ -135,8 +135,13 @@ Based on your answers, your Nebraska stepparent adoption is exactly the kind of 
 >
 > *That makes you a perfect fit for the $499 Done-For-You package.*
 
-**Primary CTA button:**
-Get My Done-For-You Forms — $499
+**Primary CTA — ThriveCart embed:**
+
+This is the first of two ThriveCart embed locations on the page (hero + final CTA). The button rendered by ThriveCart triggers the embedded checkout experience — customer stays on the page through the entire transaction.
+
+The production embed snippet is captured in Section 8 (ThriveCart Integration). Paste it here at HTML build time.
+
+The button styling should match the homepage's primary CTA (warm coral, rounded, prominent). Check ThriveCart's button-styling options to use site colors; if ThriveCart's styling controls are limited, wrap their default button in a styled container.
 
 **Below the CTA, small text:**
 *Secure checkout · Most orders delivered within 3 business days*
@@ -146,6 +151,7 @@ Get My Done-For-You Forms — $499
 - The qualification recap is critical: it bridges the quiz outcome and the page content. The visitor should feel "yes, this page is for me, specifically"
 - The CTA appears here above the fold so a visitor who's already decided can buy immediately without scrolling. Most won't — but the option being there reduces anxiety
 - "Secure checkout" + the turnaround line are micro-trust signals at the moment of decision
+- **ThriveCart integration:** the embed handles the entire transaction — credit card collection, processing, confirmation, and customer email — without leaving the page. The page just reserves visual real estate for ThriveCart's button and (typically) a popup overlay.
 
 ---
 
@@ -236,9 +242,12 @@ Licensed Nebraska Adoption Attorney
 
 **Three review cards (Google-verified, all stepparent adoption clients):**
 
-> "I chose Bundy Law to complete a stepparent adoption. I was truly amazed at how pain-free Lucrece made the process…"
+> "I chose Bundy Law to complete a stepparent adoption. I was truly amazed at how pain-free Lucrece made the process. In the past, with custody orders it has been so much work, but Lucrece handled everything. I felt like I could breathe for the first time in nearly a decade. From the first phone call we had, I knew she was the right choice. Before I even hired her she gave me great advice, which made me feel that she truly cares about the adoption process and this isn't just another case to her. I definitely made the right choice in my representation. Thanks again Lucrece!"
 > — Jennifer Jenkins (Apr 2025)
-> *[Note: review is truncated in current Google paste. Pull full text from Google Business Profile before final publish.]*
+>
+> **Curated excerpt for HTML three-up card** (locked v2.3 — shorter version chosen for visual balance with Sarah's and Robyn's cards; drops the front and back framing while preserving the strongest emotional beats including "I could breathe for the first time in nearly a decade" and the "she truly cares" line):
+>
+> > "I was truly amazed at how pain-free Lucrece made the process. In the past, with custody orders it has been so much work, but Lucrece handled everything. I felt like I could breathe for the first time in nearly a decade. Before I even hired her she gave me great advice, which made me feel that she truly cares about the adoption process and this isn't just another case to her."
 
 > "The adoption process was quick and effortless. Mrs. Bundy handled everything for us. We couldn't be more happy!"
 > — Sarah Hall (Sep 2022)
@@ -253,7 +262,6 @@ Licensed Nebraska Adoption Attorney
 - Sarah Hall's "handled everything for us" is the single most powerful line for a Done-For-You product page — it's the visitor's expectation in their own words.
 - Robyn Wallace's "detailed instructions on how to fill out the forms and updates and reminders" is a uniquely valuable line: it validates the procedural rails of the product (instructions, reminders, updates), not just the outcome. This is the part anxious buyers want to hear most.
 - Each testimonial does a different job: Jennifer (recent + emotional/anxiety reduction), Sarah (DFY product promise — "handled everything"), Robyn (procedural specifics — "instructions, reminders, updates").
-- Pull full text for Jennifer Jenkins from Google before HTML build.
 
 ---
 
@@ -299,8 +307,11 @@ Single, large, unmissable.
 **Below H2:**
 Your Done-For-You package, completed by a licensed Nebraska adoption attorney, delivered in 3 business days.
 
-**Primary CTA button (large, centered):**
-Get My Done-For-You Forms — $499
+**Primary CTA — ThriveCart embed (second location):**
+
+Same ThriveCart embed snippet as the hero CTA. Paste the captured snippet from Section 8 here as well, styled to be large and centered.
+
+**Important:** ThriveCart sometimes requires unique IDs or different handling when the same product embed appears more than once on the same page. The captured snippet uses `id="tc-adoptionssimplified-10-TOD8DE"` on the script tag — when reused twice, both instances share the same ID, which is invalid HTML and may cause the second embed to misbehave. See Section 8 for fix options if it does.
 
 **Below the CTA, small reassurance line:**
 *Secure checkout · 7-day refund if your case isn't a fit · Questions? [Email us]*
@@ -351,7 +362,7 @@ The page should feel **calmer and more focused** than the homepage. Specifically
 **`<head>` requirements:**
 ```html
 <meta name="robots" content="noindex,nofollow">
-<link rel="canonical" href="https://adoptionformsexpress.com/qualified/done-for-you-minor-child/">
+<link rel="canonical" href="https://adoptionformsexpress.com/buy-doneforyou-minor/">
 ```
 
 **Sitemap:** Not included in `sitemap.xml`.
@@ -408,11 +419,49 @@ Minimal — we don't want this page generating rich results in search since it s
 - Page is built as a single self-contained HTML file in the same style as `homepage.html`
 - Same design tokens, typography, button styles, FAQ accordion logic
 - File name: `dfy-minor-child.html`
-- Deployed to URL: `/qualified/done-for-you-minor-child/`
-- WordPress: created as a new page with a "Custom HTML" block or as a custom page template
+- Deployed to URL: `/buy-doneforyou-minor/`
+- WordPress: the page already exists on the live WordPress site at this URL with the old design; the new HTML build replaces its content at the same URL
 - WordPress page settings: set to "noindex" via your SEO plugin (Yoast, Rank Math, etc.) — belt-and-suspenders alongside the meta tag
 - Removed from primary nav menu
 - 301 redirect: old `/customized-adoption-forms/` page redirects to `/` (homepage) so the existing inbound SEO equity flows somewhere useful instead of evaporating
+
+### ThriveCart Integration
+
+**Payment processor:** ThriveCart (embedded checkout — customer stays on the page through the entire transaction).
+
+**Captured embed snippet** (resolved 2026-04-30 — production snippet for the $499 DFY Minor-Child product, provided by Tyler from ThriveCart admin):
+
+```html
+<div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="10" data-thrivecart-embeddable="tc-adoptionssimplified-10-TOD8DE"></div>
+<script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-10-TOD8DE"></script>
+```
+
+Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssimplified-10-TOD8DE`. Paste at both CTA locations (Section 4.2 hero + Section 4.7 final CTA) during HTML build.
+
+**Two embed locations on the page:**
+1. Hero CTA (Section 4.2) — one ThriveCart embed
+2. Final CTA (Section 4.7) — second ThriveCart embed
+
+**Implementation details for the HTML build:**
+- Paste the snippet above at both CTA locations
+- Style the surrounding container at both locations to match the homepage's primary CTA visual treatment (warm coral, generous padding, prominent placement)
+- ThriveCart's button styling can usually be customized in the ThriveCart admin — match brand colors there if possible, otherwise wrap their button in a styled container
+
+**Known wrinkles to watch for:**
+- **Duplicate-`id` consideration:** the snippet's `<script>` tag has `id="tc-adoptionssimplified-10-TOD8DE"`. Pasting it twice creates two `<script>` tags with the same `id`, which is invalid HTML and may cause the second embed to misbehave. If the second embed fails to render on test: (a) ask ThriveCart for a second-instance variant, or (b) manually unique-ify the `id` on the second `<script>` AND the matching `data-thrivecart-embeddable` attribute on its `<div>` (e.g., suffix both with `-2`)
+- ThriveCart popups sometimes interact poorly with site headers/footers that have `position: sticky` — test the popup overlay on mobile after deployment
+- The embedded ThriveCart cart may load slightly slower than the rest of the page; consider a "Loading checkout…" skeleton state during JS load
+
+**What ThriveCart handles automatically (no extra work for the page):**
+- Credit card collection and processing
+- Order confirmation page (set up in ThriveCart admin to redirect to the post-purchase intake form)
+- Customer email receipt
+- Refund handling
+
+**What still needs to be set up separately (post-deployment, not in this build):**
+- ThriveCart "thank you" / success URL → redirect to a post-purchase intake form (Typeform, JotForm, or similar) to collect the customer's case data
+- ThriveCart webhook to email the team when an order comes in
+- ThriveCart refund policy aligned with the "7-day refund if case isn't a fit" copy on the page
 
 ---
 
@@ -427,6 +476,9 @@ Minimal — we don't want this page generating rich results in search since it s
 | 5 | Quiz routing logic | Open | The Typeform must be configured so that qualifying minor-child cases route here, qualifying adult cases route to the adult page, and disqualified visitors route to a disqualified-routing page. Need to verify quiz logic supports this. |
 | 6 | County-specific filing-fee accuracy | Open | $60–$90 range — Lucrece to confirm current Nebraska filing-fee range. |
 | 7 | Background check fee disclosure | Open | Current FAQ mentions "background-check fees if your county requires them" — confirm which counties require this and what the fee range is. |
+| 8 | ThriveCart embed snippet | ✅ Resolved 2026-04-30 | Production snippet captured verbatim in Section 8. Account: `adoptionssimplified` · Product `10` · Embed token `tc-adoptionssimplified-10-TOD8DE`. To be pasted at both CTA locations during HTML build. |
+| 9 | ThriveCart success URL → intake form wiring | Open | After successful purchase, ThriveCart should redirect customer to a post-purchase intake form. Confirm the intake form tool (Typeform/JotForm/etc.) and configure the success URL in ThriveCart admin. Tied to Open Question #4. |
+| 10 | ThriveCart button styling | Open | Decide whether to (a) configure ThriveCart's native button styling in their admin to match site colors, or (b) wrap their button in a styled site container. Visual decision affecting hero + final CTA appearance. |
 
 ---
 
@@ -441,6 +493,7 @@ Minimal — we don't want this page generating rich results in search since it s
 | 2026-04-29 | v2.0 — Built `dfy-minor-child.html`: single self-contained HTML file matching `homepage.html`'s design language (Fraunces + Manrope, same color palette, same FAQ accordion mechanic). Includes: stripped checkout-style nav, qualification-confirmation hero with success-green eyebrow + qualification recap callout, "What's Included" two-column section, "What Happens Next" 4-step timeline, Lucrece signature block (small circular photo) + 3 forms-product-specific testimonials, 5-question pre-purchase FAQ (no FAQPage schema by design), navy final-CTA band, escape hatch for contested-case routing. Schema: Product only (`noindex,nofollow`). Buy buttons placeholder-linked to `#` with TODO comments for Stripe URL. | Claude / Tyler |
 | 2026-04-29 | v2.1 — Content edits made during build review, propagated to both spec doc and HTML. Section 4.3 (What's Included): "Notice of Hearing" → "Notice of Adoption" (form-name correction); "Background check authorizations" moved from Forms column to Guidance column with new framing — "Background check instructions — you complete the checks yourself; we provide step-by-step guidance for what your county requires"; "Consent forms — custodial parent, plus non-custodial where applicable" simplified to just "Consent forms". Section 4.4 (What Happens Next): H2 "From order to filed forms in 3 business days" → "From order to inbox in 3 business days" (the 3-day window is delivery, not filing — visitors won't necessarily file the day they receive forms); step 2 "A trained paralegal completes your forms" → "Our team completes your forms"; step 3 "You'll get a PDF package with…" rewritten to "Your package will include…" (we deliver via Google Drive link in practice, but the page no longer specifies delivery format). | Claude / Tyler |
 | 2026-04-29 | v2.2 — Form Sneak Peek removed across the project; lead-magnet freebie replaces it. dfy-minor-child.html footer: "Form Sneak Peek" link → "Free Nebraska Adoption Guide" (stubbed `#` with TODO for the future `/starter-guide` URL). No on-page-content changes — DFY checkout page deliberately stays focused on purchase, so the freebie only appears in the footer (not in the body, hero, or final CTA). Spec doc Section 4.9 still says "Same footer as homepage, with the standard UPL disclaimer. No changes." — that statement remains accurate; the homepage footer just gained a different Services link. | Claude / Tyler |
+| 2026-04-30 | v2.3 — Three layered changes ported in one update. (1) **URL alignment:** confirmed the live URL is `/buy-doneforyou-minor/` (not the placeholder `/qualified/done-for-you-minor-child/` we'd been using); updated header URL line, Section 6 canonical, Section 8 deployment URL. The page already exists on the live WordPress site at this URL; the new HTML build replaces its content. (2) **ThriveCart Integration:** Section 4.2 (hero CTA) and 4.7 (final CTA) updated to use ThriveCart embed instead of standard button. Section 8 gains new "ThriveCart Integration" subsection with the production embed snippet captured verbatim (account `adoptionssimplified`, product `10`, embed token `tc-adoptionssimplified-10-TOD8DE`); duplicate-`id` test consideration documented; what ThriveCart handles automatically vs. what still needs separate setup also captured. Section 9 gains Open Questions #8 (✅ resolved with snippet), #9 (success URL wiring, open), #10 (button styling decision, open). (3) **Jennifer Jenkins testimonial:** Section 4.5 full review text captured verbatim; curated excerpt locked for the HTML three-up card (visual balance with Sarah's and Robyn's cards — drops front/back framing, preserves the strongest emotional beats including "I could breathe for the first time in nearly a decade" and "she truly cares about the adoption process"). | Claude / Tyler |
 | | | |
 
 ---
