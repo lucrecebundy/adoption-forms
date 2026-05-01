@@ -1,19 +1,21 @@
-# Done-For-You Adult Stepparent Adoption — Post-Qualification Checkout Page
+# Done-For-You Adult Stepparent Adoption — Post-Qualification Sales Page
 
 **Document type:** Page-level working document
 **Owner:** Lucrece H. Bundy / Tyler
-**URL:** `/qualified/done-for-you-adult/`
+**URLs:** `/dfy-adult-sales-page/` (sales page — `dfy-adult.html`); `/dfy-adult-checkout-page/` (transactional checkout page — not yet built). The two pages will be sibling top-level pages in WordPress, mirroring the minor-child architecture.
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-minor-child-page-v1.md` (minor-child equivalent)
-**Version:** 1.5
-**Last updated:** April 29, 2026
-**Status:** Draft — ready for HTML build (mirrors locked minor-child structure)
+**Version:** 1.10
+**Last updated:** May 1, 2026
+**Status:** Built — `dfy-adult.html` (post-quiz sales page) and `dfy-adult-checkout.html` (transactional checkout housing the ThriveCart embed for product 8) both on disk, ready for WordPress deploy
 
 ---
 
 ## How to Use This Document
 
-This is the page-level working doc for the **post-qualification checkout page** for the Done-For-You product when the qualifying case involves an **adult stepchild** (19+). Inherits all site-wide standards from the master doc (`website-redesign-master.md`).
+This is the page-level working doc for the **post-qualification sales page** for the Done-For-You product when the qualifying case involves an **adult stepchild** (19+). Inherits all site-wide standards from the master doc (`website-redesign-master.md`).
+
+**Two-page architecture (mirroring minor-child):** this is the SALES page (`/dfy-adult-sales-page/`) — it does the convincing. The CHECKOUT page (`/dfy-adult-checkout-page/`) is a separate sibling top-level page that does the transaction with an embedded ThriveCart. The checkout page does not yet exist; both CTA buttons on this sales page link to it. The full funnel is: Homepage → Qualifier Quiz → THIS sales page → `/dfy-adult-checkout-page/` → ThriveCart processes payment.
 
 This is a sister doc to `dfy-minor-child-page-v1.md`. The two pages share structure exactly; the audience-specific content differs.
 
@@ -25,7 +27,7 @@ If you change the structure of this page, change it on the minor-child page too.
 
 ### What this page IS
 
-A **post-qualification checkout page** for adult stepparent adoption. The visitor:
+A **post-qualification sales page** for adult stepparent adoption. The visitor:
 
 1. Found the site
 2. Took the qualifier quiz
@@ -34,13 +36,14 @@ A **post-qualification checkout page** for adult stepparent adoption. The visito
 5. Chose the Done-For-You option
 6. Was routed here by quiz logic
 
-The page exists to make them feel **confident, informed, and ready** to pay $499 right now.
+The page exists to make them feel **confident, informed, and ready** to click through to the checkout page and complete the $499 purchase.
 
 ### What this page IS NOT
 
 - **Not an SEO page.** `<meta name="robots" content="noindex,nofollow">`. Not in the sitemap.
 - **Not a marketing page.** No selling, no comparison, no upsell. The visitor is already sold.
-- **Not a discovery page.** Every link off this page is the purchase button, the support escape hatch, or footer-standard.
+- **Not a discovery page.** Every link off this page is the purchase button (which routes to the checkout page), the support escape hatch, or footer-standard.
+- **Not the checkout page.** ThriveCart embeds do NOT live on this page — they live on `/dfy-adult-checkout-page/` (a separate sibling page). The two CTA buttons on this page link to that checkout page.
 - **Not the SEO pillar.** A future, public-facing `/adult-stepparent-adoption-nebraska/` page will do the SEO work. That page funnels TO the qualifier quiz. This page is what's BEHIND the qualifier quiz.
 
 ### Why adult stepparent adoption is different (and matters strategically)
@@ -49,7 +52,7 @@ Adult stepparent adoption is a **largely overlooked product category in Nebraska
 
 - Adopting an adult stepchild they helped raise (very common — the stepchild grew up, the family wants to make it official before a parent passes, or for inheritance/recognition purposes)
 - In an emotionally loaded moment — these adoptions often happen around weddings, graduations, the birth of grandchildren, or the death of a biological parent
-- Surprised that the process is more straightforward than minor-child adoption (no consent of biological parents required, no home study, often a single court hearing)
+- Surprised by how procedurally light adult adoption is on the front end — no home study, less documentation than minor-child cases — even though the courthouse timeline is similar (4–6 months)
 - Looking for someone who actually understands adult adoption — most Nebraska attorneys handle it once a year if at all
 
 This is a real strategic moat. Build the page accordingly.
@@ -146,7 +149,9 @@ Based on your answers, your Nebraska adult stepparent adoption is exactly the ki
 > *That makes you a perfect fit for the $499 Done-For-You package.*
 
 **Primary CTA button:**
-Get My Done-For-You Forms — $499
+Continue to Checkout — $499
+
+*(button links to `/dfy-adult-checkout-page/`)*
 
 **Below the CTA, small text:**
 *Secure checkout · Most orders delivered within 3 business days*
@@ -155,6 +160,7 @@ Get My Done-For-You Forms — $499
 - Adult adoption qualification is simpler than minor-child (no biological-parent-consent requirement, no 6-month residency requirement). The recap reflects this.
 - "Your stepchild consents" is the central legal pillar of adult stepparent adoption — both parties must consent in writing
 - The qualification recap is doing the same emotional work as on the minor-child page: bridging the quiz outcome to the page content
+- The CTA does NOT load ThriveCart on this page — clicking it routes the visitor to `/dfy-adult-checkout-page/`, where the ThriveCart embed lives
 
 ---
 
@@ -184,7 +190,7 @@ Get My Done-For-You Forms — $499
 *Court filing fees (~$60–$90 depending on county) and certified copy fees are paid directly to your local court and not included.*
 
 **Notes:**
-- The adult-adoption package list mirrors the minor-child list exactly — same items, same wording. Internal context: a Nebraska adult-adoption case requires consent from both biological parents plus the adult adoptee themselves. Background check requirements are the same as minor-child cases — each adult party completes their own, with step-by-step guidance included.
+- The adult-adoption package list mirrors the minor-child list exactly — same items, same wording. Internal context: a Nebraska adult-adoption stepparent case requires written consent from your spouse (the adult adoptee's biological parent) and the adult adoptee themselves. The customer-facing list says generic "Consent forms," which fits both adult and minor-child cases without surfacing the underlying consent-party difference. Background check requirements are the same as minor-child cases — each adult party completes their own, with step-by-step guidance included.
 - "Adult adoption experience" specifically called out in the calls description because it's the differentiator — most attorneys don't do many of these
 - Note for Lucrece: confirm whether the adult adoptee's name change is automatic or requires a separate filing in Nebraska. Update copy accordingly.
 
@@ -208,16 +214,15 @@ Our team completes your forms, and Lucrece personally reviews every package. No 
 Your package will include every form filled out and ready to file, your county-specific filing checklist, your court hearing prep guide, and the new birth certificate ordering instructions.
 
 **Step 4 — You file with your county court**
-Take your forms to your county court clerk. Pay the filing fee (~$60–$90). Get your hearing date. Adult adoptions in Nebraska typically finalize in **6–10 weeks** from filing.
+Take your forms to your county court clerk. Pay the filing fee (~$60–$90). Get your hearing date. Most uncontested Nebraska adult stepparent adoptions finalize **4–6 months** after filing.
 
 **Below the steps:**
 *Need to finalize before a specific date — a wedding, a holiday, a family reunion? Let us know in the intake form and we'll help you plan the timing.*
 
 **Notes:**
 - The 10-minute intake estimate (vs. 15 on the minor-child page) is real and accurate — adult adoption requires less documentation
-- 6–10 weeks for adult adoption (vs. 2–4 months for minor-child) is faster because there's no home study, no biological-parent notification waiting period, and a simpler hearing
+- 4–6 months for adult adoption matches the minor-child timeline. The advantage of adult cases is procedural (less documentation up front, no home study) rather than calendar speed — court schedules and county-specific delays drive the total timeline either way.
 - The "specific date" line at the bottom is THE most important addition for this audience — they often have a real-world deadline. Acknowledging it builds trust and signals competence.
-- Confirm with Lucrece: 6–10 weeks Nebraska adult-adoption timeline.
 
 ---
 
@@ -265,13 +270,13 @@ Licensed Nebraska Adoption Attorney
 **Accordion FAQ (5 questions):**
 
 **Q: Do biological parents need to consent to an adult adoption in Nebraska?**
-No. In Nebraska, adult adoption (where the adoptee is 19 or older) does not require consent from the biological parents. The only consent required is from the adult adoptee themselves and from your spouse. This is one of the main reasons adult adoption is simpler than minor-child adoption.
+Yes. In a Nebraska adult stepparent adoption, written consent is required from your spouse — the adult adoptee's biological parent — and from the adult adoptee themselves. Both consents are filed with the petition.
 
 **Q: Will my adult stepchild's name change automatically?**
 Your adult stepchild can choose to take your last name as part of the adoption decree, but it isn't automatic — it must be requested in the petition. Your forms package will ask you whether a name change is desired and prepare the petition accordingly.
 
 **Q: How long does the process take?**
-Most uncontested Nebraska adult stepparent adoptions finalize in 6 to 10 weeks from filing — faster than minor-child adoption because there's no home study, no biological-parent notification period, and the hearing is typically shorter.
+Most uncontested Nebraska adult stepparent adoptions finalize in 4 to 6 months from filing. Timelines vary by county and case complexity.
 
 **Q: What if my situation is unusual (e.g., my stepchild lives out of state)?**
 Adult adoptions can usually proceed even when the adoptee lives in another state, as long as one of you (or your spouse) is a Nebraska resident. If your situation has any wrinkles, email us before purchasing — we'll let you know whether the Done-For-You package is the right fit.
@@ -281,7 +286,7 @@ The $499 covers your completed forms package, the two attorney calls, and the fi
 
 **Notes:**
 - These FAQs are different from the minor-child page because the legal mechanics of adult adoption are genuinely different. Don't try to copy-paste between the pages.
-- The biological-parent-consent question goes first because it's the single most common confusion point — most people assume adult adoption works like minor adoption
+- The biological-parent-consent question goes first because it's the single most common confusion point — visitors often assume adult adoption requires no biological-parent consent at all, when in fact the spouse (the adoptee's biological parent) must consent in writing alongside the adult adoptee
 - The name-change question is the second-most-asked thing in adult adoption — everyone wonders about it, few attorneys explain it clearly
 - The out-of-state question matters because adult-adoption visitors are often dealing with a stepchild who has moved out of Nebraska
 
@@ -295,7 +300,9 @@ The $499 covers your completed forms package, the two attorney calls, and the fi
 Your Done-For-You adult adoption package, completed by a licensed Nebraska adoption attorney, delivered in 3 business days.
 
 **Primary CTA button:**
-Get My Done-For-You Forms — $499
+Continue to Checkout — $499
+
+*(button links to `/dfy-adult-checkout-page/`)*
 
 **Below the CTA, small reassurance line:**
 *Secure checkout · 7-day refund if your case isn't a fit · Questions? [Email us]*
@@ -303,6 +310,7 @@ Get My Done-For-You Forms — $499
 **Notes:**
 - "Make it official" intentionally echoes the homepage hero language — same emotional anchor
 - This is the only CTA below the fold
+- Same `/dfy-adult-checkout-page/` destination as the hero CTA — ThriveCart loads on the checkout page, not here
 
 ---
 
@@ -342,7 +350,7 @@ The page should feel **calm, dignified, slightly more refined** than the minor-c
 
 ```html
 <meta name="robots" content="noindex,nofollow">
-<link rel="canonical" href="https://adoptionformsexpress.com/qualified/done-for-you-adult/">
+<link rel="canonical" href="https://adoptionformsexpress.com/dfy-adult-sales-page/">
 ```
 
 **Sitemap:** Not included.
@@ -389,13 +397,14 @@ No `FAQPage` schema. Page is gated; rich results aren't desired.
 
 ## 8. Technical Implementation Notes
 
-- Single self-contained HTML file in the same style as `homepage.html` and the minor-child page
-- File name: `dfy-adult.html`
-- URL: `/qualified/done-for-you-adult/`
-- WordPress: created as a new page with a "Custom HTML" block or custom page template
-- Set to "noindex" in your SEO plugin
+- Two self-contained HTML files in the same style as `homepage.html` and the minor-child funnel
+- Sales page file: `dfy-adult.html` — URL: `/dfy-adult-sales-page/`
+- Checkout page file: `dfy-adult-checkout.html` — URL: `/dfy-adult-checkout-page/` — houses the ThriveCart embed (account `adoptionssimplified`, product `8`, embed token `tc-adoptionssimplified-8-0FGCA9`)
+- WordPress: each is a separate top-level page using a "Custom HTML" block or custom page template; the two are sibling pages, not parent/child
+- Set to "noindex" in your SEO plugin (both pages)
 - Removed from primary nav menu
-- Quiz routing: Typeform must route adult-stepchild qualifying cases to this URL
+- Quiz routing: Typeform must route adult-stepchild qualifying cases to `/dfy-adult-sales-page/`
+- ThriveCart loads only on `/dfy-adult-checkout-page/` — no duplicate-instance concern
 
 ---
 
@@ -404,7 +413,7 @@ No `FAQPage` schema. Page is gated; rich results aren't desired.
 | # | Question | Status | Notes |
 |---|---|---|---|
 | 1 | Collect 3 adult-adoption-specific testimonials | ✅ Resolved 2026-04-29 | Locked: Catrice Jackson (full text, explicitly mentions adult adoption + 30 year old son), Gary Boettcher (full text), Patty Bales (full text). All three full Google-verified text. |
-| 2 | Confirm 6–10 week Nebraska adult-adoption timeline | Open | Lucrece to confirm — this number is on the page and creates expectation. |
+| 2 | Confirm Nebraska adult-adoption timeline | ✅ Resolved 2026-05-01 | Tyler confirmed: uncontested adult stepparent adoptions finalize 4–6 months after filing — same as minor-child cases. The earlier 6–10 week claim (and the "faster than minor-child" framing that went with it) is replaced everywhere on the page. |
 | 3 | Adult-adoption forms list accuracy | Open | Lucrece to confirm exact list. Specifically: does Nebraska require the spouse's consent in writing? |
 | 4 | Adult name change mechanism | Open | Confirm whether name change is automatic or requires separate request in petition. Update FAQ and copy accordingly. |
 | 5 | Out-of-state adoptee residency rule | Open | Lucrece to confirm Nebraska rule on adult adoption when adoptee resides out of state. |
@@ -422,6 +431,11 @@ No `FAQPage` schema. Page is gated; rich results aren't desired.
 | 2026-04-29 | v1.3 — Gary Boettcher full review text added. Notes and Open Question #1 updated. Bales remains truncated. | Claude / Tyler |
 | 2026-04-29 | v1.4 — Patty Bales full review text added. All three adult-adoption testimonials are now full Google-verified text. Page is fully testimonial-locked. Bales's "very reasonable with no hidden fees" line is a strong unexpected asset for cost-anxious visitors. | Claude / Tyler |
 | 2026-04-29 | v1.5 — Cross-doc consistency edits to mirror locked minor-child spec. Section 4.3 (What's Included) Column 1 rewritten so adult page now matches minor-child word-for-word: "Petition for Adult Adoption" → "Petition for Adoption", consent line simplified from "adult adoptee, plus your spouse's consent" → just "Consent forms" (note: Tyler corrected an earlier inaccurate claim — adult adoption requires consent from BOTH biological parents AND the adult adoptee themselves), "Notice of Hearing" → "Notice of Adoption" (form-name correction). Background check guidance line added to Column 2 with same "you complete the checks yourself" framing as minor-child page. Internal note rewritten to reflect that adult-adoption package contents mirror minor-child rather than being a reduced subset. Section 4.4 (What Happens Next): H2 "From order to filed forms in 3 business days" → "From order to inbox in 3 business days"; step 2 "trained paralegal" → "Our team"; step 3 PDF mention removed. | Claude / Tyler |
+| 2026-05-01 | v1.6 — Repositioned doc as the SALES page (matching the two-page architecture used by minor-child). URL locked to /dfy-adult-sales-page/. Both hero and final CTAs updated to "Continue to Checkout — $499" and link to /dfy-adult-checkout-page/ (the future adult checkout page). Title, intro, "What this page IS / IS NOT" sections updated. The ThriveCart embed will live on the future checkout page, not this one. Doc is build-ready. | Claude / Tyler |
+| 2026-05-01 | v1.7 — Section 4.6 FAQ Q1 ("Do biological parents need to consent to an adult adoption in Nebraska?") answer corrected per Tyler. Previously read "No" (assumed adult adoption needed no biological-parent consent); now reads: "Yes. In a Nebraska adult stepparent adoption, written consent is required from your spouse — the adult adoptee's biological parent — and from the adult adoptee themselves. Both consents are filed with the petition." Notes bullet on why Q1 goes first updated to match new framing — confusion point is now that visitors *under-assume* the consent requirement, not that they assume it works like minor adoption. Edit propagated to `dfy-adult.html`. Section 4.3 internal note narrowed to match (Tyler chose option a): the v1.5 framing of "consent from both biological parents plus the adult adoptee themselves" replaced with "consent from your spouse (the adult adoptee's biological parent) and the adult adoptee themselves" — the absent biological parent's consent is NOT required for a Nebraska adult-stepparent case. The customer-facing "Consent forms" line still works for both adult and minor-child without surfacing the underlying difference. | Claude / Tyler |
+| 2026-05-01 | v1.8 — Adult-adoption timeline corrected per Tyler. Previous claim of "6–10 weeks from filing" replaced with **4–6 months** everywhere it appeared: Section 4.4 step 4 timeline, Section 4.4 internal notes, Section 4.6 FAQ Q3 answer. Also removed two specific factual claims Tyler flagged as inaccurate: (1) "no biological-parent notification waiting period" — removed from Section 4.4 notes, (2) "the hearing is typically shorter" / "a simpler hearing" — removed from Section 4.6 FAQ Q3 answer and Section 4.4 notes. The "faster than minor-child" framing in FAQ Q3 dropped entirely since adult and minor-child timelines now match (4–6 months). Section 4.4 notes rewritten: adult-adoption advantage is procedural (less documentation up front, no home study) rather than calendar speed — court scheduling drives total timeline either way. Section 9 Open Question #2 (timeline confirmation) ✅ resolved with the new 4–6 month figure. Edits propagated to `dfy-adult.html` (FAQ Q3 answer + Section 4.4 step 4 paragraph). | Claude / Tyler |
+| 2026-05-01 | v1.9 — Section 1 strategic visitor-archetype bullet updated to align with the v1.7 + v1.8 corrections. Old text: *"Surprised that the process is more straightforward than minor-child adoption (no consent of biological parents required, no home study, often a single court hearing)."* This contained two now-corrected inaccuracies — "no consent of biological parents required" (contradicts the v1.7 Q1 fix: your spouse, the adoptee's biological parent, must consent) and "often a single court hearing" (same family of claim as the "shorter hearing" v1.8 removal). Replaced with: *"Surprised by how procedurally light adult adoption is on the front end — no home study, less documentation than minor-child cases — even though the courthouse timeline is similar (4–6 months)."* No HTML change required (this section is internal/strategic copy, not customer-facing). | Claude / Tyler |
+| 2026-05-01 | v1.10 — Adult CHECKOUT page built as `dfy-adult-checkout.html`. Mirrors `dfy-minor-child-checkout.html` structurally and visually (same CSS verbatim, same design tokens, same section order: minimalist nav → confirmation header → ThriveCart embed → reassurance strip → two-up testimonials → footer). Adult-specific changes: `<title>` ("Checkout — Done-For-You Adult Stepparent Adoption Forms | Adoption Forms Express"), meta description, canonical (`/dfy-adult-checkout-page/`), Schema.org Product block (name + description swapped to the adult product, $499 price kept), confirmation H1 ("Done-For-You Nebraska Adult Stepparent Adoption Forms"), ThriveCart product `8` embed (token `tc-adoptionssimplified-8-0FGCA9`) replacing minor-child product `10`, and two-up testimonials swapped to Catrice Jackson (curated excerpt — strongest adult-adoption-explicit social proof in the Google review set: *"...went above and beyond...knowledgeable about adult adoption...my husband was able to legally adopt my 30 year old son"*) and Patty Bales (same "no hidden fees" line used on the minor-child checkout — strong cost-anxiety counter for both audiences). Section 8 (Technical Implementation Notes) updated to list both files and the ThriveCart product 8 embed details. Status updated to reflect both HTML files now on disk. The two CTA buttons on the sales page (`dfy-adult.html`) already point to `/dfy-adult-checkout-page/`, so the sales-page HTML required no changes. **Tyler's WordPress deploy step:** create the new checkout WP page as a top-level page with slug `dfy-adult-checkout-page`, paste the `dfy-adult-checkout.html` body content, mark noindex via SEO plugin. ThriveCart only loads on the checkout page — sales page stays clean. | Claude / Tyler |
 
 ---
 *End of v1.0 — DFY Adult Page Working Document*
