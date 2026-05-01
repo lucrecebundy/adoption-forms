@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout — Done-For-You Stepparent Adoption Forms | Adoption Forms Express</title>
+<meta name="description" content="Secure checkout for the Done-For-You Nebraska stepparent adoption forms package. Completed by a licensed Nebraska adoption attorney within 3 business days.">
+
+<!-- Gated post-qualification page — must NOT be indexed -->
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://adoptionformsexpress.com/dfy-child-check-out-page/">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Schema: Product (no FAQPage, no AggregateRating — gated checkout page should not surface in search) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Done-For-You Nebraska Stepparent Adoption Forms (Minor Child)",
+  "description": "Attorney-prepared Nebraska stepparent adoption forms for minor-child cases. Completed by a licensed Nebraska adoption attorney within 3 business days. Includes two attorney calls and complete filing guidance.",
+  "brand": { "@type": "Brand", "name": "Adoption Forms Express" },
+  "offers": {
+    "@type": "Offer",
+    "price": "499",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
+<style>
+/* ------------------------------------------------------------------
+   Design tokens (inherited from homepage.html — master doc Section 4)
+------------------------------------------------------------------ */
+:root {
+  --color-primary: #1F3A5F;
+  --color-accent: #E07856;
+  --color-accent-soft: #EFA084;
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #FFFFFF;
+  --color-text: #1A1A1A;
+  --color-text-muted: #6B6B6B;
+  --color-success: #7A9E7E;
+  --color-success-soft: #E6EEE7;
+  --color-border: #E5E1DA;
+  --color-cream-deep: #F2EDE3;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --max-width: 1240px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 2px 12px rgba(31, 58, 95, 0.06);
+  --shadow-md: 0 8px 28px rgba(31, 58, 95, 0.10);
+}
+
+/* ------------------------------------------------------------------
+   Base
+------------------------------------------------------------------ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--color-primary); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--color-accent); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+h1 { font-size: clamp(1.85rem, 3.4vw, 2.5rem); font-weight: 700; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* ------------------------------------------------------------------
+   Stripped checkout-style nav
+------------------------------------------------------------------ */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(31, 58, 95, 0.08);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+.nav-logo em {
+  font-style: italic;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.nav-help {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.nav-help a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.nav-help a::after {
+  content: " →";
+  color: var(--color-accent);
+}
+@media (max-width: 540px) {
+  .nav-help { font-size: 0.85rem; }
+  .nav-help .nav-help-prefix { display: none; }
+}
+
+/* ------------------------------------------------------------------
+   Confirmation header
+------------------------------------------------------------------ */
+.checkout-confirm {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(2.75rem, 6vw, 4rem) 0 1.75rem;
+}
+.checkout-eyebrow-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: var(--color-success-soft);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4F7253;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.checkout-eyebrow-success .check {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-success);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+.checkout-confirm h1 {
+  margin-bottom: 0.85rem;
+}
+.checkout-confirm-subhead {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+.checkout-confirm-subhead strong {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ------------------------------------------------------------------
+   ThriveCart embed (the focal point)
+------------------------------------------------------------------ */
+.thrivecart-wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+  text-align: center;
+}
+.thrivecart-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  line-height: 1.3;
+  color: var(--color-primary);
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  letter-spacing: -0.015em;
+}
+.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }
+
+/* ------------------------------------------------------------------
+   Reassurance strip
+------------------------------------------------------------------ */
+.reassurance-strip {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  padding: 0 1rem;
+}
+
+/* ------------------------------------------------------------------
+   Compact two-up testimonials
+------------------------------------------------------------------ */
+.checkout-reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: clamp(2.5rem, 5vw, 3.75rem) auto 0;
+}
+.checkout-review {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+}
+.checkout-review p {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+.checkout-review cite {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+@media (max-width: 640px) {
+  .checkout-reviews { grid-template-columns: 1fr; }
+}
+
+/* ------------------------------------------------------------------
+   Body padding (between nav and footer)
+------------------------------------------------------------------ */
+.checkout-body {
+  padding-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+/* ------------------------------------------------------------------
+   Footer (inherited verbatim from homepage)
+------------------------------------------------------------------ */
+.site-footer {
+  background: #142944;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 4.5rem 0 2rem;
+  font-size: 0.93rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-soft);
+  margin-bottom: 1.25rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.55rem; }
+.footer-col a { color: rgba(255, 255, 255, 0.78); font-size: 0.94rem; }
+.footer-col a:hover { color: white; }
+.footer-brand p { font-size: 0.93rem; margin: 0.85rem 0 1.25rem; max-width: 320px; line-height: 1.6; }
+.footer-brand .logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+}
+.footer-brand .logo em { font-style: italic; color: var(--color-accent-soft); font-weight: 500; }
+.footer-social { display: flex; gap: 0.85rem; }
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: white;
+  transition: background 0.2s ease;
+}
+.footer-social a:hover { background: var(--color-accent); }
+
+.footer-disclaimer {
+  font-size: 0.81rem;
+  line-height: 1.65;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-style: italic;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-bottom a { color: rgba(255, 255, 255, 0.78); margin-left: 1.25rem; }
+@media (max-width: 880px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 540px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============== STRIPPED CHECKOUT NAV ============== -->
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Adoption Forms <em>Express</em></a>
+    <span class="nav-help"><span class="nav-help-prefix">Need help? </span><a href="mailto:adoptionformsexpress@gmail.com">Email us</a></span>
+  </div>
+</header>
+
+<main class="checkout-body">
+  <div class="container">
+
+    <!-- ============== CONFIRMATION HEADER ============== -->
+    <section class="checkout-confirm">
+      <span class="checkout-eyebrow-success"><span class="check">✓</span>Secure checkout</span>
+      <h1>Done-For-You Nebraska Stepparent Adoption Forms — Minor Child</h1>
+      <p class="checkout-confirm-subhead"><strong>$499</strong> · Delivered within 3 business days · Includes two attorney calls</p>
+    </section>
+
+    <!-- ============== THRIVECART EMBED ============== -->
+    <div class="thrivecart-wrap">
+      <h2 class="thrivecart-heading">Complete your payment below</h2>
+      <div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="10" data-thrivecart-embeddable="tc-adoptionssimplified-10-TOD8DE"></div>
+      <script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-10-TOD8DE"></script>
+    </div>
+
+    <!-- ============== REASSURANCE STRIP ============== -->
+    <p class="reassurance-strip">🔒 Secure ThriveCart checkout · 7-day refund if your case isn't a fit · Forms prepared by a licensed Nebraska adoption attorney</p>
+
+    <!-- ============== TWO-UP TESTIMONIALS ============== -->
+    <div class="checkout-reviews">
+      <div class="checkout-review">
+        <p>"The adoption process was quick and effortless. Mrs. Bundy handled everything for us. We couldn't be more happy!"</p>
+        <cite>— Sarah Hall</cite>
+      </div>
+      <div class="checkout-review">
+        <p>"Of course price seems to always play a role and she is very reasonable with no hidden fees!"</p>
+        <cite>— Patty Bales</cite>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <span class="logo">Adoption Forms <em>Express</em></span>
+        <p>Attorney-prepared Nebraska stepparent adoption forms — created by a licensed Nebraska adoption attorney.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/adoptionformsexpress" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/adoptionformsexpress" aria-label="Facebook">FB</a>
+          <a href="https://www.youtube.com/@adoptionformsexpress" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener">Qualifier Quiz</a></li>
+          <!-- TODO: replace href="#" with /starter-guide URL once the lead-magnet landing page is built -->
+          <li><a href="#">Free Nebraska Adoption Guide</a></li>
+          <!-- DIY + Done-For-You forms are unlinked by design — visitors must take the qualifier quiz first to access them -->
+          <li>DIY Adoption Forms</li>
+          <li>Done-For-You Forms</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="https://adoptionformsexpress.com/#about">Meet Lucrece</a></li>
+          <li><a href="https://adoptionformsexpress.com/#how-it-works">How It Works</a></li>
+          <li><a href="https://adoptionformsexpress.com/#faq">FAQ</a></li>
+          <li><a href="https://lbundylaw.com/">Bundy Law LLC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:adoptionformsexpress@gmail.com">adoptionformsexpress@gmail.com</a></li>
+          <li>12020 Shamrock Plz, Ste 200<br>Omaha, NE 68154</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      Adoption Forms Express provides access to independent attorneys and self-service tools. We are not a law firm and do not provide legal advice. Use of our products and services are governed by our Terms of Use and Privacy Policy. The forms provided are intended for use in uncontested Nebraska stepparent adoption cases. If your case is contested or your situation is unusual, you should consult a licensed attorney.
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Adoption Forms Express. All rights reserved.</span>
+      <span>
+        <a href="https://adoptionformsexpress.com/terms-of-use/">Terms of Use</a>
+        <a href="https://adoptionformsexpress.com/privacy-policy/">Privacy Policy</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
