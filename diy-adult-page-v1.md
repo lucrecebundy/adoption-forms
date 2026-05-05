@@ -6,7 +6,7 @@
 **Sister docs:**
 - `diy-minor-child-page-v1.md` (the structural template — DIY minor child)
 - `dfy-adult-page-v1.md` (the adult-content reference — DFY adult)
-**Version:** 1.6
+**Version:** 1.7
 **Last updated:** May 5, 2026
 **Status:** Built — `diy-adult.html` and `diy-adult-checkout.html` on disk; pending WordPress deploy
 
@@ -267,7 +267,7 @@ Copy:
 
 ### 4.6 Pre-Purchase FAQ
 
-5 questions, accordion format. Adult-DIY-specific anxieties.
+6 questions, accordion format. Adult-DIY-specific anxieties.
 
 **Eyebrow:** QUESTIONS BEFORE YOU BUY
 
@@ -288,13 +288,17 @@ Yes — name change is one of the most common reasons adults pursue stepparent a
 **Q5: What if I live in Nebraska but the adoptee lives somewhere else?**
 The petition is filed in the Nebraska county where you live, and the court hearing happens there in person. If the adoptee lives out of state, they'll need to travel to Nebraska for the hearing.
 
+**Q6: What if I realize I selected the wrong package?**
+Right after purchase, we'll email you to confirm which scenario applies to your case and which package you ordered. We don't send your forms until you reply confirming both. If at that point you realize you bought the wrong package, just reply and let us know — we'll refund you, and you can purchase the correct one. If you don't reply to our confirmation emails within 7 days of purchase, we consider your purchase final and refunds are no longer available. After we've sent your forms, we cannot refund.
+
 **Notes:**
 - Q1 mirrors the DIY minor-child Q1 pattern — the natural anxiety question gets a confidence-building answer ("most cases finish without needing more"). No "email us" escape hatch and no upgrade-to-DFY-credit mention; the page is built to do the convincing work itself, not to invite people to bypass it with email questions.
 - Q2 mirrors the DFY adult page Q1 (same correction applied — biological parents DO need to consent), adapted for DIY framing
 - Q3 timeline corrected to 4–6 months per DFY adult v1.8 timeline correction
 - Q4 surfaces the name-change use case which is often the trigger for adult adoption — and tells the visitor that the package handles it
 - Q5 gives the essence of the rule without getting into the weeds: petition filed where the petitioner lives in Nebraska; in-person hearing in that county; out-of-state adoptee travels to Nebraska. The military-deployment exception, the "everyone must appear" detail, and the package-instructions reference are intentionally omitted to keep the answer tight. Earlier drafts suggested remote appearance "depending on the judge" — that was wrong; corrected per Lucrece's guidance.
-- 5 questions matches the DFY adult and DIY minor pattern — enough to cover the main anxieties without overwhelming
+- Q6 is the project-wide refund-policy single source of truth — same Q&A appears on all four sales pages.
+- 6 questions matches the new pattern across all four sales pages.
 
 ---
 
@@ -310,13 +314,13 @@ Continue to Checkout — $299
 *(button links to `/diy-adult-check-out-page/`)*
 
 **Below the CTA, small reassurance line:**
-*Secure checkout · 7-day refund if your case isn't a fit*
+*Secure checkout*
 
 **Notes:**
 - "Make it official" intentionally echoes the DFY adult page H2 — same emotional anchor for adult-adoption visitors
 - "In your inbox tomorrow" is concrete, time-specific, lower-anxiety than "within 1 business day" (same content, more emotional)
 - Same `/diy-adult-check-out-page/` destination as the hero CTA — ThriveCart loads on the checkout page, not here
-- Same 7-day refund promise as all other product pages
+- Reassurance line trimmed to a single phrase — by the time qualifying visitors reach the final CTA on a gated post-quiz page, refund/email-question messaging is friction, not reassurance. Refund mechanics live in the FAQ (Q6); the support escape hatch lives in Section 4.8. Same trim applied across all four sales pages this session.
 
 ---
 
@@ -440,3 +444,4 @@ Embeddable token: `tc-adoptionssimplified-7-F1ED0D`
 | 2026-05-05 | v1.4 — **Reverted v1.3's mobile fix** in `diy-adult-checkout.html`. The `@media (max-width: 720px)` block was removed, restoring the file to its pre-v1.3 state. Reason: forcing `height: auto !important` on the injected ThriveCart iframe collapsed the form into the iframe's intrinsic default height (~150px), squishing the form fields to the point users couldn't comfortably enter their info. The original empty-space gap is back, but the form is usable. Next attempt deferred until Tyler can DevTools-inspect the live mobile checkout (Chrome mobile emulation, right-click the empty area → Inspect) and report the actual injected element's tag, class/id, and computed `height` — then we can target the real offender instead of guessing. | Claude / Tyler |
 | 2026-05-05 | v1.5 — **Mobile empty-space fix v2 (correct version) in `diy-adult-checkout.html`.** Tyler's DevTools inspection revealed the actual culprit: ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` inside the `.tc-v2-embeddable-target` div and hardcodes an inline `style="height: 2387px"` on it. On mobile that's ~1000px taller than the form's actual rendered content, creating the empty-space gap below the visible form (the user is still scrolling inside the iframe through dead space until they exit it and reach our reassurance strip). The injected iframe also carries `scrolling="yes"`, which means we can safely cap its height with CSS — any overflow scrolls inside the iframe rather than being clipped. Fix: re-added the `@media (max-width: 720px)` block (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) with `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }` plus tightened wrap padding to `1.5rem 0`. The 1800px cap is conservative (form likely needs ~1300–1500px on mobile) — leaves a buffer for dynamic form expansion (coupon-code section, address validation errors, etc.) while still cutting most of the dead space. **Tuning:** if dead space is still visible after deploy, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Behavior change is mobile-only (≤720px); desktop unchanged. CSS-only; no HTML/copy/schema changes. | Claude / Tyler |
 | 2026-05-05 | v1.6 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" with "support call" / "support calls" framing across Section 4 customer copy + Section 8 schema spec + the strategic notes that referenced the call by name (Section 3 page architecture, Section 4 internal notes, Section 4.5 signature quote). New language: DIY = "one 30-minute support call". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
+| 2026-05-05 | v1.7 — Sales-page and checkout-page polish + refund policy formalized (mirrors the same change applied to all three sister docs this session). **Sales page (`diy-adult.html`) — two edits:** (1) Section 4.6 — new Q6 added at the end of the FAQ accordion: "What if I realize I selected the wrong package?" Locks the project-wide refund policy: refunds available between purchase and delivery; delivery happens only after buyer replies to confirmation email; if buyer doesn't reply within 7 days, purchase is considered final; no refunds after forms are sent. Same Q&A on all four sales pages. (2) Section 4.7 — final CTA reassurance line simplified from "Secure checkout · 7-day refund if your case isn't a fit" to just "Secure checkout"; the refund-line is now redundant on a gated post-quiz page where Q6 holds the canonical refund policy. **Checkout page (`diy-adult-checkout.html`) — two edits:** (1) Existing reassurance strip's "7-day refund if your case isn't a fit" middle clause removed to avoid contradicting the new refund policy — strip now reads "🔒 Secure ThriveCart checkout · Forms prepared by a licensed Nebraska adoption attorney". (2) New italic refund-note line added directly below the strip: "Wrong package? Email us before your forms are sent — we can refund." New `.refund-note` CSS class defined inside the page's `<style>` block (max-width 720px, font-size 0.85rem, var(--color-text-muted), italic, line-height 1.55). DIY-adult-specific note: this product had no Q1 about case-complexity refunds (DIY-adult Q1 is "What if I get stuck on a form?"), so unlike the DFY minor-child sister doc, no Q1 rewrite was needed. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner. | Claude / Lucrece |

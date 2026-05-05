@@ -5,7 +5,7 @@
 **URLs:** `/dfy-adult-sales-page/` (sales page — `dfy-adult.html`); `/dfy-adult-checkout-page/` (transactional checkout page — not yet built). The two pages will be sibling top-level pages in WordPress, mirroring the minor-child architecture.
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-minor-child-page-v1.md` (minor-child equivalent)
-**Version:** 1.15
+**Version:** 1.16
 **Last updated:** May 5, 2026
 **Status:** Built — `dfy-adult.html` (post-quiz sales page) and `dfy-adult-checkout.html` (transactional checkout housing the ThriveCart embed for product 8) both on disk, ready for WordPress deploy
 
@@ -184,7 +184,7 @@ Continue to Checkout — $499
 - Court hearing prep document with the questions a Nebraska judge is most likely to ask in adult adoption cases
 - Background check instructions — you complete the checks yourself; we provide step-by-step guidance for what your county requires
 - New birth certificate ordering instructions (your adult stepchild's name change, if applicable)
-- **Two 15-minute support calls** to answer questions about your forms
+- Two 15-minute support calls to answer questions about your forms
 
 **Below the columns:**
 *Court filing fees (~$60–$90 depending on county) and certified copy fees are paid directly to your local court and not included.*
@@ -267,7 +267,7 @@ Licensed Nebraska Adoption Attorney
 
 **H2:** A few quick answers.
 
-**Accordion FAQ (5 questions):**
+**Accordion FAQ (6 questions):**
 
 **Q: Do biological parents need to consent to an adult adoption in Nebraska?**
 Yes. In a Nebraska adult stepparent adoption, written consent is required from your spouse — the adult adoptee's biological parent — and from the adult adoptee themselves. Both consents are filed with the petition.
@@ -283,6 +283,9 @@ Adult adoptions can usually proceed even when the adoptee lives in another state
 
 **Q: What does the $499 not include?**
 The $499 covers your completed forms package, the two 15-minute support calls, and the filing/hearing/birth certificate guidance. It does NOT cover your county's filing fee (~$60–$90 paid directly to the court) or certified copies of your finalized adoption decree.
+
+**Q: What if I realize I selected the wrong package?**
+Right after purchase, we'll email you to confirm which scenario applies to your case and which package you ordered. We don't send your forms until you reply confirming both. If at that point you realize you bought the wrong package, just reply and let us know — we'll refund you, and you can purchase the correct one. If you don't reply to our confirmation emails within 7 days of purchase, we consider your purchase final and refunds are no longer available. After we've sent your forms, we cannot refund.
 
 **Notes:**
 - These FAQs are different from the minor-child page because the legal mechanics of adult adoption are genuinely different. Don't try to copy-paste between the pages.
@@ -305,12 +308,13 @@ Continue to Checkout — $499
 *(button links to `/dfy-adult-checkout-page/`)*
 
 **Below the CTA, small reassurance line:**
-*Secure checkout · 7-day refund if your case isn't a fit · Questions? [Email us]*
+*Secure checkout*
 
 **Notes:**
 - "Make it official" intentionally echoes the homepage hero language — same emotional anchor
 - This is the only CTA below the fold
 - Same `/dfy-adult-checkout-page/` destination as the hero CTA — ThriveCart loads on the checkout page, not here
+- Reassurance line trimmed to a single phrase — by the time qualifying visitors reach the final CTA on a gated post-quiz page, refund/email-question messaging is friction, not reassurance. Refund mechanics live in the FAQ (Q6); the support escape hatch lives in Section 4.8.
 
 ---
 
@@ -441,6 +445,7 @@ No `FAQPage` schema. Page is gated; rich results aren't desired.
 | 2026-05-05 | v1.13 — **Reverted v1.12's mobile fix** in `dfy-adult-checkout.html`. The `@media (max-width: 720px)` block was removed, restoring the file to its pre-v1.12 state. Reason: forcing `height: auto !important` on the injected ThriveCart iframe collapsed the form into the iframe's intrinsic default height (~150px), squishing the form fields to the point users couldn't comfortably enter their info. The original empty-space gap is back, but the form is usable. Next attempt deferred until Tyler can DevTools-inspect the live mobile checkout (Chrome mobile emulation, right-click the empty area → Inspect) and report the actual injected element's tag, class/id, and computed `height` — then we can target the real offender instead of guessing. | Claude / Tyler |
 | 2026-05-05 | v1.14 — **Mobile empty-space fix v2 (correct version) in `dfy-adult-checkout.html`.** Tyler's DevTools inspection revealed the actual culprit: ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` inside the `.tc-v2-embeddable-target` div and hardcodes an inline `style="height: 2387px"` on it. On mobile that's ~1000px taller than the form's actual rendered content, creating the empty-space gap below the visible form (the user is still scrolling inside the iframe through dead space until they exit it and reach our reassurance strip). The injected iframe also carries `scrolling="yes"`, which means we can safely cap its height with CSS — any overflow scrolls inside the iframe rather than being clipped. Fix: re-added the `@media (max-width: 720px)` block (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) with `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }` plus tightened wrap padding to `1.5rem 0`. The 1800px cap is conservative (form likely needs ~1300–1500px on mobile) — leaves a buffer for dynamic form expansion (coupon-code section, address validation errors, etc.) while still cutting most of the dead space. **Tuning:** if dead space is still visible after deploy, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Behavior change is mobile-only (≤720px); desktop unchanged. CSS-only; no HTML/copy/schema changes. | Claude / Tyler |
 | 2026-05-05 | v1.15 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" / "free 15-minute attorney calls" with "support call" / "support calls" framing. New language: DFY = "two 15-minute support calls". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. Schema description and meta description updated. Schema "Completed by a licensed Nebraska adoption attorney" → "Completed by our team" — the attorney designed/prepared the form templates (still credited via "Attorney-prepared..." which remains), but the per-customer form completion is done by the team, not the attorney directly. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
+| 2026-05-05 | v1.16 — Sales-page and checkout-page polish + refund policy formalized (mirrors the same change applied to the minor-child sister doc this session). **Sales page (`dfy-adult.html`) — three edits:** (1) Section 4.3 (What's Included) — removed bold from the "Two 15-minute support calls" item to match the visual rhythm of the rest of the Guidance list. (2) Section 4.6 — new Q6 added at the end of the FAQ accordion: "What if I realize I selected the wrong package?" Locks the project-wide refund policy: refunds available between purchase and delivery; delivery happens only after buyer replies to confirmation email; if buyer doesn't reply within 7 days, purchase is considered final; no refunds after forms are sent. Same Q&A on all four sales pages. Note: unlike the minor-child sister doc, the adult page's existing Q1 was *not* about refunds (it was the bio-parent-consent question), so no Q1 rewrite was needed here. (3) Section 4.7 — final CTA reassurance line simplified from "Secure checkout · 7-day refund if your case isn't a fit · Questions? Email us" to just "Secure checkout"; added explainer that the refund/email content lives in the FAQ + escape hatch. **Checkout page (`dfy-adult-checkout.html`) — two edits:** (1) Existing reassurance strip's "7-day refund if your case isn't a fit" middle clause removed to avoid contradicting the new refund policy — strip now reads "🔒 Secure ThriveCart checkout · Forms prepared by a licensed Nebraska adoption attorney". (2) New italic refund-note line added directly below the strip: "Wrong package? Email us before your forms are sent — we can refund." New `.refund-note` CSS class defined inside the page's `<style>` block (max-width 720px, font-size 0.85rem, var(--color-text-muted), italic, line-height 1.55). Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner. | Claude / Lucrece |
 
 ---
 *End of v1.0 — DFY Adult Page Working Document*

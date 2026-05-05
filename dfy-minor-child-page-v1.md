@@ -5,7 +5,7 @@
 **URLs:** `/dfy-minor-sales-page/` (sales page — `dfy-minor-child.html`); `/dfy-child-check-out-page/` (transactional checkout page — `dfy-minor-child-checkout.html`). The two pages are sibling top-level pages in WordPress (not parent/child).
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-adult-page-v1.md` (adult-adoption equivalent)
-**Version:** 2.12
+**Version:** 2.13
 **Last updated:** May 5, 2026
 **Status:** Built — both `dfy-minor-child.html` (post-quiz sales page) and `dfy-minor-child-checkout.html` (transactional checkout page housing the ThriveCart embed) now exist on disk; ready for WordPress deploy
 
@@ -177,7 +177,7 @@ The full product spelled out. No mystery, no padding.
 - Court hearing prep document with the exact questions a Nebraska judge is most likely to ask
 - Background check instructions — you complete the checks yourself; we provide step-by-step guidance for what your county requires
 - New birth certificate ordering instructions
-- **Two 15-minute support calls** to answer questions about your forms
+- Two 15-minute support calls to answer questions about your forms
 
 **Below the columns:**
 *Court filing fees (~$60–$90 depending on county) and certified copy fees are paid directly to your local court and not included.*
@@ -273,10 +273,10 @@ Tightly focused on last-second purchase concerns. NOT general adoption-law FAQs 
 
 **H2:** A few quick answers.
 
-**Accordion FAQ (5 questions, all about the buying experience):**
+**Accordion FAQ (6 questions, all about the buying experience):**
 
 **Q: What if I realize my case is more complicated than I thought after I order?**
-Email us at [support email] within 7 days of purchase and we'll review your situation. If your case turns out not to be a fit for the Done-For-You package, we'll refund your purchase in full. If your case needs full attorney representation, we'll connect you directly with Bundy Law LLC.
+If your case might need more than the Done-For-You package can offer — for example, if it's contested or unusually complex — email us at [support email]. We'll connect you with Bundy Law LLC, where a licensed attorney can speak with you and give you legal advice about your specific situation. For refund details, see the refund policy below.
 
 **Q: What information do I need to provide?**
 The intake form will ask for the legal names of all parties, the child's birth certificate details, your marriage certificate details, addresses, and basic case history. You won't need to provide anything you don't already have on hand.
@@ -290,11 +290,14 @@ Your package includes two 15-minute support calls, available whenever you need t
 **Q: What does the $499 not include?**
 The $499 covers your completed forms package, the two 15-minute support calls, and the filing/hearing/birth certificate guidance. It does NOT cover your county's filing fee (~$60–$90 paid directly to the court), certified copies of your finalized adoption decree, or any background-check fees if your county requires them.
 
+**Q: What if I realize I selected the wrong package?**
+Right after purchase, we'll email you to confirm which scenario applies to your case and which package you ordered. We don't send your forms until you reply confirming both. If at that point you realize you bought the wrong package, just reply and let us know — we'll refund you, and you can purchase the correct one. If you don't reply to our confirmation emails within 7 days of purchase, we consider your purchase final and refunds are no longer available. After we've sent your forms, we cannot refund.
+
 **Notes:**
-- Five questions max. The visitor's hand is on the buy button — too many FAQs sends them down a rabbit hole.
-- The refund question is critical and goes first because it directly defuses the biggest anxiety: "what if I bought the wrong thing?"
-- Every answer reinforces what's in the package vs. what isn't, with no ambiguity
-- The "what does it not include" question is anti-buyer-remorse insurance
+- Six questions max. The visitor's hand is on the buy button — too many FAQs sends them down a rabbit hole.
+- Q1 routes complicated cases to Bundy Law LLC for actual legal advice (UPL-protective) and points to Q6 for refund mechanics.
+- Q6 (wrong-package refund) is the single source of truth for refund policy across the project — same Q&A appears on all four sales pages.
+- Every answer reinforces what's in the package vs. what isn't, with no ambiguity.
 
 ---
 
@@ -314,12 +317,11 @@ Same ThriveCart embed snippet as the hero CTA. Paste the captured snippet from S
 **Important:** ThriveCart sometimes requires unique IDs or different handling when the same product embed appears more than once on the same page. The captured snippet uses `id="tc-adoptionssimplified-10-HV1ZXD"` on the script tag — when reused twice, both instances share the same ID, which is invalid HTML and may cause the second embed to misbehave. See Section 8 for fix options if it does.
 
 **Below the CTA, small reassurance line:**
-*Secure checkout · 7-day refund if your case isn't a fit · Questions? [Email us]*
+*Secure checkout*
 
 **Notes:**
 - This is the only CTA below the fold. No "or compare to DIY," no "or book a consult."
-- The reassurance line consolidates the three biggest pre-click anxieties (security, refund, support) into one tight stripe of text
-- The email link is a soft escape hatch — gives the hesitant buyer somewhere to go besides clicking the back button
+- Reassurance line trimmed to a single phrase — by the time qualifying visitors reach the final CTA on a gated post-quiz page, refund/email-question messaging is friction, not reassurance. Refund mechanics live in the FAQ (Q6); the support escape hatch lives in Section 4.8.
 
 ---
 
@@ -506,6 +508,7 @@ Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssim
 | 2026-05-05 | v2.10 — ThriveCart embed token regenerated again for product 10 after Tyler adjusted spacing in the ThriveCart admin (separate from the prior logo-change regen). Confirms the empirical pattern: ThriveCart mints a new embeddable token on most product saves, not just specific changes. Product ID unchanged. Old token: UAXWPD → new token: 1OP2TU. Token swapped in `dfy-minor-child-checkout.html` (lines 376–377) and across all token references in this spec doc via `replace_all`. Only this one product was edited in the admin this round, so the other three checkout files (DFY adult / DIY minor / DIY adult) are unaffected. | Claude / Tyler |
 | 2026-05-05 | v2.11 — ThriveCart embed token regenerated yet again for product 10 after Tyler made an additional spacing adjustment in the ThriveCart admin (further fine-tuning the in-embed layout). Same product, third token regen of the day. Product ID unchanged. Old token: 1OP2TU → new token: HV1ZXD. Token swapped in `dfy-minor-child-checkout.html` and across all token references in this spec doc via `replace_all`. Other three checkout files unaffected. | Claude / Tyler |
 | 2026-05-05 | v2.12 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" / "free 15-minute attorney calls" with "support call" / "support calls" framing. New language: DFY = "two 15-minute support calls". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. Schema description and meta description updated. Schema "Completed by a licensed Nebraska adoption attorney" → "Completed by our team" — the attorney designed/prepared the form templates (still credited via "Attorney-prepared..." which remains), but the per-customer form completion is done by the team, not the attorney directly. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
+| 2026-05-05 | v2.13 — Sales-page and checkout-page polish + refund policy formalized. **Sales page (`dfy-minor-child.html`) — four edits:** (1) Section 4.3 (What's Included) — removed bold from the "Two 15-minute support calls" item to match the visual rhythm of the rest of the Guidance list. (2) Section 4.6 — existing Q1 ("What if I realize my case is more complicated…") rewritten to route complicated-case visitors to Bundy Law LLC for legal advice rather than mixing case-fit refund language with the new wrong-package policy; the answer now points to the new Q6 for refund details. (3) Section 4.6 — new Q6 added at the end of the FAQ accordion: "What if I realize I selected the wrong package?" Locks the project-wide refund policy: refunds available between purchase and delivery; delivery happens only after buyer replies to confirmation email; if buyer doesn't reply within 7 days, purchase is considered final; no refunds after forms are sent. Same Q&A on all four sales pages. (4) Section 4.7 — final CTA reassurance line simplified from "Secure checkout · 7-day refund if your case isn't a fit · Questions? Email us" to just "Secure checkout"; the consolidated-anxieties note replaced with a brief explainer that the refund/email content lives in the FAQ + escape hatch. **Checkout page (`dfy-minor-child-checkout.html`) — two edits:** (1) Existing reassurance strip's "7-day refund if your case isn't a fit" middle clause removed to avoid contradicting the new refund policy — strip now reads "🔒 Secure ThriveCart checkout · Forms prepared by a licensed Nebraska adoption attorney". (2) New italic refund-note line added directly below the strip: "Wrong package? Email us before your forms are sent — we can refund." New `.refund-note` CSS class defined inside the page's `<style>` block (max-width 720px, font-size 0.85rem, var(--color-text-muted), italic, line-height 1.55) — visually distinct from the strip but in the same reassurance-zone weight. **Master open decision opened:** future dedicated refund-policy page. Surface decision locked this session per Tyler — the page is NOT linked from the site footer; the link will live in the post-purchase invoice/receipt only. Once built, the FAQ Q6 and checkout-page note may shorten and reference the canonical hosted policy. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner. | Claude / Lucrece |
 | | | |
 
 ---

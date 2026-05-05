@@ -6,7 +6,7 @@
 **Sister docs:**
 - `dfy-minor-child-page-v1.md` (the structural template — DFY minor child)
 - Future `diy-adult-page-v1.md` (DIY adult equivalent)
-**Version:** 1.9
+**Version:** 1.10
 **Last updated:** May 5, 2026
 **Status:** 🔵 Built — `diy-minor-child.html` and `diy-minor-child-checkout.html` on disk; pending WordPress deploy
 
@@ -276,7 +276,7 @@ The FAQ is where DIY differs most from DFY because the questions are different. 
 
 **H2:** A few quick answers.
 
-**FAQ accordion (5 questions, no FAQPage schema):**
+**FAQ accordion (6 questions, no FAQPage schema):**
 
 **Q1: What if I get stuck?**
 You have two places to turn. First, the instructions cover the most common questions — they're written in plain English and walk through every section of every form. Second, you have one 30-minute support call — most people use it about halfway through, after they've reviewed everything but before they file. Most clients finish their forms without needing the call at all.
@@ -293,12 +293,16 @@ You can upgrade to Done-For-You at any time before filing — we credit your $29
 **Q5: How long until I receive everything?**
 After payment, we'll send a short email to confirm a few details about your case. Once you reply, your forms and instruction guide are typically sent within one business day.
 
+**Q6: What if I realize I selected the wrong package?**
+Right after purchase, we'll email you to confirm which scenario applies to your case and which package you ordered. We don't send your forms until you reply confirming both. If at that point you realize you bought the wrong package, just reply and let us know — we'll refund you, and you can purchase the correct one. If you don't reply to our confirmation emails within 7 days of purchase, we consider your purchase final and refunds are no longer available. After we've sent your forms, we cannot refund.
+
 **Notes:**
 - Q1 leads because "what if I get stuck?" is the central DIY anxiety. It needs to be the first question answered with concrete safety nets — instructions first, support call second.
 - Q2 is the only question that mentions DFY — by name, briefly, framed as "if you'd rather we type, here's that option." Doesn't oversell DFY; just answers the question and moves on.
 - Q3 names the imposter syndrome head-on. Most DIY visitors are quietly worried they're about to get in over their heads. Reassuring them with "the hardest part was deciding to start" is exactly the right note.
 - Q4 is the upgrade path — important for protecting the buyer: if life happens, they're not stuck. The $299→$499 credit removes the hesitation that "what if I have to switch later?"
 - Q5 sets honest expectations: there's a brief confirmation-email step before forms are delivered. The 1-business-day turnaround is still a meaningful speed advantage over DFY's 3 business days for visitors who care about getting started quickly.
+- Q6 is the project-wide refund-policy single source of truth — same Q&A appears on all four sales pages.
 - No FAQPage schema — same reasoning as DFY page (gated checkout-funnel page should not surface in search).
 
 ---
@@ -315,12 +319,12 @@ Continue to Checkout — $299
 *(button links to `/diy-minor-checkout-page/`)*
 
 **Below the CTA, small reassurance line:**
-*Secure checkout · 7-day refund if your case isn't a fit · Questions? [Email us]*
+*Secure checkout*
 
 **Notes:**
 - "Get started?" mirrors the DFY final CTA H2 — keeps the sister-page feel
 - The italicized "*get started?*" matches the H1 italics styling for consistency
-- The reassurance line is identical to DFY for refund/email parity — these are project-wide standards now
+- Reassurance line trimmed to a single phrase — by the time qualifying visitors reach the final CTA on a gated post-quiz page, refund/email-question messaging is friction, not reassurance. Refund mechanics live in the FAQ (Q6); the support escape hatch lives in Section 4.8. Same trim applied across all four sales pages this session.
 
 ---
 
@@ -444,3 +448,4 @@ This page does NOT contain the ThriveCart embed. ThriveCart lives on the separat
 | 2026-05-05 | v1.7 — **Reverted v1.6's mobile fix** in `diy-minor-child-checkout.html`. The `@media (max-width: 720px)` block was removed, restoring the file to its pre-v1.6 state. Reason: forcing `height: auto !important` on the injected ThriveCart iframe collapsed the form into the iframe's intrinsic default height (~150px), squishing the form fields to the point users couldn't comfortably enter their info. The original empty-space gap is back, but the form is usable. Next attempt deferred until Tyler can DevTools-inspect the live mobile checkout (Chrome mobile emulation, right-click the empty area → Inspect) and report the actual injected element's tag, class/id, and computed `height` — then we can target the real offender instead of guessing. | Claude / Tyler |
 | 2026-05-05 | v1.8 — **Mobile empty-space fix v2 (correct version) in `diy-minor-child-checkout.html`.** Tyler's DevTools inspection revealed the actual culprit: ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` inside the `.tc-v2-embeddable-target` div and hardcodes an inline `style="height: 2387px"` on it. On mobile that's ~1000px taller than the form's actual rendered content, creating the empty-space gap below the visible form (the user is still scrolling inside the iframe through dead space until they exit it and reach our reassurance strip). The injected iframe also carries `scrolling="yes"`, which means we can safely cap its height with CSS — any overflow scrolls inside the iframe rather than being clipped. Fix: re-added the `@media (max-width: 720px)` block (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) with `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }` plus tightened wrap padding to `1.5rem 0`. The 1800px cap is conservative (form likely needs ~1300–1500px on mobile) — leaves a buffer for dynamic form expansion (coupon-code section, address validation errors, etc.) while still cutting most of the dead space. **Tuning:** if dead space is still visible after deploy, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Behavior change is mobile-only (≤720px); desktop unchanged. CSS-only; no HTML/copy/schema changes. | Claude / Tyler |
 | 2026-05-05 | v1.9 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" with "support call" / "support calls" framing across Section 4 customer copy + Section 8 schema spec + the strategic notes that referenced the call by name (Section 1 voice principles, Section 2 visitor needs, Section 3 page architecture, Section 4 internal notes). New language: DIY = "one 30-minute support call". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
+| 2026-05-05 | v1.10 — Sales-page and checkout-page polish + refund policy formalized (mirrors the same change applied to the DFY sister docs this session). **Sales page (`diy-minor-child.html`) — two edits:** (1) Section 4.6 — new Q6 added at the end of the FAQ accordion: "What if I realize I selected the wrong package?" Locks the project-wide refund policy: refunds available between purchase and delivery; delivery happens only after buyer replies to confirmation email; if buyer doesn't reply within 7 days, purchase is considered final; no refunds after forms are sent. Same Q&A on all four sales pages. (2) Section 4.7 — final CTA reassurance line simplified from "Secure checkout · 7-day refund if your case isn't a fit · Questions? Email us" to just "Secure checkout"; the refund-line + email-link are now redundant on a gated post-quiz page where Q6 holds the canonical refund policy. **Checkout page (`diy-minor-child-checkout.html`) — two edits:** (1) Existing reassurance strip's "7-day refund if your case isn't a fit" middle clause removed to avoid contradicting the new refund policy — strip now reads "🔒 Secure ThriveCart checkout · Forms prepared by a licensed Nebraska adoption attorney". (2) New italic refund-note line added directly below the strip: "Wrong package? Email us before your forms are sent — we can refund." New `.refund-note` CSS class defined inside the page's `<style>` block (max-width 720px, font-size 0.85rem, var(--color-text-muted), italic, line-height 1.55). DIY-specific note: this product had no Q1 about case-complexity refunds (DIY Q1 is "What if I get stuck?"), so unlike the DFY minor-child sister doc, no Q1 rewrite was needed. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner. | Claude / Lucrece |
