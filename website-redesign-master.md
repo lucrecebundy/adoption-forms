@@ -3,7 +3,7 @@
 **Document type:** Master / index for the entire site redesign
 **Owner:** Lucrece H. Bundy / Tyler
 **Site:** adoptionformsexpress.com
-**Version:** 1.13
+**Version:** 1.14
 **Last updated:** May 5, 2026
 **Status:** Active
 
@@ -329,7 +329,7 @@ Two paths under consideration:
 **Planned additions:**
 - Email automation (ConvertKit or MailerLite) for lead magnet + post-purchase sequence
 - Conversational AI intake (Phase 3)
-- Calendly or similar for the free 15-minute attorney calls
+- Calendly or similar for the support calls
 - Schema markup deployment
 
 ### Performance targets
@@ -436,6 +436,7 @@ End every session with an entry here. This is the cross-document log; individual
 | 2026-05-05 | dfy-minor-child-checkout.html, dfy-minor-child-page-v1.md, **Master** | ThriveCart embed token regenerated again for **product 10 only** (DFY minor child) after Tyler adjusted spacing in the ThriveCart admin to address the prior text-overlap-inside-embed issue. Confirms the empirical pattern: ThriveCart mints a new embeddable token on most product saves, not just specific changes (logo last time, spacing this time). Product ID unchanged. Old token: UAXWPD → new token: 1OP2TU. Updated `dfy-minor-child-checkout.html` (lines 376–377) and `dfy-minor-child-page-v1.md` (token references via replace_all + change-log entry + version v2.9 → v2.10). Other three checkout files (DFY adult / DIY minor / DIY adult) unaffected — Tyler only edited product 10 in this round. **Reminder for Tyler post-deploy:** retest the mobile checkout to confirm the 1800px iframe-height cap is still appropriate; the form's actual rendered height may have changed with the spacing adjustment. | Claude / Tyler |
 | 2026-05-05 | dfy-minor-child-checkout.html, dfy-minor-child-page-v1.md, **Master** | Third ThriveCart token regen of the day for **product 10 only** after Tyler made an additional spacing tweak in the ThriveCart admin to add a bit more room. Product ID unchanged. Old token: 1OP2TU → new token: HV1ZXD. Updated `dfy-minor-child-checkout.html` and `dfy-minor-child-page-v1.md` (token via replace_all + change-log entry + version v2.10 → v2.11). Other three checkout files unaffected. **Reminder for Tyler post-deploy:** retest the mobile checkout — with the additional spacing the form's rendered height likely grew slightly, so the 1800px iframe-height cap may need to be raised if a scrollbar appears inside the embed (or lowered if dead space is still visible). | Claude / Tyler |
 | 2026-05-05 | All four checkout HTML files + their spec docs, **Master** | **Mobile empty-space fix v2 (working version) applied uniformly to all four checkout pages.** Tyler's DevTools inspection revealed ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` (not inline DOM as my read of the prior earlier-shared markup had suggested — that markup was iframe content) inside the `.tc-v2-embeddable-target` div, with an inline `style="height: 2387px"` hardcoded on it. On mobile the form's actual rendered content takes ~1300–1500px, leaving roughly 1000px of dead space that the user scrolls through inside the iframe before reaching our reassurance strip. The iframe also carries `scrolling="yes"`, so capping its height with CSS is safe — any overflow scrolls inside the iframe instead of being clipped. Fix added to all four checkout HTMLs in the same spot (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule): a `@media (max-width: 720px)` block tightening `.thrivecart-wrap` padding to `1.5rem 0` and applying `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }`. 1800px is intentionally conservative — leaves a buffer for dynamic form expansion (coupon-code section, validation errors, address-state changes) while still cutting most of the dead space. Each spec doc bumped by another 0.1 (DFY minor v2.8 → v2.9, DFY adult v1.13 → v1.14, DIY minor v1.7 → v1.8, DIY adult v1.4 → v1.5). **Tuning playbook for Tyler post-deploy:** if dead space is still visible, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Desktop behavior unchanged. CSS-only; no HTML/copy/schema changes. The text-overlap-inside-embed issue (testimonial photo overlapping product description in the form area) remains a separate, unresolved ThriveCart-admin issue — not fixable from our checkout HTML. | Claude / Tyler |
+| 2026-05-05 | All HTML files + 5 spec docs + Master | UPL-driven language change. Replaced "attorney call(s)" with "support call(s)" framing across the entire project. DFY products: "two 15-minute support calls". DIY products: "one 30-minute support call". Total support time per product unchanged (30 min). Added protective note on all 4 sales pages: "Support calls are for questions about your forms and the filing process — not personalized legal advice. If you need legal advice about your specific case, please contact a licensed attorney directly." Master doc Section 7 (Tech stack) line about Calendly also updated to drop "free attorney calls" framing. Schema descriptions across all 4 products updated. **Per Flag C resolution:** the DFY checkout schema/meta lines that previously read "Completed by a licensed Nebraska adoption attorney within 3 business days" were also updated to "Completed by our team within 3 business days" — the attorney designed/prepared the form templates (Lucrece's pedigree remains via "Attorney-prepared..." which is left intact), but the per-customer form completion is done by the team, not the attorney directly. Same edit applied to DFY sales pages' final-CTA paragraphs. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner. Per master doc Section 3 compliance review trigger, this approval is recorded in writing here. **Spec docs bumped:** homepage-redesign-v1.md v2.10 → v2.11; dfy-minor-child-page-v1.md v2.11 → v2.12; dfy-adult-page-v1.md v1.14 → v1.15; diy-minor-child-page-v1.md v1.8 → v1.9; diy-adult-page-v1.md v1.5 → v1.6. **One small additional voice edit Tyler should know about** — in `diy-adult.html`'s Lucrece signature quote, the original phrase "direct access to me when something specific to their adoption comes up" was implying Lucrece-as-attorney availability for the call, which contradicts the new support-call framing. Replaced with "a place to turn when something specific to their adoption comes up." If Tyler prefers a different wording there, easy follow-up. | Claude / Lucrece |
 | | | | |
 
 ---
@@ -446,14 +447,14 @@ Every doc in the project, with location and current version.
 
 | Doc | Filename | Latest version | Status |
 |---|---|---|---|
-| **Master** | `website-redesign-master.md` | v1.13 | 🟡 Active |
-| Homepage | `homepage-redesign-v1.md` | v2.10 | 🔵 Built (`homepage.html`), ready for WordPress deploy |
+| **Master** | `website-redesign-master.md` | v1.14 | 🟡 Active |
+| Homepage | `homepage-redesign-v1.md` | v2.11 | 🔵 Built (`homepage.html`), ready for WordPress deploy |
 | Qualifier quiz | `qualifier-quiz-v1.md` | — | ⚪ Not started |
 | Pricing | `pricing-page-v1.md` | — | ⚪ Not started |
-| DFY minor child (sales + checkout) | `dfy-minor-child-page-v1.md` | v2.11 | 🔵 Built — `dfy-minor-child.html` (sales page) + `dfy-minor-child-checkout.html` (transactional checkout, ThriveCart product 10) both on disk, ready for WordPress deploy |
-| DFY sales — adult | `dfy-adult-page-v1.md` | v1.14 | 🔵 Built — `dfy-adult.html` (sales page) + `dfy-adult-checkout.html` (transactional checkout, ThriveCart product 8) both on disk, ready for WordPress deploy |
-| DIY minor child (sales + checkout) | `diy-minor-child-page-v1.md` | v1.8 | 🔵 Built — `diy-minor-child.html` (sales page) + `diy-minor-child-checkout.html` (transactional checkout, ThriveCart product 4) both on disk, ready for WordPress deploy |
-| DIY adult (sales + checkout) | `diy-adult-page-v1.md` | v1.5 | 🔵 Built — `diy-adult.html` (sales page) + `diy-adult-checkout.html` (transactional checkout, ThriveCart product 7) both on disk, ready for WordPress deploy |
+| DFY minor child (sales + checkout) | `dfy-minor-child-page-v1.md` | v2.12 | 🔵 Built — `dfy-minor-child.html` (sales page) + `dfy-minor-child-checkout.html` (transactional checkout, ThriveCart product 10) both on disk, ready for WordPress deploy |
+| DFY sales — adult | `dfy-adult-page-v1.md` | v1.15 | 🔵 Built — `dfy-adult.html` (sales page) + `dfy-adult-checkout.html` (transactional checkout, ThriveCart product 8) both on disk, ready for WordPress deploy |
+| DIY minor child (sales + checkout) | `diy-minor-child-page-v1.md` | v1.9 | 🔵 Built — `diy-minor-child.html` (sales page) + `diy-minor-child-checkout.html` (transactional checkout, ThriveCart product 4) both on disk, ready for WordPress deploy |
+| DIY adult (sales + checkout) | `diy-adult-page-v1.md` | v1.6 | 🔵 Built — `diy-adult.html` (sales page) + `diy-adult-checkout.html` (transactional checkout, ThriveCart product 7) both on disk, ready for WordPress deploy |
 | DFY public pillar (SEO) | `dfy-pillar-page-v1.md` | — | ⚪ Not started |
 | Adult adoption pillar (SEO) | `adult-adoption-pillar-v1.md` | — | ⚪ Not started |
 | About / Founder | `about-page-v1.md` | — | ⚪ Not started |

@@ -3,8 +3,8 @@
 **Document type:** Living working document
 **Owner:** Lucrece H. Bundy / Tyler
 **Site:** adoptionformsexpress.com
-**Version:** 2.10
-**Last updated:** May 4, 2026
+**Version:** 2.11
+**Last updated:** May 5, 2026
 **Status:** Draft — ready for review, then handoff to Claude Code
 
 ---
@@ -374,7 +374,7 @@ Choose Your Option
 - Step-by-step instructions for filling out and filing
 - Court hearing prep guide + likely judge questions
 - New birth certificate ordering instructions
-- (1) free 15-minute call with Lucrece Bundy, Esq. — scoped to questions about your forms
+- One 30-minute support call to answer your questions about the forms
 
 **[CTA button: Get DIY Forms — $299]**
 
@@ -383,7 +383,7 @@ Choose Your Option
 **OPTION 2 — WE DO IT FOR YOU — $499 ⭐ Most Popular**
 Everything in DIY, plus:
 - Forms completed for you using the information you provide
-- (2) free 15-minute calls with Lucrece Bundy, Esq. — scoped to questions about your forms
+- Two 15-minute support calls to answer your questions about the forms
 - Priority 3-business-day turnaround
 
 **[CTA button: Get Done-For-You — $499]**
@@ -417,7 +417,7 @@ What You Get with Adoption Forms Express
 - Background check instructions
 - Court hearing prep document with likely judge questions
 - New birth certificate ordering walk-through
-- Direct attorney call(s) with Lucrece Bundy, Esq. — scoped to questions about your forms
+- Support call(s) to answer your questions about the forms
 
 **Notes:**
 - Listing the actual form names is a big AI-search and Google trust signal — it tells both the algorithm and the visitor that this is the real package
@@ -784,6 +784,7 @@ End every session by adding an entry here. Format: date — what changed — who
 | 2026-04-29 | v2.8 — Cross-doc form-name and consent-line consistency edits propagated to homepage. Section 5.10 (What's Included): "Notice of Hearing" → "Notice of Adoption" (form-name correction Tyler caught while reviewing the DFY minor-child page); "Consent forms (custodial parent + non-custodial where applicable)" simplified to just "Consent forms" so the visible package list is unified across all pages. Section 5.12 FAQ Q4 ("What forms do I need?") answer: "Notice of Hearing" → "Notice of Adoption" (kept "parental consent forms" wording — generic enough not to trigger the simplification). homepage.html updated to match: 3 "Notice of Hearing" → "Notice of Adoption" replacements (forms list + FAQ accordion answer + FAQPage schema), and 1 consent-line simplification in the What's Included section. | Claude / Tyler |
 | 2026-04-29 | v2.9 — Form Sneak Peek removed from the homepage and replaced with the lead-magnet freebie throughout. Section 1 conversion goal hierarchy: "Secondary: Preview the forms (sneak peek)" → "Secondary: Get the free Nebraska Adoption Guide (lead magnet)". Section 5.2 hero secondary text-link CTA: "Preview the Forms →" → "Get the Free Nebraska Adoption Guide →". Section 5.14 final CTA secondary button: "Preview the Forms" → "Get the Free Nebraska Adoption Guide". Section 5.15 footer Services list: "Sneak Peek" → "Free Nebraska Adoption Guide". **New addition:** Section 5.12 FAQ now ends with a sub-CTA footnote — "Still have questions? Get the free Nebraska Adoption Guide — covers timelines, costs, and the Nebraska-specific filing process." This is the lead-magnet's dedicated conversion point on the homepage, catching FAQ readers who aren't yet ready for the quiz. homepage.html updated to match across all four placements + new `.faq-footnote` CSS class added. All freebie links currently stubbed to `#` with TODO comments — wire up once `/starter-guide` lead-magnet landing page exists. Resolves homepage doc Open Question #7 (lead magnet on homepage). | Claude / Tyler |
 | 2026-05-04 | v2.10 — Two visual polish fixes and one copy-clarity update to homepage.html (no spec section text changes). **Visual:** (1) Hero credibility line ("200+ Adoptions Finalized · 140+ Five-Star Reviews · Nebraska-Specific Forms") was wrapping to two lines because the uppercase 0.85rem styling overflowed the hero column — `.hero-credibility` font reduced to 0.78rem, gap tightened to 0.85rem, and `white-space: nowrap` added to each phrase span so individual phrases never break mid-word. Now sits on one line on desktop, wraps cleanly between phrases on mobile. (2) Founder credential line ("Admitted: Nebraska State Bar · Member: Nebraska State Bar Association · Founder: Bundy Law LLC") in Section 5.6 was wrapping in the founder text column — restructured the single string into three flex spans separated by accent-colored `<span class="sep">·</span>` (mirroring the hero pattern), `.founder-cred` switched from `display: block` to flex with `flex-wrap: nowrap` + `white-space: nowrap`, font reduced to 0.7rem with letter-spacing dropped to 0. Mobile-only media query (≤880px) restores wrap behavior and 0.78rem font so the line doesn't horizontally overflow on phones. **Copy clarity:** "scoped to questions about your forms" replaced with "to answer your questions about the forms" in three places — DIY $299 pricing card (Section 5.9), DFY $499 pricing card (Section 5.9), and What's Included → The Guidance list (Section 5.10). Plain-English wording aligns with the master doc's Section 3 voice principles (the word "scoped" reads as legalese; "to answer your questions" is direct). | Claude / Tyler |
+| 2026-05-05 | v2.11 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" / "free 15-minute attorney calls" with "support call" / "support calls" framing. New language: DFY = "two 15-minute support calls", DIY = "one 30-minute support call". Added a protective note on each sales page near the call mention clarifying that support calls do NOT include personalized legal advice. Schema descriptions and meta descriptions updated. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
 | | | |
 
 ---

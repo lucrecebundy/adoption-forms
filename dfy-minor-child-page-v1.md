@@ -5,7 +5,7 @@
 **URLs:** `/dfy-minor-sales-page/` (sales page — `dfy-minor-child.html`); `/dfy-child-check-out-page/` (transactional checkout page — `dfy-minor-child-checkout.html`). The two pages are sibling top-level pages in WordPress (not parent/child).
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-adult-page-v1.md` (adult-adoption equivalent)
-**Version:** 2.11
+**Version:** 2.12
 **Last updated:** May 5, 2026
 **Status:** Built — both `dfy-minor-child.html` (post-quiz sales page) and `dfy-minor-child-checkout.html` (transactional checkout page housing the ThriveCart embed) now exist on disk; ready for WordPress deploy
 
@@ -177,7 +177,7 @@ The full product spelled out. No mystery, no padding.
 - Court hearing prep document with the exact questions a Nebraska judge is most likely to ask
 - Background check instructions — you complete the checks yourself; we provide step-by-step guidance for what your county requires
 - New birth certificate ordering instructions
-- **Two free 15-minute calls** with Lucrece Bundy, Esq. (a licensed Nebraska adoption attorney) to answer questions about your forms
+- **Two 15-minute support calls** to answer questions about your forms
 
 **Below the columns:**
 *Court filing fees (~$60–$90 depending on county) and certified copy fees are paid directly to your local court and not included.*
@@ -185,7 +185,7 @@ The full product spelled out. No mystery, no padding.
 **Notes:**
 - Listing each form by its real name reinforces "this is a real attorney product, not a template fill-in"
 - The "completed with your information" emphasis in column 1 is the key DFY differentiator — separates this from the DIY package
-- The two attorney calls are a premium touch worth highlighting — most product purchases at this price don't include direct attorney access
+- The two 15-minute support calls are a meaningful inclusion at this price — most product purchases in this category don't include any included call time
 - The filing fee disclosure is here (not buried) because it's the single most common refund-trigger surprise for new buyers
 
 ---
@@ -210,7 +210,7 @@ Our team completes your forms, and Lucrece personally reviews every package befo
 Your package will include every form filled out and ready to file, your county-specific filing checklist, your court hearing prep guide, and the ordering instructions for your new birth certificate.
 
 **Step 4 — You file with your county court**
-Take your forms to your county court clerk. Pay the filing fee (~$60–$90). Get your hearing date. Your two free 15-minute attorney calls are available throughout — schedule them whenever you need them.
+Take your forms to your county court clerk. Pay the filing fee (~$60–$90). Get your hearing date. Your two 15-minute support calls are available throughout — schedule them whenever you need them.
 
 **Below the steps:**
 *Most uncontested Nebraska stepparent adoptions finalize 4–6 months after filing.*
@@ -285,10 +285,10 @@ The intake form will ask for the legal names of all parties, the child's birth c
 Most Done-For-You packages are completed and delivered within 3 business days of receiving your intake form. If your case has unusual circumstances (e.g., unusual non-custodial parent situation), it may take an extra day or two — we'll let you know.
 
 **Q: What if I have questions during my case?**
-Your package includes two free 15-minute attorney calls with Lucrece, available whenever you need them — before filing, before your hearing, or at any point in between. The calls are scoped to questions about your forms package.
+Your package includes two 15-minute support calls, available whenever you need them — before filing, before your hearing, or at any point in between. Support calls are scoped to questions about your forms package.
 
 **Q: What does the $499 not include?**
-The $499 covers your completed forms package, the two attorney calls, and the filing/hearing/birth certificate guidance. It does NOT cover your county's filing fee (~$60–$90 paid directly to the court), certified copies of your finalized adoption decree, or any background-check fees if your county requires them.
+The $499 covers your completed forms package, the two 15-minute support calls, and the filing/hearing/birth certificate guidance. It does NOT cover your county's filing fee (~$60–$90 paid directly to the court), certified copies of your finalized adoption decree, or any background-check fees if your county requires them.
 
 **Notes:**
 - Five questions max. The visitor's hand is on the buy button — too many FAQs sends them down a rabbit hole.
@@ -305,7 +305,7 @@ Single, large, unmissable.
 **H2:** Ready to get started?
 
 **Below H2:**
-Your Done-For-You package, completed by a licensed Nebraska adoption attorney, delivered in 3 business days.
+Your Done-For-You package, completed by our team, delivered in 3 business days.
 
 **Primary CTA — ThriveCart embed (second location):**
 
@@ -399,7 +399,7 @@ Minimal — we don't want this page generating rich results in search since it s
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Done-For-You Nebraska Stepparent Adoption Forms (Minor Child)",
-  "description": "Attorney-prepared Nebraska stepparent adoption forms for minor-child cases. Completed by a licensed Nebraska adoption attorney within 3 business days. Includes two attorney calls and complete filing guidance.",
+  "description": "Attorney-prepared Nebraska stepparent adoption forms for minor-child cases. Completed by our team within 3 business days. Includes two 15-minute support calls and complete filing guidance.",
   "brand": { "@type": "Brand", "name": "Adoption Forms Express" },
   "offers": {
     "@type": "Offer",
@@ -505,6 +505,7 @@ Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssim
 | 2026-05-05 | v2.9 — **Mobile empty-space fix v2 (correct version) in `dfy-minor-child-checkout.html`.** Tyler's DevTools inspection revealed the actual culprit: ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` inside the `.tc-v2-embeddable-target` div and hardcodes an inline `style="height: 2387px"` on it. On mobile that's ~1000px taller than the form's actual rendered content, creating the empty-space gap below the visible form (the user is still scrolling inside the iframe through dead space until they exit it and reach our reassurance strip). The injected iframe also carries `scrolling="yes"`, which means we can safely cap its height with CSS — any overflow scrolls inside the iframe rather than being clipped. Fix: re-added the `@media (max-width: 720px)` block (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) with `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }` plus tightened wrap padding to `1.5rem 0`. The 1800px cap is conservative (form likely needs ~1300–1500px on mobile) — leaves a buffer for dynamic form expansion (coupon-code section, address validation errors, etc.) while still cutting most of the dead space. **Tuning:** if dead space is still visible after deploy, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Behavior change is mobile-only (≤720px); desktop unchanged. CSS-only; no HTML/copy/schema changes. | Claude / Tyler |
 | 2026-05-05 | v2.10 — ThriveCart embed token regenerated again for product 10 after Tyler adjusted spacing in the ThriveCart admin (separate from the prior logo-change regen). Confirms the empirical pattern: ThriveCart mints a new embeddable token on most product saves, not just specific changes. Product ID unchanged. Old token: UAXWPD → new token: 1OP2TU. Token swapped in `dfy-minor-child-checkout.html` (lines 376–377) and across all token references in this spec doc via `replace_all`. Only this one product was edited in the admin this round, so the other three checkout files (DFY adult / DIY minor / DIY adult) are unaffected. | Claude / Tyler |
 | 2026-05-05 | v2.11 — ThriveCart embed token regenerated yet again for product 10 after Tyler made an additional spacing adjustment in the ThriveCart admin (further fine-tuning the in-embed layout). Same product, third token regen of the day. Product ID unchanged. Old token: 1OP2TU → new token: HV1ZXD. Token swapped in `dfy-minor-child-checkout.html` and across all token references in this spec doc via `replace_all`. Other three checkout files unaffected. | Claude / Tyler |
+| 2026-05-05 | v2.12 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" / "free 15-minute attorney calls" with "support call" / "support calls" framing. New language: DFY = "two 15-minute support calls". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. Schema description and meta description updated. Schema "Completed by a licensed Nebraska adoption attorney" → "Completed by our team" — the attorney designed/prepared the form templates (still credited via "Attorney-prepared..." which remains), but the per-customer form completion is done by the team, not the attorney directly. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
 | | | |
 
 ---

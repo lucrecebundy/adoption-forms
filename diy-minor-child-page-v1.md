@@ -6,7 +6,7 @@
 **Sister docs:**
 - `dfy-minor-child-page-v1.md` (the structural template — DFY minor child)
 - Future `diy-adult-page-v1.md` (DIY adult equivalent)
-**Version:** 1.8
+**Version:** 1.9
 **Last updated:** May 5, 2026
 **Status:** 🔵 Built — `diy-minor-child.html` and `diy-minor-child-checkout.html` on disk; pending WordPress deploy
 
@@ -63,8 +63,8 @@ A DIY buyer is fundamentally different from a DFY buyer. Same legal situation, b
 1. **Don't apologize for the product being self-serve.** That's the feature, not the bug.
 2. **Don't compare to DFY.** The visitor doesn't need to be reminded a more expensive option exists.
 3. **Lead with capability, not absence.** "You'll have everything you need" — not "You'll have to do it yourself."
-4. **Show what's actually in the package generously.** Anxiety about "will I be able to do this?" is reduced by showing the product is comprehensive — forms, step-by-step instructions, attorney call.
-5. **Position the attorney call as the safety net.** Not the main event. The forms and instructions are the main event; the call is what de-risks the whole thing.
+4. **Show what's actually in the package generously.** Anxiety about "will I be able to do this?" is reduced by showing the product is comprehensive — forms, step-by-step instructions, support call.
+5. **Position the support call as the safety net.** Not the main event. The forms and instructions are the main event; the call is what de-risks the whole thing.
 
 ### One-line page goal
 
@@ -92,7 +92,7 @@ A married Nebraska resident who:
 - Specific, generous detail about what's in the $299 package
 - Evidence that someone like them did this and it worked
 - A clear sense of what they will actually do after they buy
-- A safety net (the attorney call) for if they get stuck
+- A safety net (the support call) for if they get stuck
 
 **What they do NOT need:**
 
@@ -107,7 +107,7 @@ A married Nebraska resident who:
 ```
 1. Sticky nav (logo + simple Email link — no menu)
 2. Hero / qualification confirmation (eyebrow + H1 + qualification recap + primary CTA)
-3. What You Get (forms list + instructions + attorney call — generously detailed)
+3. What You Get (forms list + instructions + support call — generously detailed)
 4. How It Works After You Order (4-step: download → review → fill out → file)
 5. Trust Block (Lucrece signature + 3 testimonials — Ruby Leonard featured)
 6. Pre-Purchase FAQ (DIY-specific anxieties — different from DFY's FAQ)
@@ -143,7 +143,7 @@ The right-side link is `mailto:adoptionformsexpress@gmail.com`.
 Your DIY minor-child stepparent adoption package is *ready* to download.
 
 **Subhead:**
-Your case fits our DIY package for minor-child stepparent adoptions. You'll get every Nebraska form you need to adopt your stepchild, step-by-step instructions, and one attorney call when questions come up — all for $299.
+Your case fits our DIY package for minor-child stepparent adoptions. You'll get every Nebraska form you need to adopt your stepchild, step-by-step instructions, and one 30-minute support call when questions come up — all for $299.
 
 **Qualification recap callout box (5 items):**
 ✓ Married Nebraska resident
@@ -157,7 +157,7 @@ Continue to Checkout — $299
 *(button links to `/diy-minor-checkout-page/`)*
 
 **Below the CTA, small text:**
-*Secure checkout · Forms delivered within 1 business day · Includes one attorney call*
+*Secure checkout · Forms delivered within 1 business day · Includes one 30-minute support call*
 
 **Notes:**
 - Hero language emphasizes capability ("set up to do this yourself, with confidence") rather than absence ("you have to do it yourself")
@@ -175,7 +175,7 @@ This section does the most heavy lifting on the page. DIY anxiety is "will I act
 **H2:** Everything you need to finalize your minor-child stepparent adoption — without an attorney handling it.
 
 **Subhead (one short line):**
-Your $299 package includes forms, step-by-step instructions, and one attorney call.
+Your $299 package includes forms, step-by-step instructions, and one 30-minute support call.
 
 **Two-column layout:**
 
@@ -188,7 +188,7 @@ Your $299 package includes forms, step-by-step instructions, and one attorney ca
 
 **Column 2 — The Guidance** (stacked layout — bold heading on its own line, description underneath):
 - **Step-by-step written instructions** — for each form: what goes where, what each section means in plain English.
-- **One attorney call with Lucrece** — use it whenever you need it. Most clients use it after they've drafted the forms but before they file.
+- **One 30-minute support call** — use it whenever you need it. Most clients use it after they've drafted the forms but before they file.
 - **Filing instructions** — exactly which county to file in, what fees to expect, and how to schedule your finalization hearing.
 
 **Below the two columns, a single reassurance line:**
@@ -197,10 +197,10 @@ Your $299 package includes forms, step-by-step instructions, and one attorney ca
 **Notes:**
 - Two-column structure mirrors the DFY page's "What You Get" section exactly — keeps visual sister-page feel
 - Generous detail in Column 1 reduces the "will I have what I need?" anxiety
-- Column 2 makes the support structure clear: instructions handle most cases, attorney call handles the edge cases
+- Column 2 makes the support structure clear: instructions handle most cases, support call handles the edge cases
 - Column 2 items render with the bold heading stacked above its description (not inline with an em-dash) so the column doesn't feel chopped up next to the plain-bullet Forms list
 - Final reassurance line is intentional: it reinforces that even though the visitor is doing the work themselves, they're working with attorney-prepared materials, not generic templates
-- **No email-access feature is offered** — the product includes the forms, instructions, and one attorney call. General contact email exists in the nav and footer (mailto:adoptionformsexpress@gmail.com) but it's not framed as a feature with a response-time promise.
+- **No email-access feature is offered** — the product includes the forms, instructions, and one 30-minute support call. General contact email exists in the nav and footer (mailto:adoptionformsexpress@gmail.com) but it's not framed as a feature with a response-time promise.
 
 ---
 
@@ -217,10 +217,10 @@ The whole process typically takes 4–6 months in Nebraska. Here's what your par
 Right after checkout, we'll send a short email to confirm a few details about your case. Once you reply, we'll send all your forms and the instruction guide — typically within one business day.
 
 **Step 2 — Read through (1–2 hours)**
-Look at the forms with your spouse. The instruction guide walks you through each one. Make a list of any questions you want to ask on your attorney call.
+Look at the forms with your spouse. The instruction guide walks you through each one. Make a list of any questions you want to ask on your support call.
 
 **Step 3 — Fill out the forms (a few evenings, at your pace)**
-Work through the forms using the instructions. There's no deadline — you can take a week or a month. When you have questions, schedule your attorney call with Lucrece.
+Work through the forms using the instructions. There's no deadline — you can take a week or a month. When you have questions, schedule your support call.
 
 **Step 4 — File and finalize (Nebraska timeline: 4–6 months)**
 Take the completed forms to your county courthouse along with the filing fee. The instructions tell you exactly how. After filing, you'll receive a hearing date — typically 2–4 months out.
@@ -228,7 +228,7 @@ Take the completed forms to your county courthouse along with the filing fee. Th
 **Notes:**
 - "At your pace" framing in the H2 reframes the longer effort as flexibility rather than burden
 - Step 1 sets accurate post-purchase expectations: a short confirmation-email exchange before delivery, with forms typically sent within one business day. Still faster than DFY (1 day vs 3) but doesn't promise instant.
-- Step 2 includes "make a list of questions" — prepares them for the attorney call
+- Step 2 includes "make a list of questions" — prepares them for the support call
 - Step 3 explicitly says "there's no deadline" — addresses the DIY anxiety that they'll get behind
 - Step 4 is the same as DFY but with "instructions tell you exactly how" emphasized — reinforces that they're not on their own for the filing step
 
@@ -245,7 +245,7 @@ Take the completed forms to your county courthouse along with the filing fee. Th
 [Photo: Lucrece headshot, circular, ~80px]
 URL: `https://adoptionformsexpress.com/wp-content/uploads/2026/04/497A2015-scaled.jpg`
 
-> "I designed this DIY package for Nebraska families who are comfortable doing paperwork but want the security of attorney-prepared forms. Every form, every instruction page comes from my actual practice handling stepparent adoptions for Nebraska families. If you get stuck, your attorney call is your safety net."
+> "I designed this DIY package for Nebraska families who are comfortable doing paperwork but want the security of attorney-prepared forms. Every form, every instruction page comes from my actual practice handling stepparent adoptions for Nebraska families. If you get stuck, your support call is your safety net."
 >
 > **— Lucrece H. Bundy, Esq.**
 > *Licensed Nebraska adoption attorney · Nebraska Bar #25734 · 140+ five-star reviews*
@@ -265,7 +265,7 @@ URL: `https://adoptionformsexpress.com/wp-content/uploads/2026/04/497A2015-scale
 - **Ruby Leonard goes first** — she's the only Google review in the entire 142-review set that explicitly mentions purchasing the DIY adoption documents AND specifically calls them "easy to do and understand." That's the single most powerful piece of social proof on the entire DIY page. Lead with it.
 - Sarah Hall is in slot 2 because "quick and effortless" reduces the DIY-buyer anxiety that this will be a slog
 - Kevin Shafer is in slot 3 with "would absolutely use again" — general satisfaction, post-purchase
-- The Lucrece signature copy is intentionally different from the DFY page — it acknowledges the DIY buyer's situation directly ("comfortable doing paperwork but want the security of attorney-prepared forms") and reframes the attorney call as a safety net rather than a feature
+- The Lucrece signature copy is intentionally different from the DFY page — it acknowledges the DIY buyer's situation directly ("comfortable doing paperwork but want the security of attorney-prepared forms") and reframes the support call as a safety net rather than a feature
 - Photo styling identical to DFY page (same image, same circular crop, same size)
 
 ---
@@ -279,13 +279,13 @@ The FAQ is where DIY differs most from DFY because the questions are different. 
 **FAQ accordion (5 questions, no FAQPage schema):**
 
 **Q1: What if I get stuck?**
-You have two places to turn. First, the instructions cover the most common questions — they're written in plain English and walk through every section of every form. Second, you have one attorney call with Lucrece — most people use it about halfway through, after they've reviewed everything but before they file. Most clients finish their forms without needing the call at all.
+You have two places to turn. First, the instructions cover the most common questions — they're written in plain English and walk through every section of every form. Second, you have one 30-minute support call — most people use it about halfway through, after they've reviewed everything but before they file. Most clients finish their forms without needing the call at all.
 
 **Q2: How is this different from your $499 Done-For-You package?**
 Done-For-You means we complete the forms for you using information you provide. DIY means you receive blank forms with detailed instructions and you fill them out yourself. Same forms, same attorney-prepared quality. The difference is who does the typing — and the price reflects that.
 
 **Q3: Can I really do this myself? Without legal training?**
-Yes — that's exactly who this product is designed for. The forms are written in plain English, the instructions explain every section, and your attorney call is there when you need it. Most clients tell us the hardest part was deciding to start; the actual paperwork is more straightforward than they expected.
+Yes — that's exactly who this product is designed for. The forms are written in plain English, the instructions explain every section, and your support call is there when you need it. Most clients tell us the hardest part was deciding to start; the actual paperwork is more straightforward than they expected.
 
 **Q4: What if my situation changes and I need more help?**
 You can upgrade to Done-For-You at any time before filing — we credit your $299 toward the $499 package. Or you can hire Lucrece directly through Bundy Law for full attorney representation.
@@ -294,7 +294,7 @@ You can upgrade to Done-For-You at any time before filing — we credit your $29
 After payment, we'll send a short email to confirm a few details about your case. Once you reply, your forms and instruction guide are typically sent within one business day.
 
 **Notes:**
-- Q1 leads because "what if I get stuck?" is the central DIY anxiety. It needs to be the first question answered with concrete safety nets — instructions first, attorney call second.
+- Q1 leads because "what if I get stuck?" is the central DIY anxiety. It needs to be the first question answered with concrete safety nets — instructions first, support call second.
 - Q2 is the only question that mentions DFY — by name, briefly, framed as "if you'd rather we type, here's that option." Doesn't oversell DFY; just answers the question and moves on.
 - Q3 names the imposter syndrome head-on. Most DIY visitors are quietly worried they're about to get in over their heads. Reassuring them with "the hardest part was deciding to start" is exactly the right note.
 - Q4 is the upgrade path — important for protecting the buyer: if life happens, they're not stuck. The $299→$499 credit removes the hesitation that "what if I have to switch later?"
@@ -386,7 +386,7 @@ Single Product schema in the head:
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "DIY Nebraska Stepparent Adoption Forms (Minor Child)",
-  "description": "Attorney-prepared blank Nebraska stepparent adoption forms for minor-child cases, with step-by-step instructions and one attorney call. Designed for Nebraska families completing the paperwork themselves.",
+  "description": "Attorney-prepared blank Nebraska stepparent adoption forms for minor-child cases, with step-by-step instructions and one 30-minute support call. Designed for Nebraska families completing the paperwork themselves.",
   "brand": { "@type": "Brand", "name": "Adoption Forms Express" },
   "offers": {
     "@type": "Offer",
@@ -443,3 +443,4 @@ This page does NOT contain the ThriveCart embed. ThriveCart lives on the separat
 | 2026-05-05 | v1.6 — Mobile checkout layout fix in `diy-minor-child-checkout.html`. Added a `@media (max-width: 720px)` block in the embedded `<style>` (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) that tightens `.thrivecart-wrap` vertical padding and forces `min-height: 0` + `height: auto` on the injected ThriveCart iframe. Reason: on mobile the injected iframe was being given a desktop-sized fixed height, which left a large empty white gap between the form and the reassurance strip / two-up testimonials below it. No HTML or copy changes; CSS-only mobile fix. May need follow-up if ThriveCart's v2 embed turns out not to use an iframe (renders inline DOM instead) — in which case the iframe selector is a no-op and we'll need to target the actual injected container after inspecting it on the live page. | Claude / Tyler |
 | 2026-05-05 | v1.7 — **Reverted v1.6's mobile fix** in `diy-minor-child-checkout.html`. The `@media (max-width: 720px)` block was removed, restoring the file to its pre-v1.6 state. Reason: forcing `height: auto !important` on the injected ThriveCart iframe collapsed the form into the iframe's intrinsic default height (~150px), squishing the form fields to the point users couldn't comfortably enter their info. The original empty-space gap is back, but the form is usable. Next attempt deferred until Tyler can DevTools-inspect the live mobile checkout (Chrome mobile emulation, right-click the empty area → Inspect) and report the actual injected element's tag, class/id, and computed `height` — then we can target the real offender instead of guessing. | Claude / Tyler |
 | 2026-05-05 | v1.8 — **Mobile empty-space fix v2 (correct version) in `diy-minor-child-checkout.html`.** Tyler's DevTools inspection revealed the actual culprit: ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` inside the `.tc-v2-embeddable-target` div and hardcodes an inline `style="height: 2387px"` on it. On mobile that's ~1000px taller than the form's actual rendered content, creating the empty-space gap below the visible form (the user is still scrolling inside the iframe through dead space until they exit it and reach our reassurance strip). The injected iframe also carries `scrolling="yes"`, which means we can safely cap its height with CSS — any overflow scrolls inside the iframe rather than being clipped. Fix: re-added the `@media (max-width: 720px)` block (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) with `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }` plus tightened wrap padding to `1.5rem 0`. The 1800px cap is conservative (form likely needs ~1300–1500px on mobile) — leaves a buffer for dynamic form expansion (coupon-code section, address validation errors, etc.) while still cutting most of the dead space. **Tuning:** if dead space is still visible after deploy, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Behavior change is mobile-only (≤720px); desktop unchanged. CSS-only; no HTML/copy/schema changes. | Claude / Tyler |
+| 2026-05-05 | v1.9 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" with "support call" / "support calls" framing across Section 4 customer copy + Section 8 schema spec + the strategic notes that referenced the call by name (Section 1 voice principles, Section 2 visitor needs, Section 3 page architecture, Section 4 internal notes). New language: DIY = "one 30-minute support call". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |

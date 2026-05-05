@@ -5,7 +5,7 @@
 **URLs:** `/dfy-adult-sales-page/` (sales page — `dfy-adult.html`); `/dfy-adult-checkout-page/` (transactional checkout page — not yet built). The two pages will be sibling top-level pages in WordPress, mirroring the minor-child architecture.
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-minor-child-page-v1.md` (minor-child equivalent)
-**Version:** 1.14
+**Version:** 1.15
 **Last updated:** May 5, 2026
 **Status:** Built — `dfy-adult.html` (post-quiz sales page) and `dfy-adult-checkout.html` (transactional checkout housing the ThriveCart embed for product 8) both on disk, ready for WordPress deploy
 
@@ -184,7 +184,7 @@ Continue to Checkout — $499
 - Court hearing prep document with the questions a Nebraska judge is most likely to ask in adult adoption cases
 - Background check instructions — you complete the checks yourself; we provide step-by-step guidance for what your county requires
 - New birth certificate ordering instructions (your adult stepchild's name change, if applicable)
-- **Two free 15-minute calls** with Lucrece Bundy, Esq. (a licensed Nebraska adoption attorney with adult-adoption experience) — scoped to questions about your forms
+- **Two 15-minute support calls** to answer questions about your forms
 
 **Below the columns:**
 *Court filing fees (~$60–$90 depending on county) and certified copy fees are paid directly to your local court and not included.*
@@ -282,7 +282,7 @@ Most uncontested Nebraska adult stepparent adoptions finalize in 4 to 6 months f
 Adult adoptions can usually proceed even when the adoptee lives in another state, as long as one of you (or your spouse) is a Nebraska resident. If your situation has any wrinkles, email us before purchasing — we'll let you know whether the Done-For-You package is the right fit.
 
 **Q: What does the $499 not include?**
-The $499 covers your completed forms package, the two attorney calls, and the filing/hearing/birth certificate guidance. It does NOT cover your county's filing fee (~$60–$90 paid directly to the court) or certified copies of your finalized adoption decree.
+The $499 covers your completed forms package, the two 15-minute support calls, and the filing/hearing/birth certificate guidance. It does NOT cover your county's filing fee (~$60–$90 paid directly to the court) or certified copies of your finalized adoption decree.
 
 **Notes:**
 - These FAQs are different from the minor-child page because the legal mechanics of adult adoption are genuinely different. Don't try to copy-paste between the pages.
@@ -297,7 +297,7 @@ The $499 covers your completed forms package, the two attorney calls, and the fi
 **H2:** Ready to make it official?
 
 **Below H2:**
-Your Done-For-You adult adoption package, completed by a licensed Nebraska adoption attorney, delivered in 3 business days.
+Your Done-For-You adult adoption package, completed by our team, delivered in 3 business days.
 
 **Primary CTA button:**
 Continue to Checkout — $499
@@ -380,7 +380,7 @@ Same minimal approach as minor-child page:
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Done-For-You Nebraska Adult Stepparent Adoption Forms",
-  "description": "Attorney-prepared Nebraska adult stepparent adoption forms (adoptee age 19+). Completed by a licensed Nebraska adoption attorney within 3 business days. Includes two attorney calls and complete filing guidance.",
+  "description": "Attorney-prepared Nebraska adult stepparent adoption forms (adoptee age 19+). Completed by our team within 3 business days. Includes two 15-minute support calls and complete filing guidance.",
   "brand": { "@type": "Brand", "name": "Adoption Forms Express" },
   "offers": {
     "@type": "Offer",
@@ -440,6 +440,7 @@ No `FAQPage` schema. Page is gated; rich results aren't desired.
 | 2026-05-05 | v1.12 — Mobile checkout layout fix in `dfy-adult-checkout.html`. Added a `@media (max-width: 720px)` block in the embedded `<style>` (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) that tightens `.thrivecart-wrap` vertical padding and forces `min-height: 0` + `height: auto` on the injected ThriveCart iframe. Reason: on mobile the injected iframe was being given a desktop-sized fixed height, which left a large empty white gap between the form and the reassurance strip / two-up testimonials below it. No HTML or copy changes; CSS-only mobile fix. May need follow-up if ThriveCart's v2 embed turns out not to use an iframe (renders inline DOM instead) — in which case the iframe selector is a no-op and we'll need to target the actual injected container after inspecting it on the live page. | Claude / Tyler |
 | 2026-05-05 | v1.13 — **Reverted v1.12's mobile fix** in `dfy-adult-checkout.html`. The `@media (max-width: 720px)` block was removed, restoring the file to its pre-v1.12 state. Reason: forcing `height: auto !important` on the injected ThriveCart iframe collapsed the form into the iframe's intrinsic default height (~150px), squishing the form fields to the point users couldn't comfortably enter their info. The original empty-space gap is back, but the form is usable. Next attempt deferred until Tyler can DevTools-inspect the live mobile checkout (Chrome mobile emulation, right-click the empty area → Inspect) and report the actual injected element's tag, class/id, and computed `height` — then we can target the real offender instead of guessing. | Claude / Tyler |
 | 2026-05-05 | v1.14 — **Mobile empty-space fix v2 (correct version) in `dfy-adult-checkout.html`.** Tyler's DevTools inspection revealed the actual culprit: ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` inside the `.tc-v2-embeddable-target` div and hardcodes an inline `style="height: 2387px"` on it. On mobile that's ~1000px taller than the form's actual rendered content, creating the empty-space gap below the visible form (the user is still scrolling inside the iframe through dead space until they exit it and reach our reassurance strip). The injected iframe also carries `scrolling="yes"`, which means we can safely cap its height with CSS — any overflow scrolls inside the iframe rather than being clipped. Fix: re-added the `@media (max-width: 720px)` block (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) with `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }` plus tightened wrap padding to `1.5rem 0`. The 1800px cap is conservative (form likely needs ~1300–1500px on mobile) — leaves a buffer for dynamic form expansion (coupon-code section, address validation errors, etc.) while still cutting most of the dead space. **Tuning:** if dead space is still visible after deploy, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Behavior change is mobile-only (≤720px); desktop unchanged. CSS-only; no HTML/copy/schema changes. | Claude / Tyler |
+| 2026-05-05 | v1.15 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" / "free 15-minute attorney calls" with "support call" / "support calls" framing. New language: DFY = "two 15-minute support calls". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. Schema description and meta description updated. Schema "Completed by a licensed Nebraska adoption attorney" → "Completed by our team" — the attorney designed/prepared the form templates (still credited via "Attorney-prepared..." which remains), but the per-customer form completion is done by the team, not the attorney directly. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
 
 ---
 *End of v1.0 — DFY Adult Page Working Document*

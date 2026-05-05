@@ -6,7 +6,7 @@
 **Sister docs:**
 - `diy-minor-child-page-v1.md` (the structural template — DIY minor child)
 - `dfy-adult-page-v1.md` (the adult-content reference — DFY adult)
-**Version:** 1.5
+**Version:** 1.6
 **Last updated:** May 5, 2026
 **Status:** Built — `diy-adult.html` and `diy-adult-checkout.html` on disk; pending WordPress deploy
 
@@ -98,7 +98,7 @@ A Nebraska resident who:
 ```
 1. Stripped checkout-style nav (logo + Email us)
 2. Confirmation hero (eyebrow: "✓ You qualify" + H1 + qualification recap callout + primary CTA → checkout)
-3. What You Get (forms + instructions + 1 attorney call — generous detail)
+3. What You Get (forms + instructions + 1 support call — generous detail)
 4. How It Works After You Order (4-step: download → review → fill out → file)
 5. Trust Block (Lucrece signature block + 3 testimonials)
 6. Pre-Purchase FAQ (DIY-adult-specific anxieties)
@@ -132,7 +132,7 @@ Same as DIY minor-child page — minimal nav, no menu items. Email link: `mailto
 Your DIY adult stepparent adoption package is ready to download.
 
 **Subhead (one short paragraph):**
-Based on your answers, your case meets the criteria for our DIY adult package. You'll get every Nebraska form you need, step-by-step instructions, and one attorney call when questions come up — all for $299.
+Based on your answers, your case meets the criteria for our DIY adult package. You'll get every Nebraska form you need, step-by-step instructions, and one 30-minute support call when questions come up — all for $299.
 
 **Qualification recap callout box (5 items):**
 
@@ -148,7 +148,7 @@ Continue to Checkout — $299
 *(button links to `/diy-adult-check-out-page/`)*
 
 **CTA subtext (one line):**
-Secure checkout · Forms delivered within 1 business day · Includes one attorney call
+Secure checkout · Forms delivered within 1 business day · Includes one 30-minute support call
 
 **Notes:**
 - 5-item qualification recap. The absent-biological-parent bullet was added after Tyler's review of the v1.1 build — the adoptee's other biological parent must be deceased, have consented, or have had their rights terminated before the stepchild turned 19 for the case to qualify for DIY adult. Without this, the case is not a clean uncontested adult stepparent adoption and shouldn't have been routed to this product.
@@ -165,7 +165,7 @@ Secure checkout · Forms delivered within 1 business day · Includes one attorne
 **H2:** Everything you need to finalize your adult stepparent adoption.
 
 **Subhead (one line):**
-Your $299 package includes forms, step-by-step instructions, and one attorney call.
+Your $299 package includes forms, step-by-step instructions, and one 30-minute support call.
 
 **Two-column layout:**
 
@@ -181,7 +181,7 @@ Your $299 package includes forms, step-by-step instructions, and one attorney ca
 - Filing instructions for your specific Nebraska county
 - Background check authorization — you complete the checks yourself; we provide step-by-step guidance for what your county requires
 - Court hearing prep document with the questions a Nebraska judge is most likely to ask in adult adoption cases
-- One attorney call with Lucrece (30 minutes) — use it whenever you get stuck
+- One 30-minute support call — use it whenever you get stuck
 
 **Below the columns, a small reassurance line:**
 *All forms are prepared by Lucrece H. Bundy, Esq., a licensed Nebraska adoption attorney with 200+ adoption cases — including adult stepparent adoptions.*
@@ -215,13 +215,13 @@ Work through the forms at your own pace. The instructions tell you exactly what 
 Submit your forms to your Nebraska county court. Pay the filing fee. Attend the brief hearing. Most adult adoption cases finalize within 4–6 months from filing.
 
 **Below the timeline, a small reassurance line:**
-*Stuck somewhere? Use your attorney call. That's exactly what it's for.*
+*Stuck somewhere? Use your support call. That's exactly what it's for.*
 
 **Notes:**
 - 4-step structure mirrors DIY minor-child for cross-page consistency
 - Adult adoption has the same 4–6 month timeline as minor-child cases at the courthouse end (per `dfy-adult-page-v1.md` v1.8 timeline correction)
 - Step 3 time estimate (2–4 hours over a weekend) is realistic for most cases — DIY buyers want a concrete time commitment so they can plan
-- The "stuck somewhere?" line at the end is the second time the page surfaces the attorney call as a safety net — important because the DIY buyer's #1 anxiety is "what if I get stuck"
+- The "stuck somewhere?" line at the end is the second time the page surfaces the support call as a safety net — important because the DIY buyer's #1 anxiety is "what if I get stuck"
 - Step 4 acknowledges the filing fee and hearing without making them feel scary or unexpected
 
 ---
@@ -236,7 +236,7 @@ URL: `https://adoptionformsexpress.com/wp-content/uploads/2026/04/497A2015-scale
 Copy:
 > Hi, I'm **Lucrece H. Bundy**, a licensed Nebraska adoption attorney. I built the DIY package for the families I see most often: comfortable doing paperwork themselves, but wanting the security of attorney-prepared forms — and direct access to me when something specific to their adoption comes up.
 >
-> I've handled hundreds of Nebraska adoption cases, including adult stepparent adoptions where the adoptee is decades older than the stepparent. I know which forms get tripped up, which counties have idiosyncratic filing rules, and which questions the judges actually ask at the hearing. My job is to make sure your forms are correct, your filing path is clear, and you know exactly when to use the attorney call.
+> I've handled hundreds of Nebraska adoption cases, including adult stepparent adoptions where the adoptee is decades older than the stepparent. I know which forms get tripped up, which counties have idiosyncratic filing rules, and which questions the judges actually ask at the hearing. My job is to make sure your forms are correct, your filing path is clear, and you know exactly when to use the support call.
 
 **Three review cards (Google-verified, curated for the DIY adult intersection):**
 
@@ -274,7 +274,7 @@ Copy:
 **H2:** What people ask before clicking through to checkout.
 
 **Q1: What if I get stuck on a form?**
-Two places to turn. First, the step-by-step instructions cover every section of every form in plain English. Second, you have one attorney call with Lucrece — most clients use it about halfway through, after they've reviewed everything but before they file. Between the two, most DIY adult adoption cases finish without needing more.
+Two places to turn. First, the step-by-step instructions cover every section of every form in plain English. Second, you have one 30-minute support call — most clients use it about halfway through, after they've reviewed everything but before they file. Between the two, most DIY adult adoption cases finish without needing more.
 
 **Q2: Do biological parents need to consent to an adult adoption in Nebraska?**
 Yes — written consent is required from the adoptee's biological parent (typically your spouse) and from the adult adoptee themselves. Both consent forms are filed with the petition. The DIY package includes both consent forms with step-by-step instructions for completion. The absent biological parent's consent is not required for adult stepparent adoption in Nebraska — that's one of the reasons this case type qualifies for DIY.
@@ -378,7 +378,7 @@ Single JSON-LD `Product` block (no `FAQPage`, no `AggregateRating`):
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "DIY Nebraska Adult Stepparent Adoption Forms",
-  "description": "Self-serve Nebraska adult stepparent adoption forms package (for stepchildren age 19+). Attorney-prepared forms with step-by-step instructions and one attorney call. Prepared by a licensed Nebraska adoption attorney.",
+  "description": "Self-serve Nebraska adult stepparent adoption forms package (for stepchildren age 19+). Attorney-prepared forms with step-by-step instructions and one 30-minute support call. Prepared by a licensed Nebraska adoption attorney.",
   "brand": { "@type": "Brand", "name": "Adoption Forms Express" },
   "offers": {
     "@type": "Offer",
@@ -439,3 +439,4 @@ Embeddable token: `tc-adoptionssimplified-7-F1ED0D`
 | 2026-05-05 | v1.3 — Mobile checkout layout fix in `diy-adult-checkout.html`. Added a `@media (max-width: 720px)` block in the embedded `<style>` (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) that tightens `.thrivecart-wrap` vertical padding and forces `min-height: 0` + `height: auto` on the injected ThriveCart iframe. Reason: on mobile the injected iframe was being given a desktop-sized fixed height, which left a large empty white gap between the form and the reassurance strip / two-up testimonials below it. No HTML or copy changes; CSS-only mobile fix. May need follow-up if ThriveCart's v2 embed turns out not to use an iframe (renders inline DOM instead) — in which case the iframe selector is a no-op and we'll need to target the actual injected container after inspecting it on the live page. | Claude / Tyler |
 | 2026-05-05 | v1.4 — **Reverted v1.3's mobile fix** in `diy-adult-checkout.html`. The `@media (max-width: 720px)` block was removed, restoring the file to its pre-v1.3 state. Reason: forcing `height: auto !important` on the injected ThriveCart iframe collapsed the form into the iframe's intrinsic default height (~150px), squishing the form fields to the point users couldn't comfortably enter their info. The original empty-space gap is back, but the form is usable. Next attempt deferred until Tyler can DevTools-inspect the live mobile checkout (Chrome mobile emulation, right-click the empty area → Inspect) and report the actual injected element's tag, class/id, and computed `height` — then we can target the real offender instead of guessing. | Claude / Tyler |
 | 2026-05-05 | v1.5 — **Mobile empty-space fix v2 (correct version) in `diy-adult-checkout.html`.** Tyler's DevTools inspection revealed the actual culprit: ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` inside the `.tc-v2-embeddable-target` div and hardcodes an inline `style="height: 2387px"` on it. On mobile that's ~1000px taller than the form's actual rendered content, creating the empty-space gap below the visible form (the user is still scrolling inside the iframe through dead space until they exit it and reach our reassurance strip). The injected iframe also carries `scrolling="yes"`, which means we can safely cap its height with CSS — any overflow scrolls inside the iframe rather than being clipped. Fix: re-added the `@media (max-width: 720px)` block (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) with `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }` plus tightened wrap padding to `1.5rem 0`. The 1800px cap is conservative (form likely needs ~1300–1500px on mobile) — leaves a buffer for dynamic form expansion (coupon-code section, address validation errors, etc.) while still cutting most of the dead space. **Tuning:** if dead space is still visible after deploy, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Behavior change is mobile-only (≤720px); desktop unchanged. CSS-only; no HTML/copy/schema changes. | Claude / Tyler |
+| 2026-05-05 | v1.6 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" with "support call" / "support calls" framing across Section 4 customer copy + Section 8 schema spec + the strategic notes that referenced the call by name (Section 3 page architecture, Section 4 internal notes, Section 4.5 signature quote). New language: DIY = "one 30-minute support call". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
