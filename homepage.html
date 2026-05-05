@@ -353,8 +353,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); }
 .hero-credibility {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1.25rem;
-  font-size: 0.85rem;
+  gap: 0.4rem 0.85rem;
+  font-size: 0.78rem;
   color: var(--color-text-muted);
   margin-bottom: 2.25rem;
   font-weight: 500;
@@ -362,7 +362,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); }
   text-transform: uppercase;
   animation: fadeUp 0.8s ease 0.4s both;
 }
-.hero-credibility span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.hero-credibility span { display: inline-flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
 .hero-credibility .sep { color: var(--color-accent); }
 .hero-ctas {
   display: flex;
@@ -597,19 +597,25 @@ section { scroll-margin-top: 80px; }
   font-weight: 400;
 }
 .founder-cred {
-  display: block;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.4rem 0.5rem;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-border);
-  font-size: 0.88rem;
+  font-size: 0.7rem;
   color: var(--color-text-muted);
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   font-weight: 500;
+  white-space: nowrap;
 }
+.founder-cred span { white-space: nowrap; }
+.founder-cred .sep { color: var(--color-accent); }
 .founder-content p { margin-bottom: 1rem; color: var(--color-text); font-size: 1.04rem; }
 @media (max-width: 880px) {
   .founder-grid { grid-template-columns: 1fr; }
   .founder-image-wrap { max-width: 420px; margin: 0 auto; }
+  .founder-cred { flex-wrap: wrap; white-space: normal; font-size: 0.78rem; gap: 0.4rem 0.6rem; }
 }
 
 /* ------------------------------------------------------------------
@@ -1299,7 +1305,13 @@ section { scroll-margin-top: 80px; }
         <p>Lucrece H. Bundy is a licensed Nebraska adoption attorney and the founder of Bundy Law LLC and Adoption Forms Express. Over the past decade she has finalized more than 200 adoptions in Nebraska — stepparent, relative, adult, surrogacy, and international cases — across Douglas, Lancaster, Sarpy, and dozens of other Nebraska counties.</p>
         <blockquote class="founder-quote">"Too many qualifying families walk away from a stepparent adoption because the attorney quote is simply out of reach. The forms you'll receive are the same forms I use in my own practice."</blockquote>
         <p>She built Adoption Forms Express to put attorney-grade adoption forms within reach of every Nebraska family that qualifies.</p>
-        <span class="founder-cred">Admitted: Nebraska State Bar · Member: Nebraska State Bar Association · Founder: Bundy Law LLC</span>
+        <div class="founder-cred">
+          <span>Admitted: Nebraska State Bar</span>
+          <span class="sep">·</span>
+          <span>Member: Nebraska State Bar Association</span>
+          <span class="sep">·</span>
+          <span>Founder: Bundy Law LLC</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1381,7 +1393,7 @@ section { scroll-margin-top: 80px; }
           <li>Step-by-step instructions for filling out and filing</li>
           <li>Court hearing prep guide + likely judge questions</li>
           <li>New birth certificate ordering instructions</li>
-          <li>One free 15-minute call with Lucrece Bundy, Esq. — scoped to questions about your forms</li>
+          <li>One free 15-minute call with Lucrece Bundy, Esq. to answer your questions about the forms</li>
         </ul>
         <a href="#" class="btn btn-secondary">Get DIY Forms — $299</a>
       </div>
@@ -1394,7 +1406,7 @@ section { scroll-margin-top: 80px; }
         <span class="price-includes-title">Everything in DIY, plus</span>
         <ul class="price-list">
           <li>Forms completed for you using your information</li>
-          <li>Two free 15-minute calls with Lucrece Bundy, Esq. — scoped to questions about your forms</li>
+          <li>Two free 15-minute calls with Lucrece Bundy, Esq. to answer your questions about the forms</li>
           <li>Priority 3-business-day turnaround</li>
           <li>Personalized case review</li>
         </ul>
@@ -1431,7 +1443,7 @@ section { scroll-margin-top: 80px; }
           <li>Background check instructions</li>
           <li>Court hearing prep document with likely judge questions</li>
           <li>New birth certificate ordering walk-through</li>
-          <li>Direct attorney call(s) with Lucrece Bundy, Esq. — scoped to questions about your forms</li>
+          <li>Direct attorney call(s) with Lucrece Bundy, Esq. to answer your questions about the forms</li>
         </ul>
       </div>
     </div>
