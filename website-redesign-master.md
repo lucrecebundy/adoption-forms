@@ -448,7 +448,7 @@ Every doc in the project, with location and current version.
 | Doc | Filename | Latest version | Status |
 |---|---|---|---|
 | **Master** | `website-redesign-master.md` | v1.14 | 🟡 Active |
-| Homepage | `homepage-redesign-v1.md` | v2.11 | 🔵 Built (`homepage.html`), ready for WordPress deploy |
+| Homepage | `homepage-redesign-v1.md` | v2.12 | 🔵 Built (`homepage.html`), ready for WordPress deploy |
 | Qualifier quiz | `qualifier-quiz-v1.md` | — | ⚪ Not started |
 | Pricing | `pricing-page-v1.md` | — | ⚪ Not started |
 | DFY minor child (sales + checkout) | `dfy-minor-child-page-v1.md` | v2.12 | 🔵 Built — `dfy-minor-child.html` (sales page) + `dfy-minor-child-checkout.html` (transactional checkout, ThriveCart product 10) both on disk, ready for WordPress deploy |
