@@ -215,6 +215,16 @@ h1 { font-size: clamp(1.85rem, 3.4vw, 2.5rem); font-weight: 700; }
 }
 .thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }
 
+/* Mobile: ThriveCart's script hardcodes a desktop-sized inline height (~2387px) on the embed iframe, leaving roughly 1000px of dead space below the form. Cap it to a sensible mobile height; the iframe has scrolling="yes" so any genuine overflow scrolls inside the iframe instead of clipping content. */
+@media (max-width: 720px) {
+  .thrivecart-wrap {
+    padding: 1.5rem 0;
+  }
+  .thrivecart-wrap iframe.tc-v2-embeddable-el {
+    max-height: 1800px !important;
+  }
+}
+
 /* ------------------------------------------------------------------
    Reassurance strip
 ------------------------------------------------------------------ */
@@ -373,8 +383,8 @@ h1 { font-size: clamp(1.85rem, 3.4vw, 2.5rem); font-weight: 700; }
     <!-- ============== THRIVECART EMBED ============== -->
     <div class="thrivecart-wrap">
       <h2 class="thrivecart-heading">Complete your payment below</h2>
-      <div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="7" data-thrivecart-embeddable="tc-adoptionssimplified-7-A4PSQA"></div>
-      <script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-7-A4PSQA"></script>
+      <div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="7" data-thrivecart-embeddable="tc-adoptionssimplified-7-F1ED0D"></div>
+      <script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-7-F1ED0D"></script>
     </div>
 
     <!-- ============== REASSURANCE STRIP ============== -->
