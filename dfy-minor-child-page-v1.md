@@ -5,8 +5,8 @@
 **URLs:** `/dfy-minor-sales-page/` (sales page — `dfy-minor-child.html`); `/dfy-child-check-out-page/` (transactional checkout page — `dfy-minor-child-checkout.html`). The two pages are sibling top-level pages in WordPress (not parent/child).
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-adult-page-v1.md` (adult-adoption equivalent)
-**Version:** 2.4
-**Last updated:** May 1, 2026
+**Version:** 2.5
+**Last updated:** May 4, 2026
 **Status:** Built — both `dfy-minor-child.html` (post-quiz sales page) and `dfy-minor-child-checkout.html` (transactional checkout page housing the ThriveCart embed) now exist on disk; ready for WordPress deploy
 
 ---
@@ -118,10 +118,10 @@ A stripped-down nav. No "How It Works," no "FAQ," no "Pricing." We don't want th
 This is the most important section. It must feel like a continuation of the quiz.
 
 **Eyebrow (small, success green):**
-✓ You qualify
+✓ You qualify for the DFY Minor Child Adoption Package
 
 **H1:**
-You're a great fit for our Done-For-You package.
+You're a great fit for a Minor Child Done-For-You package.
 
 **Subhead:**
 Based on your answers, your Nebraska stepparent adoption is exactly the kind of case our Done-For-You package was built for. Here's what you'll get and what happens next.
@@ -498,6 +498,7 @@ Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssim
 | 2026-05-01 | URL conflict resolved (open issue from earlier in session). Two-page funnel now has two distinct URLs: sales page at `/buy-doneforyou-minor/` (existing live URL — unchanged so the qualifier-quiz Typeform redirect keeps working), checkout page at `/buy-doneforyou-minor/checkout/` (new sub-path). Header URL line in this doc updated from single URL to both URLs. Section 8 deployment URL line updated to reflect both URLs and the role of each. `dfy-minor-child-checkout.html` canonical updated to `https://adoptionformsexpress.com/buy-doneforyou-minor/checkout/`. The two CTA buttons on `dfy-minor-child.html` (hero + final CTA) — previously placeholder `<a href="#">` with TODO comments — now link to `/buy-doneforyou-minor/checkout/`; stale TODO comments removed. ThriveCart embed only loads on the checkout page (no duplicate-instance concern). **WordPress deploy step (Tyler):** create the new checkout WP page as a child of the existing Buy DFY Minor page with slug `checkout`, paste the `dfy-minor-child-checkout.html` body content, mark noindex via SEO plugin. | Claude / Tyler |
 | 2026-05-01 | Checkout URL revised: Tyler created the WordPress checkout page as a **top-level page** at `/dfy-child-check-out-page/` rather than as a child page at `/buy-doneforyou-minor/checkout/`. The two pages are now sibling top-level WordPress pages, not parent/child. URLs aligned across all four files: `dfy-minor-child-checkout.html` canonical now `https://adoptionformsexpress.com/dfy-child-check-out-page/`; `dfy-minor-child.html` two CTA buttons (hero + final CTA) updated to `https://adoptionformsexpress.com/dfy-child-check-out-page/`; this doc's header URL line and Section 8 deployment URL updated to match; master Section 2 architecture row updated to match. Also: minor typography fix on `dfy-minor-child.html` — added `&nbsp;` between "business" and "days" in the "What Happens Next" H2 ("From order to inbox in 3 business days.") and step 2 H3 ("Our team prepares your forms (1–3 business days)") so "days" doesn't orphan onto its own line on narrow widths. | Claude / Tyler |
 | 2026-05-01 | Sales page URL revised again. Tyler chose `/dfy-minor-sales-page/` as the sales-page WordPress slug (replacing `/buy-doneforyou-minor/`) for naming symmetry with the checkout page (`/dfy-child-check-out-page/`). URLs aligned: `dfy-minor-child.html` canonical updated (also caught and fixed a stale canonical that had been pointing to the original `/qualified/done-for-you-minor-child/` placeholder all along — it had missed the prior 2026-04-30 alignment); this doc's header URL line, Section 6 canonical example, and Section 8 deployment URL updated to match; master Section 2 architecture row + Decision #13 updated. **Tyler's WordPress side (not in this code update):** (1) update Typeform quiz redirect from `/buy-doneforyou-minor/` to `/dfy-minor-sales-page/`; (2) set 301 redirect in WordPress from old `/buy-doneforyou-minor/` to new `/dfy-minor-sales-page/` so any inbound links from the old URL don't 404. | Claude / Tyler |
+| 2026-05-04 | v2.5 — Hero copy clarified to make the product identity unambiguous on the post-quiz landing. Section 4.2 (hero) eyebrow: "✓ You qualify" → "✓ You qualify for the DFY Minor Child Adoption Package". Section 4.2 H1: "You're a great fit for our Done-For-You package." → "You're a great fit for a Minor Child Done-For-You package." Both edits propagated to `dfy-minor-child.html`. Rationale: visitors arriving from the qualifier quiz now see the specific product they qualified for in both the eyebrow and H1, removing any ambiguity between minor-child and adult variants of the DFY package. No structural or schema changes. | Claude / Tyler |
 | | | |
 
 ---
