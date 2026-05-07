@@ -1,6 +1,6 @@
-# The Nebraska Stepparent Adoption Starter Guide — Locked Content (v1.4)
+# The Nebraska Stepparent Adoption Starter Guide — Locked Content (v1.5)
 
-**Status:** 12 of 13 sections locked. Voice anchor sections (1 and 13), legal core (4), foundation (2 and 3), procedural sections (5, 6, 10), cost section (7), forms overview (8), DIY-vs-attorney framework (9), and next steps (12). Only Section 11 (Common Pitfalls) remaining.
+**Status:** 13 of 13 sections locked. **Guide content is structurally complete.** Voice anchor sections (1 and 13), legal core (4), foundation (2 and 3), procedural sections (5, 6, 10), cost section (7), forms overview (8), DIY-vs-attorney framework (9), common pitfalls (11), and next steps (12).
 **Last updated:** May 7, 2026
 **Author:** Lucrece H. Bundy, Esq. / Drafted with Claude
 
@@ -418,6 +418,40 @@ Most uncontested stepparent adoption hearings are warm, brief, and uneventful in
 
 ---
 
+## Section 11 — Common Pitfalls [LOCKED]
+
+**Common pitfalls — and how to avoid them.**
+
+Over the past ten years, I've watched families run into the same problems again and again. The good news is that most of these problems are preventable if you know to look for them. The three biggest ones I see:
+
+**Pitfall 1 — Hiring a family law attorney who doesn't actually do adoptions.**
+
+This one costs families more time and money than any other mistake. There's a common assumption that any family law attorney can handle a stepparent adoption — after all, it's a family law matter, right?
+
+It's not that simple. Adoption is a specific area within family law, with specific procedures, specific forms, and specific judges' expectations. A family law attorney whose practice is mostly divorces, custody, and child support may not have done many adoptions. And when an attorney is learning your case as they go, the bill grows and the timeline stretches.
+
+If you're hiring full-service representation, you want an attorney who can confidently walk you through the adoption process from start to finish — someone who can answer your questions about the procedure, the forms, and what to expect at the hearing without having to look it up. That confidence comes from having actually done adoptions before. Ask the attorney about their adoption experience directly. The right attorney for your case will be glad to tell you.
+
+**Pitfall 2 — Trusting generic online forms or out-of-state advice.**
+
+Two versions of this mistake come up regularly:
+
+The first is families finding "free adoption forms" online — usually generic templates that aren't Nebraska-specific, or that don't match the specific scenario their case fits. These forms get filed, the court rejects them, and the family is back to square one. Sometimes worse than square one, because the rejected filing has now used up filing fees and time.
+
+The second is taking advice from family or friends who adopted in a different state. They mean well, and their experience was real — but adoption law varies significantly state to state. The forms that worked for them in Iowa or Kansas or Texas don't apply in Nebraska. The procedures they followed may not be the procedures Nebraska courts use. Even small differences (which forms are required, what consent looks like, what the hearing involves) can mean their advice steers you wrong without anyone realizing it.
+
+If you're using forms-based products, make sure they're Nebraska-specific and matched to the scenario your case fits. If you're following advice from family or friends who've been through this, ask them where they did their adoption — and if it wasn't in Nebraska, treat their advice as a starting point for questions rather than a roadmap.
+
+**Pitfall 3 — Buying the forms and then not reading the instructions.**
+
+This one is harder to talk about because it isn't anyone's intent — but it happens. A family buys the DIY package, opens the email, looks at the forms, gets overwhelmed, and tries to fill them out without working through the step-by-step instructions that came with them.
+
+The instructions exist because the forms aren't self-explanatory. Some questions need careful answers. Some sections only apply if your case fits a specific scenario. Some require supporting documents that need to be gathered first. Skipping the instructions almost always means filling something out wrong, which means the case gets delayed at filing or at the hearing.
+
+If you're going the DIY route, build time into your process specifically for reading the instructions before you start filling anything out. Most families spend 30 to 60 minutes on this initial read-through. That hour is the cheapest insurance against problems later.
+
+---
+
 ## Section 12 — Next Steps [LOCKED]
 
 **What to do now.**
@@ -466,13 +500,11 @@ Wishing you well in whatever comes next.
 
 ---
 
-## Sections still to write
+## Status: Guide Content Complete ✅
 
-| Section | Length | Status |
-|---|---|---|
-| 11 — Common Pitfalls | ~600 words | Pending — needs your practice notes |
+**All 13 sections locked.** Total content: ~6,400 words across cover, welcome, legal note, 10 substantive body sections, closing, and back page.
 
-**12 of 13 done.** Only Section 11 remains. Once your practice notes are ready, the guide is complete.
+The guide content is structurally complete and ready for the next phase of work.
 
 ---
 
