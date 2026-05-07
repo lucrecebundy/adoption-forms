@@ -1,6 +1,6 @@
-# The Nebraska Stepparent Adoption Starter Guide — Locked Content (v1.3)
+# The Nebraska Stepparent Adoption Starter Guide — Locked Content (v1.4)
 
-**Status:** 9 of 13 sections locked. Voice anchor sections (1 and 13), legal core (4), foundation (2 and 3), procedural sections (5, 6, 10), and cost section (7).
+**Status:** 12 of 13 sections locked. Voice anchor sections (1 and 13), legal core (4), foundation (2 and 3), procedural sections (5, 6, 10), cost section (7), forms overview (8), DIY-vs-attorney framework (9), and next steps (12). Only Section 11 (Common Pitfalls) remaining.
 **Last updated:** May 7, 2026
 **Author:** Lucrece H. Bundy, Esq. / Drafted with Claude
 
@@ -285,6 +285,89 @@ This is where the choice between DIY and Done-For-You matters:
 
 ---
 
+## Section 8 — Required Forms Overview [LOCKED]
+
+**What forms are involved?**
+
+A Nebraska stepparent adoption involves a small set of court forms — the exact forms depend on which scenario from Section 4 applies to your case. Here's a high-level look at what gets filed.
+
+**The forms required in every stepparent adoption case:**
+
+- **Petition for Adoption.** This is the document that opens your case. It identifies who's adopting whom, what scenario applies, what the family's circumstances are, and what the petitioners are asking the court to do (including any name change). Both spouses must sign the petition — the adopting stepparent and the biological parent — whether the adoption is for a minor child or an adult stepchild.
+- **Affidavit from the custodial biological parent.** A sworn statement from the biological parent (the spouse) identifying the other biological parent. Required in every stepparent adoption case.
+- **Notice of Adoption.** A formal notice of the adoption proceeding required by Nebraska procedure.
+- **Decree of Adoption (proposed).** The proposed final order. The judge reviews it, asks any necessary questions at the hearing, and signs it to finalize the adoption.
+- **Background-check authorizations.** Required for the petitioner under § 43-107.
+
+**Forms that depend on your scenario:**
+
+- **Consent forms.** Required when consent is the basis for the adoption. Different consent forms apply depending on who's consenting:
+  - The other biological parent's signed written consent, when they consent to the adoption
+  - The adult adoptee's consent, in adult stepparent adoption cases
+  - A minor child's consent if the child is fourteen or older (§ 43-104(1)(a))
+- **Death certificate.** When the other biological parent is deceased, a certified death certificate is filed with the petition as proof.
+- **Certified copy of the prior termination order.** When the other biological parent's parental rights were previously terminated through a separate court action, a certified copy of that termination order is filed with the petition as proof.
+
+**A few things worth knowing:**
+
+The forms used in Nebraska stepparent adoption are Nebraska-specific — they're consistent statewide and don't vary by county. The Adoption Forms Express packages (DIY and Done-For-You) provide the right forms for your case based on which scenario applies.
+
+The form set itself varies based on which scenario from Section 4 applies. The qualifier quiz at adoptionformsexpress.com asks the questions needed to identify the right form set for your case before any forms are sent.
+
+If your case has any complication that takes it out of the three qualifying scenarios — abandonment, an absent parent whose location is unknown, ICWA implications — these are the cases where attorney representation matters and where a forms-based path won't fit.
+
+---
+
+## Section 9 — DIY vs. Attorney Representation: Which Is Right for You? [LOCKED]
+
+**Which path fits your case?**
+
+There's no universal answer to whether you should DIY a stepparent adoption, use the Done-For-You package, or hire a full-service attorney. The right choice depends on your specific situation. Here's an honest framework for thinking it through.
+
+**DIY makes sense when:**
+
+- Your case clearly fits one of the three scenarios from Section 4 (consent, deceased parent, or previously terminated rights)
+- The consent or documentation needed is firmly in hand — written, signed, certified
+- You're comfortable reading instructions and filling out paperwork carefully
+- Nothing about your situation feels uncertain or unusual
+- A 30-minute support call is enough to resolve any confusion that comes up
+- You want to keep the cost as low as possible
+
+DIY is the right path for the family who can confidently say "my case fits — I just need the right forms and a clear set of instructions to file them."
+
+**Done-For-You makes sense when:**
+
+- All of the DIY criteria above PLUS
+- You'd rather pay $200 more to have someone else complete the forms for you
+- Your time is more valuable than the savings on DIY
+
+Done-For-You is the right path for the family who fits the scenarios but would rather not handle the form preparation themselves.
+
+**Full attorney representation is needed when:**
+
+- Your case doesn't clearly fit one of the three scenarios from Section 4
+- Consent isn't yet in hand and you're not certain you'll get it
+- The other biological parent is unwilling, unreachable, or whose whereabouts are unknown
+- There's an ongoing custody dispute, or anyone is contesting any aspect of the adoption
+- The case has any complicating factor — ICWA, contested termination, anything else unusual
+- You're not sure which category you're in
+
+Full attorney representation isn't a fallback — it's the right tool for any case that's genuinely complicated. Many adoptions need full representation, and there's no shame in that. The cases the forms-based products serve are specifically the uncontested, scenario-clear cases. Everything else is what attorneys are for.
+
+**A practical way to decide:**
+
+If reading Sections 4 through 8 made you feel "yes, that describes my case clearly" — you probably fit a forms-based path.
+
+If reading those sections made you feel "yes, mostly, but I'm not sure about [X]" — that uncertainty is worth taking seriously. Sometimes the X turns out to be nothing. But sometimes it turns out to be exactly the thing that pushes the case into needing an attorney. Take the qualifier quiz, or contact a Nebraska adoption attorney to talk through your specific situation, before committing to forms.
+
+If reading those sections raised real concerns — abandonment questions, unwillingness on the other parent's part, anything contested — work with an attorney from the start. The forms aren't going to be the right path, and you'll save time and stress by recognizing that early.
+
+**A note about cost as a factor:**
+
+I want to be honest about something. Cost is often the reason families consider DIY when DFY or full representation might fit better. I built Adoption Forms Express specifically to make the affordable path real for the families who legitimately fit it. But "I want this to be affordable" is not the same as "my case is uncontested and clear." If your case truly needs an attorney, finding the money for one is the right thing to do. The path that fits your case is the path that finishes your adoption — the cheaper path that doesn't fit can cost you significantly more in time, stress, and ultimately money.
+
+---
+
 ## Section 10 — What to Expect at the Hearing [LOCKED]
 
 **The hearing is usually the easiest part.**
@@ -335,6 +418,35 @@ Most uncontested stepparent adoption hearings are warm, brief, and uneventful in
 
 ---
 
+## Section 12 — Next Steps [LOCKED]
+
+**What to do now.**
+
+You've made it through the guide. Whether you read every section carefully or skipped to the parts that mattered for your case, you should now have a clearer picture of what's involved in Nebraska stepparent adoption, what your options are, and which path might fit your situation.
+
+Here's what to do next.
+
+**1. Take the qualifier quiz.**
+
+If your case feels like it fits one of the three scenarios from Section 4 and doesn't have any of the complicating factors from Section 9, the qualifier quiz at adoptionformsexpress.com will route you to the right product in about 60 seconds.
+
+The quiz is designed to do one job: make sure you don't end up with the wrong product. If your case fits, it'll point you to the right package. If your case needs an attorney, it'll tell you that directly and recommend you reach out for full-service representation.
+
+**2. If you qualify, choose your package.**
+
+- **DIY ($299):** Attorney-prepared forms, step-by-step instructions, and one 30-minute support call. You complete the forms yourself.
+- **Done-For-You ($499):** Our team completes the forms for you, plus two 15-minute support calls.
+
+Either package gives you Nebraska forms prepared by a licensed Nebraska adoption attorney for the specific scenario your case fits.
+
+**3. If your case doesn't fit, find an attorney.**
+
+If the quiz tells you that your case isn't a fit for forms-based products, please don't try to force it. Bundy Law LLC (lbundylaw.com) handles complex and contested adoption cases. Other Nebraska adoption attorneys are available too. The right attorney for your case is the one who fits your specific situation and budget.
+
+Whichever path is yours — go take the next step.
+
+---
+
 ## Section 13 — Closing from Lucrece [LOCKED]
 
 **A final note from me.**
@@ -358,12 +470,9 @@ Wishing you well in whatever comes next.
 
 | Section | Length | Status |
 |---|---|---|
-| 8 — Required Forms Overview | ~400 words | Pending |
-| 9 — DIY vs. Attorney Representation | ~600 words | Pending |
 | 11 — Common Pitfalls | ~600 words | Pending — needs your practice notes |
-| 12 — Next Steps | ~250 words | Pending |
 
-**9 of 13 done.** Remaining: 4 sections, ~1,850 words. Only Section 11 still needs input from you (practice notes on common pitfalls).
+**12 of 13 done.** Only Section 11 remains. Once your practice notes are ready, the guide is complete.
 
 ---
 
