@@ -114,7 +114,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  align-items: start;
 }
 
 .hero-visual {
@@ -157,52 +157,19 @@ h1 {
 }
 
 /* ------------------------------------------------------------------
-   Form
+   GHL Form Embed
 ------------------------------------------------------------------ */
-.form-block {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+.form-embed {
   max-width: 420px;
   margin: 0 auto;
 }
-
-.form-input {
+.form-embed iframe {
   width: 100%;
-  padding: 1rem 1.15rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--color-text);
-  background: white;
-  border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.form-input:focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(224, 120, 86, 0.15);
-}
-.form-input::placeholder { color: var(--color-text-muted); opacity: 0.7; }
-
-.form-submit {
-  width: 100%;
-  padding: 1.05rem 1.5rem;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1rem;
-  color: white;
-  background: var(--color-accent);
+  height: 432px;
   border: none;
   border-radius: var(--radius-sm);
-  cursor: pointer;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: background 0.2s ease, transform 0.1s ease;
-  margin-top: 0.4rem;
+  display: block;
 }
-.form-submit:hover { background: #c8623f; }
-.form-submit:active { transform: scale(0.99); }
 
 .form-privacy {
   margin-top: 1rem;
@@ -263,31 +230,26 @@ h1 {
 
         <p class="hero-body">Get clear on what's ahead with this free PDF guide.</p>
 
-        <!-- ============== EMAIL CAPTURE FORM ============== -->
-        <!--
-          PLACEHOLDER FORM - replace with email platform's embed code
-          when Phase B (email infrastructure) is set up.
-        -->
-        <form class="form-block" action="#" method="post" novalidate>
-          <input
-            class="form-input"
-            type="text"
-            id="first_name"
-            name="first_name"
-            placeholder="Your first name"
-            autocomplete="given-name"
-          >
-          <input
-            class="form-input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your email address"
-            required
-            autocomplete="email"
-          >
-          <button class="form-submit" type="submit">Get It Now</button>
-        </form>
+        <!-- ============== GHL EMBED FORM ============== -->
+        <div class="form-embed">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/BYi5eRz5MhHXv3l5HMqI"
+            id="inline-BYi5eRz5MhHXv3l5HMqI"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Stepparent Adoption Guide"
+            data-height="432"
+            data-layout-iframe-id="inline-BYi5eRz5MhHXv3l5HMqI"
+            data-form-id="BYi5eRz5MhHXv3l5HMqI"
+            title="Stepparent Adoption Guide"
+            scrolling="no"
+          ></iframe>
+        </div>
         <!-- ============== END EMAIL CAPTURE FORM ============== -->
 
         <p class="form-privacy">You'll get the guide in your inbox right away. No spam &mdash; unsubscribe anytime in a click.</p>
@@ -299,6 +261,9 @@ h1 {
 </section>
 
 <!-- ============== FOOTER REMOVED ============== -->
+
+<!-- GHL form auto-resize script -->
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 </body>
 </html>
