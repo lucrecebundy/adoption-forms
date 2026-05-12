@@ -3,7 +3,7 @@
 **Document type:** Living working document
 **Owner:** Lucrece H. Bundy / Tyler
 **Site:** adoptionformsexpress.com
-**Version:** 2.13
+**Version:** 2.14
 **Last updated:** May 12, 2026
 **Status:** Draft — ready for review, then handoff to Claude Code
 
@@ -581,7 +581,7 @@ Don't qualify? We'll route you to the right next step — including our affiliat
 
 **Column 4 — Contact:**
 - info@adoptionformsexpress.com
-- 12020 Shamrock Plz, Ste 200, Omaha, NE 68154
+- P.O. Box 45873, Omaha, Nebraska 68145
 
 **Bottom bar:**
 © 2026 Adoption Forms Express. All rights reserved. · [Terms of Use] · [Privacy Policy]
@@ -682,10 +682,10 @@ Deploy these structured data blocks via JSON-LD in the page `<head>`:
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "12020 Shamrock Plz, Ste 200",
+    "streetAddress": "P.O. Box 45873",
     "addressLocality": "Omaha",
     "addressRegion": "NE",
-    "postalCode": "68154",
+    "postalCode": "68145",
     "addressCountry": "US"
   },
   "areaServed": {
@@ -787,6 +787,7 @@ End every session by adding an entry here. Format: date — what changed — who
 | 2026-05-05 | v2.11 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" / "free 15-minute attorney calls" with "support call" / "support calls" framing. New language: DFY = "two 15-minute support calls", DIY = "one 30-minute support call". Added a protective note on each sales page near the call mention clarifying that support calls do NOT include personalized legal advice. Schema descriptions and meta descriptions updated. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
 | 2026-05-05 | v2.12 — Section 5.4 (Problem Frame) two-paragraph rewrite for line-wrap and tone. **P1 (target 3 lines):** "For most blended Nebraska families, a stepparent adoption is one of the most paperwork-driven cases the family courts handle. The legal complexity is usually low. The cost is high because attorneys bill by the hour for filling out forms that are largely standardized under Neb. Rev. Stat. § 43-101 et seq." → "For most blended Nebraska families, a stepparent adoption is paperwork-driven and legally complex — especially when it's contested. The cost is high because every adoption is different, and the work is governed by Neb. Rev. Stat. § 43-101 et seq." **P2 (target 2 lines):** "We built Adoption Forms Express for a simple reason: the family that already lives, loves, and parents together shouldn't have to choose between a $5,000 attorney bill and never finalizing the adoption at all." → "We built Adoption Forms Express so families already parenting together don't have to choose between a $5,000 attorney bill and never finalizing the adoption at all." Reasons: (1) original P1 said "legal complexity is usually low" and framed attorney costs as "billing by the hour for forms" — both dismissive of attorney work, which is bad voice for a site whose founder IS a Nebraska adoption attorney. New P1 acknowledges complexity (especially contested cases) and frames cost as legitimate ("every adoption is different"). (2) Original P2 wrapped to 3 lines on desktop with "the adoption at all" alone on line 3; new P2 trims preamble + emotional triplet to fit 2 lines so paragraph ends cleanly with "...never finalizing the adoption at all." Trade-off: lost the "lives, loves, and parents together" emotional triplet to hit the line-wrap target. Both edits propagated to `homepage.html` Section 5.4 and to this spec doc Section 5.4. Neb. Rev. Stat. § 43-101 et seq. citation preserved per Tyler. | Claude / Tyler |
 | 2026-05-12 | v2.13 — Contact email standardized site-wide. Section 5.15 footer Column 4 Contact updated from `adoptionformsexpress@gmail.com` to `info@adoptionformsexpress.com`; `homepage.html` footer updated to match. Part of the same site-wide standardization that resolves master Open Decision #18 (chose `info@…` over the originally recommended `support@…` — single inbox is simpler to operate at this stage). | Claude / Tyler |
+| 2026-05-12 | v2.14 — Business address and business name updated site-wide. **Address:** `12020 Shamrock Plz, Ste 200, Omaha, NE 68154` → `P.O. Box 45873, Omaha, Nebraska 68145`. **Business name:** the parenthetical "(A Bundy Law adoption service)" removed from all legal-page contact blocks — the canonical business name is just "Adoption Forms Express." Section 5.15 Column 4 Contact bullet updated; Section 8 LegalService schema block updated (`streetAddress` and `postalCode` both changed); `homepage.html` footer + schema updated to match. Same address change propagated to all 9 deployed HTML files' footers + all 3 legal pages' contact blocks. | Claude / Tyler |
 | | | |
 
 ---
