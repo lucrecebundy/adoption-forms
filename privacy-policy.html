@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy | Adoption Forms Express</title>
+<meta name="description" content="The Adoption Forms Express Privacy Policy — how we collect, use, and protect information you provide on adoptionformsexpress.com.">
+<link rel="canonical" href="https://adoptionformsexpress.com/privacy-policy/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacy Policy | Adoption Forms Express">
+<meta property="og:description" content="The Adoption Forms Express Privacy Policy — how we collect, use, and protect information you provide on adoptionformsexpress.com.">
+<meta property="og:url" content="https://adoptionformsexpress.com/privacy-policy/">
+<meta property="og:site_name" content="Adoption Forms Express">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ------------------------------------------------------------------
+   Design tokens (per master doc Section 4 — match homepage.html)
+------------------------------------------------------------------ */
+:root {
+  --color-primary: #1F3A5F;
+  --color-primary-soft: #2C4A6F;
+  --color-accent: #E07856;
+  --color-accent-soft: #EFA084;
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #FFFFFF;
+  --color-text: #1A1A1A;
+  --color-text-muted: #6B6B6B;
+  --color-success: #7A9E7E;
+  --color-border: #E5E1DA;
+  --color-cream-deep: #F2EDE3;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --max-width: 1240px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 2px 12px rgba(31, 58, 95, 0.06);
+  --shadow-md: 0 8px 28px rgba(31, 58, 95, 0.10);
+}
+
+/* ------------------------------------------------------------------
+   Base
+------------------------------------------------------------------ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--color-primary); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--color-accent); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* ------------------------------------------------------------------
+   Buttons
+------------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: 0 6px 18px rgba(224, 120, 86, 0.35);
+}
+.btn-primary:hover {
+  background: #d96a47;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(224, 120, 86, 0.45);
+}
+
+/* ------------------------------------------------------------------
+   Nav (matches homepage.html — internal anchors use absolute paths
+   so they jump to the homepage from this non-homepage URL)
+------------------------------------------------------------------ */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(31, 58, 95, 0.08);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+.nav-logo em {
+  font-style: italic;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.nav-cta {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.92rem;
+}
+@media (max-width: 860px) {
+  .nav-links li:not(:last-child) { display: none; }
+}
+
+/* ------------------------------------------------------------------
+   Legal page layout
+------------------------------------------------------------------ */
+.legal-page {
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem);
+}
+.legal-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(2.75rem, 5vw, 4rem);
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+.legal-kicker {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.legal-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-primary);
+  line-height: 1.15;
+  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
+  margin-bottom: 1rem;
+}
+.legal-meta {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+.legal-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+  line-height: 1.7;
+}
+.legal-content > * + * { margin-top: 1.1rem; }
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: -0.015em;
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  margin-top: 2.75rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  margin-top: 1.85rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+.legal-content p {
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+.legal-content ul, .legal-content ol {
+  padding-left: 1.5rem;
+  font-size: 1.05rem;
+}
+.legal-content li { margin-bottom: 0.45rem; }
+.legal-content strong { font-weight: 700; color: var(--color-primary); }
+.legal-content a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-content a:hover { color: var(--color-primary); }
+
+.legal-contact-block p { margin-top: 0.25rem; }
+.legal-contact-block p:first-child { margin-top: 0.6rem; }
+
+.legal-effective {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------
+   Footer (matches homepage.html)
+------------------------------------------------------------------ */
+.site-footer {
+  background: #142944;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 4.5rem 0 2rem;
+  font-size: 0.93rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-soft);
+  margin-bottom: 1.25rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.55rem; }
+.footer-col a { color: rgba(255, 255, 255, 0.78); font-size: 0.94rem; }
+.footer-col a:hover { color: white; }
+.footer-brand p { font-size: 0.93rem; margin: 0.85rem 0 1.25rem; max-width: 320px; line-height: 1.6; }
+.footer-brand .logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+}
+.footer-brand .logo em { font-style: italic; color: var(--color-accent-soft); font-weight: 500; }
+.footer-social { display: flex; gap: 0.85rem; }
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: white;
+  transition: background 0.2s ease;
+}
+.footer-social a:hover { background: var(--color-accent); }
+.footer-disclaimer {
+  font-size: 0.81rem;
+  line-height: 1.65;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-style: italic;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-bottom a { color: rgba(255, 255, 255, 0.78); margin-left: 1.25rem; }
+@media (max-width: 880px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 540px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Adoption Forms <em>Express</em></a>
+    <ul class="nav-links">
+      <li><a href="/#how-it-works">How It Works</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener" class="btn btn-primary nav-cta">See If You Qualify</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============== LEGAL PAGE ============== -->
+<main class="legal-page">
+
+  <div class="legal-header">
+    <div class="legal-kicker">LEGAL</div>
+    <h1 class="legal-title">Privacy Policy</h1>
+    <p class="legal-meta">Last updated October 20, 2023</p>
+  </div>
+
+  <div class="legal-content">
+
+    <p><strong>Adoption Forms Express Privacy Policy</strong></p>
+
+    <p>Adoption Forms Express ("<strong>Company</strong>," "<strong>we</strong>," or "<strong>us</strong>") respects your privacy and is committed to protecting it through this Privacy Policy.</p>
+
+    <p>This Privacy Policy governs your access to and use of adoptionformsexpress.com, including any content, functionality and services offered on or through adoptionformsexpress.com (the "<strong>Website</strong>"), whether as a guest or a registered user.</p>
+
+    <p>When accessing the Website, the Company will learn certain information about you, both automatically and through voluntary actions you may take, during your visit. This policy applies to information we collect on the Website and in email, text, or other electronic messages between you and the Website.</p>
+
+    <p>Please read the Privacy Policy carefully before you start to use the Website. <strong>By using the Website or by clicking to accept or agree to the Terms of Use when this option is made available to you, you accept and agree to be bound and abide by the Privacy Policy.</strong> If you do not want to agree to the Privacy Policy, you must not access or use the Website.</p>
+
+    <h2>Children Under The Age Of 13</h2>
+
+    <p>Our Website is not intended for children under 13 years of age. No one under age 13 may provide any information to or on the Website. We do not knowingly collect personal information from children under 13. If you are under 13, do not use or provide any information on this Website or on or through any of its features/register on the Website, make any purchases through the Website, use any of the interactive or public comment features of this Website or provide any information about yourself to us, including your name, address, telephone number, email address, or any screen name or user name you may use.</p>
+
+    <p>If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please contact us at <a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a>.</p>
+
+    <h2>Information We Collect About You</h2>
+
+    <p>When you access the Website, the Company will learn certain information about you during your visit.</p>
+
+    <h3>Information You Provide To Us</h3>
+
+    <p>The Website provides various places for users to provide information. We collect information that users provide by filling out forms on the Website, communicating with us via contact forms, responding to surveys, search queries on our search feature, providing comments or other feedback, and providing information when ordering a product or service via the Website.</p>
+
+    <p>We use information you provide to us to deliver the requested product and/or service, to improve our overall performance, and to provide you with offers, promotions, and information.</p>
+
+    <h3>Information We Collect Through Automatic Data Collection Technology</h3>
+
+    <p>As you navigate through our Website, we may use automatic data collection technologies including Google Analytics to collect certain information about your equipment, browsing actions, and patterns. This will generally include information about your location, your traffic pattern through our website, and any communications between your computer and our Website. Among other things, we will collect data about the type of computer you use, your Internet connection, your IP address, your operating system, and your browser type.</p>
+
+    <p>The information we collect automatically is used for statistical data and will not include personal information. We use this data to improve our Website and our service offerings. To the extent that you voluntarily provide personal information to us, our systems will associate the automatically collected information with your personal information.</p>
+
+    <h2>Use of Cookies And Pixels</h2>
+
+    <p>Similar to other commercial websites, our website utilizes a standard technology called "cookies" and server logs to collect information about how our site is used. Information gathered through cookies and server logs may include the date and time of visits, the pages viewed, time spent at our site, and the websites visited just before and just after our own, as well as your IP address.</p>
+
+    <p>A cookie is a very small text document, which often includes an anonymous unique identifier. When you visit a website, that site's computer asks your computer for permission to store this file in a part of your hard drive specifically designated for cookies. Each website can send its own cookie to your browser if your browser's preferences allow it, but (to protect your privacy) your browser only permits a website to access the cookies it has already sent to you, not the cookies sent to you by other sites.</p>
+
+    <p>The Company reserves the right to use technological equivalents of cookies, including social media pixels. These pixels allow social media sites to track visitors to outside websites so as to tailor advertising messages users see while visiting that social media website. The Company reserves the right to use these pixels in compliance with the policies of the various social media sites.</p>
+
+    <p>Nebraska law requires us to let you know whether we honor "Do Not Track" requests set by your browser. Unfortunately, there is no industry or legal standard (or easy technological solution) about how to handle these responses. Thus, we don't currently respond to Do Not Track signals at this time.</p>
+
+    <h2>Third Party Use Of Cookies</h2>
+
+    <p>Some content or applications, including advertisements, on the Website are served by third-parties, including advertisers, ad networks and servers, content providers, and application providers. These third parties may use cookies alone or in conjunction with web beacons or other tracking technologies to collect information about you when you use our website. The information they collect may be associated with your personal information or they may collect information, including personal information, about your online activities over time and across different websites and other online services. They may use this information to provide you with interest-based (behavioral) advertising or other targeted content.</p>
+
+    <p>We do not control these third parties' tracking technologies or how they may be used. If you have any questions about an advertisement or other targeted content, you should contact the responsible provider directly.</p>
+
+    <h2>Email Information</h2>
+
+    <p>If you choose to correspond with us through email, we may retain the content of your email messages together with your email address and our responses. We provide the same protections for these electronic communications that we employ in the maintenance of information received online, mail, and telephone. This also applies when you register for our website, sign up through any of our forms using your email address or make a purchase on this site. For further information see the email policies below.</p>
+
+    <h2>Email Policies</h2>
+
+    <p>We are committed to keeping your e-mail address confidential. We do not sell, rent, or lease our subscription lists to third parties, and will not disclose your email address to any third parties except as allowed in the section titled Disclosure of Your Information.</p>
+
+    <p>We will maintain the information you send via e-mail in accordance with applicable federal law.</p>
+
+    <p>In compliance with the CAN-SPAM Act, all e-mails sent from our organization will clearly state who the e-mail is from and provide clear information on how to contact the sender. In addition, all e-mail messages will also contain concise information on how to remove yourself from our mailing list so that you receive no further e-mail communication from us.</p>
+
+    <p>Our emails provide users the opportunity to opt-out of receiving communications from us and our partners by reading the unsubscribe instructions located at the bottom of any e-mail they receive from us at anytime.</p>
+
+    <p>Users who no longer wish to receive our newsletter or promotional materials may opt-out of receiving these communications by clicking on the unsubscribe link in the e-mail.</p>
+
+    <h2>How And Why We Collect Information</h2>
+
+    <p>The Company collects your information in order to record and support your participation in the activities you select. If you register to download a book or resources, sign up for our newsletter, and/or purchase a product from us, we collect your information. We use this information to track your preferences and to keep you informed about the products and services you have selected to receive and any related products and/or services. As a visitor to this Website, you can engage in most activities without providing any personal information. It is only when you seek to download resources and/or register for services that you are required to provide information.</p>
+
+    <p>If you are outside the European Union and opt to receive any free resources, participate in any free training programs, register for a webinar, register for a live event, register for a seminar, or purchase any products sold by the Company on this Website, we will automatically enroll you to receive our free email newsletter. If you do not wish to receive this newsletter, you can unsubscribe anytime. We include an "unsubscribe" link at the bottom of every email we send. If you ever have trouble unsubscribing, you can send an email to <a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a> requesting to unsubscribe from future emails.</p>
+
+    <p>If you are in the European Union and opt to receive any free resources, participate in any free training programs, register for a webinar, register for a live event, register for a seminar, or purchase any products sold by the Company on this Website, we will only enroll you to receive our free email newsletter if you affirmatively consent to it. If you do not wish to receive this newsletter, you can unsubscribe anytime. We include an "unsubscribe" link at the bottom of every email we send. If you ever have trouble unsubscribing, you can send an email to <a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a> requesting to unsubscribe from future emails.</p>
+
+    <h2>How Do We Use the Information That You Provide to Us?</h2>
+
+    <p>We use personal information for purposes of presenting our Website and its contents to you, providing you with information, providing you with offers for products and services, providing you with information about your subscriptions and products, carrying out any contract between you and the Company, administering our business activities, providing customer service, and making available other items and services to our customers and prospective customers.</p>
+
+    <p>From time-to-time, we may use the information you provide to us to make you offers to purchase products and services provided by third parties in exchange for a commission to be paid to us by such third parties. Should you opt to take part in such promotions, the third parties will receive your information.</p>
+
+    <p>From time-to-time, we may use the information you provide to us to display advertisements to you that are tailored to your personal characteristics, interests, and activities.</p>
+
+    <h2>Disclosure Of Your Information</h2>
+
+    <p>As a general rule, we do not sell, rent, lease or otherwise transfer any information collected whether automatically or through your voluntary action.</p>
+
+    <p>We may disclose your personal information to our subsidiaries, affiliates, and service providers for the purpose of providing our services to you.</p>
+
+    <p>We may disclose your personal information to a third party, including a lawyer or collection agency, when necessary to enforce our terms of service or any other agreement between you and the Company.</p>
+
+    <p>We may provide your information to any successor in interest in the event of a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of the Company's assets and/or business.</p>
+
+    <p>We may disclose information when legally compelled to do so, in other words, when we, in good faith, believe that the law requires it or for the protection of our legal rights or when compelled by a court or other governmental entity to do so.</p>
+
+    <h2>How Do We Protect Your Information and Secure Information Transmissions?</h2>
+
+    <p>We employ commercially reasonable methods to ensure the security of the information you provide to us and the information we collect automatically. This includes using standard security protocols and working only with reputable third-party vendors.</p>
+
+    <p>Email is not recognized as a secure medium of communication. For this reason, we request that you do not send private information to us by email. However, doing so is allowed, but at your own risk. Some of the information you may enter on our website may be transmitted securely via a secure medium known as Secure Sockets Layer, or SSL. Credit Card information and other sensitive information is never transmitted via email.</p>
+
+    <p>The Company may use software programs to create summary statistics, which are used for such purposes as assessing the number of visitors to the different sections of our site, what information is of most and least interest, determining technical design specifications, and identifying system performance or problem areas.</p>
+
+    <p>For site security purposes and to ensure that this service remains available to all users, the Company uses software programs to monitor network traffic to identify unauthorized attempts to upload or change information, or otherwise cause damage.</p>
+
+    <h2>Policy Changes</h2>
+
+    <p>It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users' personal information, we will notify you by email to the email address specified in your account and/or through a notice on the Website home page. The date the privacy policy was last revised is identified at the bottom of the page. You are responsible for ensuring we have an up-to-date active and deliverable email address for you, and for periodically visiting our Website and this privacy policy to check for any changes.</p>
+
+    <h2>Visitors' GDPR Rights</h2>
+
+    <p>If you are within the European Union, you are entitled to certain information and have certain rights under the General Data Protection Regulation. Those rights include:</p>
+
+    <p>We will retain the any information you choose to provide to us until the earlier of: (a) you asking us to delete the information, (b) our decision to cease using our existing data providers, or (c) the Company decides that the value in retaining the data is outweighed by the costs of retaining it.</p>
+
+    <p>You have the right to request access to your data that the Company stores and the rights to either rectify or erase your personal data.</p>
+
+    <p>You have the right to seek restrictions on the processing of your data.</p>
+
+    <p>You have the right to object to the processing of your data and the right to the portability of your data.</p>
+
+    <p>To the extent that you provided consent to the Company's processing of your personal data, you have the right to withdraw that consent at any time, without affecting the lawfulness of processing based upon consent that occurred prior to your withdrawal of consent.</p>
+
+    <p>You have the right to lodge a complaint with a supervisory authority that has jurisdiction over issues related to the General Data Protection Regulation.</p>
+
+    <p>We require only the information that is reasonably required to enter into a contract with you. We will not require you to provide consent for any unnecessary processing as a condition of entering into a contract with us.</p>
+
+    <p>We use your personal data to make the following automated decisions: customizing your Nebraska Adoption Forms. We use the following logic to make those automated decisions: we use the information submitted to us to prepare your adoption forms. These decisions can affect your rights in the following ways: the forms provided to you by The Company reflect the information you provided to us.</p>
+
+    <h2>Contact Us</h2>
+
+    <p>The Company welcomes your questions or comments regarding the Privacy Policy:</p>
+
+    <div class="legal-contact-block">
+      <p>Adoption Forms Express (A Bundy Law adoption service)</p>
+      <p>12020 Shamrock Plaza, Suite 200</p>
+      <p>Omaha, NE 68154</p>
+      <p>Email Address: <a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a></p>
+    </div>
+
+    <p class="legal-effective">Effective as of October 20th, 2023</p>
+
+  </div>
+</main>
+
+<!-- ============== FOOTER (matches homepage.html) ============== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <span class="logo">Adoption Forms <em>Express</em></span>
+        <p>Attorney-prepared Nebraska stepparent adoption forms — created by a licensed Nebraska adoption attorney.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/adoptionformsexpress" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/adoptionformsexpress" aria-label="Facebook">FB</a>
+          <a href="https://www.youtube.com/@adoptionformsexpress" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener">Qualifier Quiz</a></li>
+          <li><a href="/starter-guide/">Free Nebraska Adoption Guide</a></li>
+          <li>DIY Adoption Forms</li>
+          <li>Done-For-You Forms</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="/#about">Meet Lucrece</a></li>
+          <li><a href="/#how-it-works">How It Works</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://lbundylaw.com/">Bundy Law LLC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a></li>
+          <li>12020 Shamrock Plz, Ste 200<br>Omaha, NE 68154</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      Adoption Forms Express provides access to independent attorneys and self-service tools. We are not a law firm and do not provide legal advice. Use of our products and services are governed by our Terms of Use and Privacy Policy. The forms provided are intended for use in uncontested Nebraska stepparent adoption cases. If your case is contested or your situation is unusual, you should consult a licensed attorney.
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Adoption Forms Express. All rights reserved.</span>
+      <span>
+        <a href="/terms-of-use/">Terms of Use</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

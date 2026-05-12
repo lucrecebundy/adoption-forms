@@ -6,8 +6,8 @@
 **Sister docs:**
 - `dfy-minor-child-page-v1.md` (the structural template — DFY minor child)
 - Future `diy-adult-page-v1.md` (DIY adult equivalent)
-**Version:** 1.10
-**Last updated:** May 5, 2026
+**Version:** 1.11
+**Last updated:** May 12, 2026
 **Status:** 🔵 Built — `diy-minor-child.html` and `diy-minor-child-checkout.html` on disk; pending WordPress deploy
 
 ---
@@ -130,7 +130,7 @@ Identical to the DFY minor sales page nav. Logo + "Email us" link. No menu items
 [Logo: Adoption Forms Express]                    Need help? Email us →
 ```
 
-The right-side link is `mailto:adoptionformsexpress@gmail.com`.
+The right-side link is `mailto:info@adoptionformsexpress.com`.
 
 ---
 
@@ -200,7 +200,7 @@ Your $299 package includes forms, step-by-step instructions, and one 30-minute s
 - Column 2 makes the support structure clear: instructions handle most cases, support call handles the edge cases
 - Column 2 items render with the bold heading stacked above its description (not inline with an em-dash) so the column doesn't feel chopped up next to the plain-bullet Forms list
 - Final reassurance line is intentional: it reinforces that even though the visitor is doing the work themselves, they're working with attorney-prepared materials, not generic templates
-- **No email-access feature is offered** — the product includes the forms, instructions, and one 30-minute support call. General contact email exists in the nav and footer (mailto:adoptionformsexpress@gmail.com) but it's not framed as a feature with a response-time promise.
+- **No email-access feature is offered** — the product includes the forms, instructions, and one 30-minute support call. General contact email exists in the nav and footer (mailto:info@adoptionformsexpress.com) but it's not framed as a feature with a response-time promise.
 
 ---
 
@@ -338,7 +338,7 @@ A small, discreet section below the final CTA for visitors realizing DIY isn't r
 >
 > If you'd rather have us complete the forms for you, our [Done-For-You package](/dfy-minor-sales-page/) is $499 and we deliver completed forms within 3 business days.
 >
-> If your case may be contested or unusual, [email us](mailto:adoptionformsexpress@gmail.com) and we'll point you in the right direction — including referrals to Bundy Law LLC for full attorney representation.
+> If your case may be contested or unusual, [email us](mailto:info@adoptionformsexpress.com) and we'll point you in the right direction — including referrals to Bundy Law LLC for full attorney representation.
 
 **Notes:**
 - Two soft exits: upgrade to DFY, or get a referral to full attorney representation
@@ -449,3 +449,4 @@ This page does NOT contain the ThriveCart embed. ThriveCart lives on the separat
 | 2026-05-05 | v1.8 — **Mobile empty-space fix v2 (correct version) in `diy-minor-child-checkout.html`.** Tyler's DevTools inspection revealed the actual culprit: ThriveCart's embed script injects an `<iframe class="tc-v2-embeddable-el">` inside the `.tc-v2-embeddable-target` div and hardcodes an inline `style="height: 2387px"` on it. On mobile that's ~1000px taller than the form's actual rendered content, creating the empty-space gap below the visible form (the user is still scrolling inside the iframe through dead space until they exit it and reach our reassurance strip). The injected iframe also carries `scrolling="yes"`, which means we can safely cap its height with CSS — any overflow scrolls inside the iframe rather than being clipped. Fix: re-added the `@media (max-width: 720px)` block (just below the existing `.thrivecart-wrap .tc-v2-embeddable-target { width: 100%; }` rule) with `.thrivecart-wrap iframe.tc-v2-embeddable-el { max-height: 1800px !important; }` plus tightened wrap padding to `1.5rem 0`. The 1800px cap is conservative (form likely needs ~1300–1500px on mobile) — leaves a buffer for dynamic form expansion (coupon-code section, address validation errors, etc.) while still cutting most of the dead space. **Tuning:** if dead space is still visible after deploy, lower the cap (1500 → 1300); if a scrollbar appears inside the iframe because the form was clipped, raise it (2000+). Behavior change is mobile-only (≤720px); desktop unchanged. CSS-only; no HTML/copy/schema changes. | Claude / Tyler |
 | 2026-05-05 | v1.9 — UPL-driven language change: replaced all instances of "attorney call" / "attorney calls" with "support call" / "support calls" framing across Section 4 customer copy + Section 8 schema spec + the strategic notes that referenced the call by name (Section 1 voice principles, Section 2 visitor needs, Section 3 page architecture, Section 4 internal notes). New language: DIY = "one 30-minute support call". Added a protective note on the sales page near the call mention clarifying that support calls do NOT include personalized legal advice. The "attorney call" framing was creating UPL ambiguity — the calls are forms-and-process customer service, not legal advice. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner of the business. | Claude / Lucrece |
 | 2026-05-05 | v1.10 — Sales-page and checkout-page polish + refund policy formalized (mirrors the same change applied to the DFY sister docs this session). **Sales page (`diy-minor-child.html`) — two edits:** (1) Section 4.6 — new Q6 added at the end of the FAQ accordion: "What if I realize I selected the wrong package?" Locks the project-wide refund policy: refunds available between purchase and delivery; delivery happens only after buyer replies to confirmation email; if buyer doesn't reply within 7 days, purchase is considered final; no refunds after forms are sent. Same Q&A on all four sales pages. (2) Section 4.7 — final CTA reassurance line simplified from "Secure checkout · 7-day refund if your case isn't a fit · Questions? Email us" to just "Secure checkout"; the refund-line + email-link are now redundant on a gated post-quiz page where Q6 holds the canonical refund policy. **Checkout page (`diy-minor-child-checkout.html`) — two edits:** (1) Existing reassurance strip's "7-day refund if your case isn't a fit" middle clause removed to avoid contradicting the new refund policy — strip now reads "🔒 Secure ThriveCart checkout · Forms prepared by a licensed Nebraska adoption attorney". (2) New italic refund-note line added directly below the strip: "Wrong package? Email us before your forms are sent — we can refund." New `.refund-note` CSS class defined inside the page's `<style>` block (max-width 720px, font-size 0.85rem, var(--color-text-muted), italic, line-height 1.55). DIY-specific note: this product had no Q1 about case-complexity refunds (DIY Q1 is "What if I get stuck?"), so unlike the DFY minor-child sister doc, no Q1 rewrite was needed. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner. | Claude / Lucrece |
+| 2026-05-12 | v1.11 — Contact email standardized site-wide. Three current-spec mentions in this doc updated from `adoptionformsexpress@gmail.com` to `info@adoptionformsexpress.com` (Section 3 nav-email line, Section 4 strategic note about general contact email in nav and footer, Section 4 escape-hatch text); `diy-minor-child.html` + `diy-minor-child-checkout.html` updated to match. Part of the same site-wide standardization that resolves master Open Decision #18 (chose `info@…` over the originally recommended `support@…`). | Claude / Tyler |

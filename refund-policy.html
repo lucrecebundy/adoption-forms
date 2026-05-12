@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Refund Policy | Adoption Forms Express</title>
+<meta name="description" content="The Adoption Forms Express Refund Policy — when refunds are available, how to request one, and what happens after your forms are delivered.">
+<link rel="canonical" href="https://adoptionformsexpress.com/refund-policy/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Refund Policy | Adoption Forms Express">
+<meta property="og:description" content="The Adoption Forms Express Refund Policy — when refunds are available, how to request one, and what happens after your forms are delivered.">
+<meta property="og:url" content="https://adoptionformsexpress.com/refund-policy/">
+<meta property="og:site_name" content="Adoption Forms Express">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ------------------------------------------------------------------
+   Design tokens (per master doc Section 4 — match homepage.html)
+------------------------------------------------------------------ */
+:root {
+  --color-primary: #1F3A5F;
+  --color-primary-soft: #2C4A6F;
+  --color-accent: #E07856;
+  --color-accent-soft: #EFA084;
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #FFFFFF;
+  --color-text: #1A1A1A;
+  --color-text-muted: #6B6B6B;
+  --color-success: #7A9E7E;
+  --color-border: #E5E1DA;
+  --color-cream-deep: #F2EDE3;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --max-width: 1240px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 2px 12px rgba(31, 58, 95, 0.06);
+  --shadow-md: 0 8px 28px rgba(31, 58, 95, 0.10);
+}
+
+/* ------------------------------------------------------------------
+   Base
+------------------------------------------------------------------ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--color-primary); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--color-accent); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* ------------------------------------------------------------------
+   Buttons
+------------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: 0 6px 18px rgba(224, 120, 86, 0.35);
+}
+.btn-primary:hover {
+  background: #d96a47;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(224, 120, 86, 0.45);
+}
+
+/* ------------------------------------------------------------------
+   Nav (matches homepage.html — internal anchors use absolute paths)
+------------------------------------------------------------------ */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(31, 58, 95, 0.08);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+.nav-logo em {
+  font-style: italic;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.nav-cta {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.92rem;
+}
+@media (max-width: 860px) {
+  .nav-links li:not(:last-child) { display: none; }
+}
+
+/* ------------------------------------------------------------------
+   Legal page layout
+------------------------------------------------------------------ */
+.legal-page {
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem);
+}
+.legal-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(2.75rem, 5vw, 4rem);
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+.legal-kicker {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.legal-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-primary);
+  line-height: 1.15;
+  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
+  margin-bottom: 1rem;
+}
+.legal-meta {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+.legal-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+  line-height: 1.7;
+}
+.legal-content > * + * { margin-top: 1.1rem; }
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: -0.015em;
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  margin-top: 2.75rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  margin-top: 1.85rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+.legal-content p {
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+.legal-content ul, .legal-content ol {
+  padding-left: 1.5rem;
+  font-size: 1.05rem;
+}
+.legal-content li { margin-bottom: 0.45rem; }
+.legal-content strong { font-weight: 700; color: var(--color-primary); }
+.legal-content a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-content a:hover { color: var(--color-primary); }
+
+.legal-contact-block p { margin-top: 0.25rem; }
+.legal-contact-block p:first-child { margin-top: 0.6rem; }
+
+/* ------------------------------------------------------------------
+   Footer (matches homepage.html)
+------------------------------------------------------------------ */
+.site-footer {
+  background: #142944;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 4.5rem 0 2rem;
+  font-size: 0.93rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-soft);
+  margin-bottom: 1.25rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.55rem; }
+.footer-col a { color: rgba(255, 255, 255, 0.78); font-size: 0.94rem; }
+.footer-col a:hover { color: white; }
+.footer-brand p { font-size: 0.93rem; margin: 0.85rem 0 1.25rem; max-width: 320px; line-height: 1.6; }
+.footer-brand .logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+}
+.footer-brand .logo em { font-style: italic; color: var(--color-accent-soft); font-weight: 500; }
+.footer-social { display: flex; gap: 0.85rem; }
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: white;
+  transition: background 0.2s ease;
+}
+.footer-social a:hover { background: var(--color-accent); }
+.footer-disclaimer {
+  font-size: 0.81rem;
+  line-height: 1.65;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-style: italic;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-bottom a { color: rgba(255, 255, 255, 0.78); margin-left: 1.25rem; }
+@media (max-width: 880px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 540px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Adoption Forms <em>Express</em></a>
+    <ul class="nav-links">
+      <li><a href="/#how-it-works">How It Works</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener" class="btn btn-primary nav-cta">See If You Qualify</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============== LEGAL PAGE ============== -->
+<main class="legal-page">
+
+  <div class="legal-header">
+    <div class="legal-kicker">LEGAL</div>
+    <h1 class="legal-title">Refund Policy</h1>
+    <p class="legal-meta">Effective May 12, 2026</p>
+  </div>
+
+  <div class="legal-content">
+
+    <h2>Our approach to refunds</h2>
+
+    <p>We want every family who orders from us to feel confident in the decision. At the same time, our products are digital and delivered quickly — sometimes within hours — so whether a refund is available depends on one thing: have your forms already been delivered to you?</p>
+
+    <p>This page explains exactly how that works.</p>
+
+    <h2>1. Eligibility window</h2>
+
+    <p>Refund requests must be submitted within <strong>7 days</strong> of your purchase date. After 7 days, your purchase is considered final and no refunds are available.</p>
+
+    <h2>2. Refunds before delivery</h2>
+
+    <p>If you request a refund <em>before</em> we have delivered your forms, you are eligible for a full refund. "Delivered" means:</p>
+
+    <ul>
+      <li><strong>Done-For-You orders</strong> — before our team has sent your completed forms to you.</li>
+      <li><strong>DIY orders</strong> — before you have downloaded the materials.</li>
+    </ul>
+
+    <h2>3. After your forms are delivered</h2>
+
+    <p>Once your forms have been delivered (for Done-For-You) or downloaded (for DIY), the product is considered fulfilled and is no longer eligible for a refund. This applies even if you are still within the 7-day eligibility window described above.</p>
+
+    <h2>4. How to request a refund</h2>
+
+    <p>To request a refund, do one of the following:</p>
+
+    <ul>
+      <li>Reply directly to your order confirmation email, or</li>
+      <li>Email <a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a> with your order number.</li>
+    </ul>
+
+    <p>Approved refunds are processed within <strong>5–10 business days</strong> to your original payment method.</p>
+
+    <h2>5. Exceptions</h2>
+
+    <p>In rare circumstances — for example, a documented technical issue on our end, or an accidental duplicate charge — we may issue a refund outside these standard terms at our discretion. If you think your situation may fall into one of these exceptions, email us and we'll take a look.</p>
+
+    <h2>Contact us</h2>
+
+    <p>Questions about this Refund Policy?</p>
+
+    <div class="legal-contact-block">
+      <p>Adoption Forms Express (A Bundy Law adoption service)</p>
+      <p>12020 Shamrock Plaza, Suite 200</p>
+      <p>Omaha, NE 68154</p>
+      <p>Email Address: <a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a></p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============== FOOTER (matches homepage.html) ============== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <span class="logo">Adoption Forms <em>Express</em></span>
+        <p>Attorney-prepared Nebraska stepparent adoption forms — created by a licensed Nebraska adoption attorney.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/adoptionformsexpress" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/adoptionformsexpress" aria-label="Facebook">FB</a>
+          <a href="https://www.youtube.com/@adoptionformsexpress" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener">Qualifier Quiz</a></li>
+          <li><a href="/starter-guide/">Free Nebraska Adoption Guide</a></li>
+          <li>DIY Adoption Forms</li>
+          <li>Done-For-You Forms</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="/#about">Meet Lucrece</a></li>
+          <li><a href="/#how-it-works">How It Works</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://lbundylaw.com/">Bundy Law LLC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a></li>
+          <li>12020 Shamrock Plz, Ste 200<br>Omaha, NE 68154</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      Adoption Forms Express provides access to independent attorneys and self-service tools. We are not a law firm and do not provide legal advice. Use of our products and services are governed by our Terms of Use and Privacy Policy. The forms provided are intended for use in uncontested Nebraska stepparent adoption cases. If your case is contested or your situation is unusual, you should consult a licensed attorney.
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Adoption Forms Express. All rights reserved.</span>
+      <span>
+        <a href="/terms-of-use/">Terms of Use</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

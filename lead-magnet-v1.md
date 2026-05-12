@@ -444,7 +444,7 @@ This is also the right place to note: **the qualifier quiz on adoptionformsexpre
 - Thank you for reading
 - Brief reflection: stepparent adoption is one of the most meaningful legal proceedings a family can pursue
 - Whatever your next step is — DIY, DFY, full attorney, or just more research — the guide hopes to have helped
-- An invitation: questions about the products specifically can be sent to adoptionformsexpress@gmail.com (NOT for legal advice; that's Bundy Law's territory)
+- An invitation: questions about the products specifically can be sent to info@adoptionformsexpress.com (NOT for legal advice; that's Bundy Law's territory)
 - Sign-off with name, signature image (if available), professional credentials line
 
 ---
@@ -455,7 +455,7 @@ This is also the right place to note: **the qualifier quiz on adoptionformsexpre
 - Adoption Forms Express logo
 - Footer disclaimer (same as web pages, full text)
 - Copyright line
-- Contact info: adoptionformsexpress.com / adoptionformsexpress@gmail.com
+- Contact info: adoptionformsexpress.com / info@adoptionformsexpress.com
 - Bundy Law LLC reference for legal-advice cases
 - Version and date
 
