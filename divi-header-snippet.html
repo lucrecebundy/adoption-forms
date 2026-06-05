@@ -1,0 +1,147 @@
+<!-- ============================================================
+     Adoption Forms Express — Site Navigation
+     Self-contained snippet for a Divi Code module
+     Namespaced under .afe-header-wrapper so it cannot leak
+============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Design tokens — scoped to the header wrapper only */
+.afe-header-wrapper {
+  --afe-color-primary: #1F3A5F;
+  --afe-color-accent: #E07856;
+  --afe-color-text: #1A1A1A;
+  --afe-font-display: "Fraunces", Georgia, serif;
+  --afe-font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  --afe-max-width: 1240px;
+
+  font-family: var(--afe-font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--afe-color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scoped reset — keeps Divi's theme styles from bleeding in */
+.afe-header-wrapper *,
+.afe-header-wrapper *::before,
+.afe-header-wrapper *::after {
+  box-sizing: border-box;
+}
+.afe-header-wrapper ul,
+.afe-header-wrapper li,
+.afe-header-wrapper a {
+  margin: 0;
+  padding: 0;
+}
+.afe-header-wrapper ul { list-style: none; }
+.afe-header-wrapper a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Container */
+.afe-header-wrapper .container {
+  max-width: var(--afe-max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* Button base (needed for the nav CTA) */
+.afe-header-wrapper .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  font-family: var(--afe-font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+.afe-header-wrapper .btn-primary {
+  background: var(--afe-color-accent);
+  color: white;
+  box-shadow: 0 6px 18px rgba(224, 120, 86, 0.35);
+}
+.afe-header-wrapper .btn-primary:hover {
+  background: #d96a47;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(224, 120, 86, 0.45);
+}
+
+/* Nav */
+.afe-header-wrapper .site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(31, 58, 95, 0.08);
+}
+.afe-header-wrapper .nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+.afe-header-wrapper .nav-logo {
+  font-family: var(--afe-font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--afe-color-primary);
+  letter-spacing: -0.01em;
+}
+.afe-header-wrapper .nav-logo em {
+  font-style: italic;
+  color: var(--afe-color-accent);
+  font-weight: 500;
+}
+.afe-header-wrapper .nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+.afe-header-wrapper .nav-links a {
+  color: var(--afe-color-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.afe-header-wrapper .nav-cta {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.92rem;
+}
+@media (max-width: 860px) {
+  .afe-header-wrapper .nav-links li:not(:last-child) { display: none; }
+}
+</style>
+
+<div class="afe-header-wrapper">
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">Adoption Forms <em>Express</em></a>
+      <ul class="nav-links">
+        <li><a href="/#how-it-works">How It Works</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/starter-guide/">Free Guide</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="https://form.typeform.com/to/wnKZAY48" target="_blank" rel="noopener" class="btn btn-primary nav-cta">See If You Qualify</a></li>
+      </ul>
+    </div>
+  </header>
+</div>
