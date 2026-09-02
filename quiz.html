@@ -4,17 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Refund Policy | Adoption Forms Express</title>
-<meta name="description" content="The Adoption Forms Express Refund Policy — when refunds are available, how to request one, and what happens after your forms are delivered.">
-<link rel="canonical" href="https://adoptionformsexpress.com/refund-policy/">
+<title>Nebraska Stepparent Adoption Qualifier Quiz | Adoption Forms Express</title>
+<meta name="description" content="Take the free 60-second qualifier quiz. See if your Nebraska stepparent adoption case fits a forms-based path or needs full attorney representation.">
+<link rel="canonical" href="https://adoptionformsexpress.com/quiz/">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Refund Policy | Adoption Forms Express">
-<meta property="og:description" content="The Adoption Forms Express Refund Policy — when refunds are available, how to request one, and what happens after your forms are delivered.">
-<meta property="og:url" content="https://adoptionformsexpress.com/refund-policy/">
+<meta property="og:title" content="Nebraska Stepparent Adoption Qualifier Quiz | Adoption Forms Express">
+<meta property="og:description" content="Take the free 60-second qualifier quiz. See if your Nebraska stepparent adoption case fits a forms-based path or needs full attorney representation.">
+<meta property="og:url" content="https://adoptionformsexpress.com/quiz/">
 <meta property="og:site_name" content="Adoption Forms Express">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nebraska Stepparent Adoption Qualifier Quiz | Adoption Forms Express">
+<meta name="twitter:description" content="Take the free 60-second qualifier quiz. See if your Nebraska stepparent adoption case fits a forms-based path or needs full attorney representation.">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,12 +47,14 @@
   --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max-width: 1240px;
+  --section-pad: clamp(4rem, 8vw, 7rem);
   --radius-sm: 6px;
   --radius-md: 14px;
   --radius-lg: 24px;
 
   --shadow-sm: 0 2px 12px rgba(31, 58, 95, 0.06);
   --shadow-md: 0 8px 28px rgba(31, 58, 95, 0.10);
+  --shadow-lg: 0 24px 60px rgba(31, 58, 95, 0.14);
 }
 
 /* ------------------------------------------------------------------
@@ -68,6 +75,17 @@ body {
 img { max-width: 100%; display: block; }
 a { color: var(--color-primary); text-decoration: none; transition: color 0.2s ease; }
 a:hover { color: var(--color-accent); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-primary);
+  line-height: 1.15;
+}
+h1 { font-size: clamp(2.4rem, 5vw, 3.75rem); font-weight: 700; }
+h2 { font-size: clamp(1.85rem, 3.5vw, 2.75rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); }
 
 .container {
   max-width: var(--max-width);
@@ -107,7 +125,8 @@ a:hover { color: var(--color-accent); }
 }
 
 /* ------------------------------------------------------------------
-   Nav (matches homepage.html — internal anchors use absolute paths)
+   Nav (matches homepage.html — internal anchors use absolute paths
+   so they jump to the homepage from this non-homepage URL)
 ------------------------------------------------------------------ */
 .site-nav {
   position: sticky;
@@ -156,97 +175,131 @@ a:hover { color: var(--color-accent); }
 }
 
 /* ------------------------------------------------------------------
-   Legal page layout
+   Section primitives (match homepage.html)
 ------------------------------------------------------------------ */
-.legal-page {
-  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem);
-}
-.legal-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto clamp(2.75rem, 5vw, 4rem);
-  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
-}
-.legal-kicker {
+section { scroll-margin-top: 80px; }
+.section { padding: var(--section-pad) 0; }
+.section-alt { background: var(--color-bg-alt); }
+.section-deep { background: var(--color-cream-deep); }
+.eyebrow {
   display: inline-block;
-  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--color-accent);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-.legal-title {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  color: var(--color-primary);
-  line-height: 1.15;
-  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
-  margin-bottom: 1rem;
-}
-.legal-meta {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-}
-.legal-content {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
-  line-height: 1.7;
-}
-.legal-content > * + * { margin-top: 1.1rem; }
-.legal-content h2 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--color-primary);
-  letter-spacing: -0.015em;
-  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
-  margin-top: 2.75rem;
-  margin-bottom: 0.85rem;
-  line-height: 1.2;
-}
-.legal-content h2:first-child { margin-top: 0; }
-.legal-content h3 {
-  font-family: var(--font-body);
-  font-weight: 700;
-  color: var(--color-primary);
-  font-size: 1.1rem;
-  letter-spacing: 0;
-  margin-top: 1.85rem;
-  margin-bottom: 0.4rem;
-  line-height: 1.35;
-}
-.legal-content p {
-  font-size: 1.05rem;
-  color: var(--color-text);
-}
-.legal-content ul, .legal-content ol {
-  padding-left: 1.5rem;
-  font-size: 1.05rem;
-}
-.legal-content li { margin-bottom: 0.45rem; }
-.legal-content strong { font-weight: 700; color: var(--color-primary); }
-.legal-content a {
   color: var(--color-accent);
-  font-weight: 500;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  margin-bottom: 1rem;
 }
-.legal-content a:hover { color: var(--color-primary); }
+.section-header { max-width: 760px; margin: 0 auto 3.5rem; text-align: center; }
+.section-header p { color: var(--color-text-muted); font-size: 1.08rem; margin-top: 1rem; }
 
-.legal-contact-block p { margin-top: 0.25rem; }
-.legal-contact-block p:first-child { margin-top: 0.6rem; }
+/* ------------------------------------------------------------------
+   Quiz hero
+------------------------------------------------------------------ */
+.quiz-hero {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.quiz-hero::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(224, 120, 86, 0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.quiz-hero .container { position: relative; z-index: 1; max-width: 820px; }
+.quiz-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-cream-deep);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+.quiz-hero-kicker .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-success);
+  border-radius: 50%;
+}
+.quiz-hero h1 { margin-bottom: 1.5rem; }
+.quiz-hero h1 em { font-style: italic; color: var(--color-accent); font-weight: 500; }
+.quiz-hero-subhead {
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  color: var(--color-text);
+  max-width: 640px;
+  margin: 0 auto;
+}
 
-.legal-effective {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border);
+/* ------------------------------------------------------------------
+   Typeform embed
+------------------------------------------------------------------ */
+.quiz-embed-section {
+  padding: clamp(2rem, 5vw, 4rem) 0 var(--section-pad);
+}
+.quiz-embed {
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 600px;
+}
+.quiz-embed [data-tf-live] { min-height: 600px; }
+
+/* ------------------------------------------------------------------
+   What happens next
+------------------------------------------------------------------ */
+.next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.next-card {
+  background: white;
+  padding: 2.25rem 1.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.next-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.next-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1.15rem;
+}
+.next-icon.yes { background: rgba(122, 158, 126, 0.16); color: var(--color-success); }
+.next-icon.no { background: rgba(31, 58, 95, 0.08); color: var(--color-primary); }
+.next-icon.free { background: rgba(224, 120, 86, 0.12); color: var(--color-accent); }
+.next-card h3 { margin-bottom: 0.75rem; font-size: 1.25rem; }
+.next-card p { color: var(--color-text-muted); font-size: 0.97rem; line-height: 1.65; }
+.next-card strong { color: var(--color-primary); font-weight: 700; }
+.next-note {
+  text-align: center;
+  margin-top: 2.75rem;
   font-size: 0.95rem;
   color: var(--color-text-muted);
   font-style: italic;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 880px) {
+  .next-grid { grid-template-columns: 1fr; }
 }
 
 /* ------------------------------------------------------------------
@@ -350,67 +403,54 @@ a:hover { color: var(--color-accent); }
   </div>
 </header>
 
-<!-- ============== LEGAL PAGE ============== -->
-<main class="legal-page">
-
-  <div class="legal-header">
-    <div class="legal-kicker">LEGAL</div>
-    <h1 class="legal-title">Refund Policy</h1>
+<!-- ============== HERO ============== -->
+<section class="quiz-hero">
+  <div class="container">
+    <span class="quiz-hero-kicker"><span class="dot"></span>60-Second Quiz</span>
+    <h1>See if your Nebraska stepparent adoption case qualifies for a <em>forms-based path</em></h1>
+    <p class="quiz-hero-subhead">Answer a few honest questions. We'll tell you which path fits your case — forms, or full attorney representation. Both answers are valid.</p>
   </div>
+</section>
 
-  <div class="legal-content">
+<!-- ============== TYPEFORM EMBED ============== -->
+<section class="quiz-embed-section">
+  <div class="container">
+    <div class="quiz-embed">
+      <div data-tf-live="01HGCT4D29KZ4G50BG7556D9F4"></div><script src="//embed.typeform.com/next/embed.js"></script>
+    </div>
+  </div>
+</section>
 
-    <h2>Our approach to refunds</h2>
-
-    <p>We want every family who orders from us to feel confident in the decision. At the same time, our products are digital and delivered quickly — sometimes within hours — so whether a refund is available depends on one thing: have your forms already been delivered to you?</p>
-
-    <p>This page explains exactly how that works.</p>
-
-    <h2>1. Eligibility window</h2>
-
-    <p>Refund requests must be submitted within <strong>7 days</strong> of your purchase date. After 7 days, your purchase is considered final and no refunds are available.</p>
-
-    <h2>2. Refunds before delivery</h2>
-
-    <p>If you request a refund <em>before</em> we have delivered your forms, you are eligible for a full refund. "Delivered" means:</p>
-
-    <ul>
-      <li><strong>Done-For-You orders</strong> — before our team has sent your completed forms to you.</li>
-      <li><strong>DIY orders</strong> — before you have downloaded the materials.</li>
-    </ul>
-
-    <h2>3. After your forms are delivered</h2>
-
-    <p>Once your forms have been delivered (for Done-For-You) or downloaded (for DIY), the product is considered fulfilled and is no longer eligible for a refund. This applies even if you are still within the 7-day eligibility window described above.</p>
-
-    <h2>4. How to request a refund</h2>
-
-    <p>To request a refund, do one of the following:</p>
-
-    <ul>
-      <li>Reply directly to your order confirmation email, or</li>
-      <li>Email <a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a> with your order number.</li>
-    </ul>
-
-    <p>Approved refunds are processed within <strong>5–10 business days</strong> to your original payment method.</p>
-
-    <h2>5. Exceptions</h2>
-
-    <p>In rare circumstances — for example, a documented technical issue on our end, or an accidental duplicate charge — we may issue a refund outside these standard terms at our discretion. If you think your situation may fall into one of these exceptions, email us and we'll take a look.</p>
-
-    <h2>Contact us</h2>
-
-    <p>Questions about this Refund Policy?</p>
-
-    <div class="legal-contact-block">
-      <p>Adoption Forms Express</p>
-      <p>Email Address: <a href="mailto:info@adoptionformsexpress.com">info@adoptionformsexpress.com</a></p>
+<!-- ============== WHAT HAPPENS NEXT ============== -->
+<section class="section section-deep">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What Happens Next</span>
+      <h2>After you take the quiz</h2>
+      <p>The quiz is just a few honest questions about your family and your case. Here's where it leads — no matter what your answers are.</p>
     </div>
 
-    <p class="legal-effective">Effective as of May 12th, 2026</p>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-icon yes">✓</span>
+        <h3>If you qualify</h3>
+        <p>We'll route you to the right package for your case — <strong>DIY forms at $299</strong> or <strong>Done-For-You at $499</strong>. Both are attorney-prepared and built specifically for Nebraska courts.</p>
+      </div>
+      <div class="next-card">
+        <span class="next-icon no">→</span>
+        <h3>If you don't qualify</h3>
+        <p>We'll tell you honestly. Some cases — contested adoptions or unusual situations — aren't a fit for a forms-based path, and we'll point you to <strong>full attorney representation</strong> through Bundy Law LLC.</p>
+      </div>
+      <div class="next-card">
+        <span class="next-icon free">♡</span>
+        <h3>Either way, it's free</h3>
+        <p>No purchase is required to take the quiz. It's simply the fastest way to find out whether your Nebraska stepparent adoption fits our forms — before you spend a dollar.</p>
+      </div>
+    </div>
 
+    <p class="next-note">Not sure yet? The quiz takes about 60 seconds and there's nothing to buy to see your result.</p>
   </div>
-</main>
+</section>
 
 <!-- ============== FOOTER (matches homepage.html) ============== -->
 <footer class="site-footer">
