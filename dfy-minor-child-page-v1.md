@@ -5,8 +5,8 @@
 **URLs:** `/dfy-minor-sales-page/` (sales page — `dfy-minor-child.html`); `/dfy-child-check-out-page/` (transactional checkout page — `dfy-minor-child-checkout.html`). The two pages are sibling top-level pages in WordPress (not parent/child).
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-adult-page-v1.md` (adult-adoption equivalent)
-**Version:** 2.18
-**Last updated:** May 12, 2026
+**Version:** 2.20
+**Last updated:** September 18, 2026
 **Status:** Built — both `dfy-minor-child.html` (post-quiz sales page) and `dfy-minor-child-checkout.html` (transactional checkout page housing the ThriveCart embed) now exist on disk; ready for WordPress deploy
 
 ---
@@ -314,7 +314,7 @@ Your Done-For-You package, completed by our team, delivered in 3 business days.
 
 Same ThriveCart embed snippet as the hero CTA. Paste the captured snippet from Section 8 here as well, styled to be large and centered.
 
-**Important:** ThriveCart sometimes requires unique IDs or different handling when the same product embed appears more than once on the same page. The captured snippet uses `id="tc-adoptionssimplified-10-LB4DW4"` on the script tag — when reused twice, both instances share the same ID, which is invalid HTML and may cause the second embed to misbehave. See Section 8 for fix options if it does.
+**Important:** ThriveCart sometimes requires unique IDs or different handling when the same product embed appears more than once on the same page. The captured snippet uses `id="tc-adoptionssimplified-10-X801EE"` on the script tag — when reused twice, both instances share the same ID, which is invalid HTML and may cause the second embed to misbehave. See Section 8 for fix options if it does.
 
 **Below the CTA, small reassurance line:**
 *Secure checkout*
@@ -434,11 +434,11 @@ Minimal — we don't want this page generating rich results in search since it s
 **Captured embed snippet** (resolved 2026-04-30 — production snippet for the $499 DFY Minor-Child product, provided by Tyler from ThriveCart admin):
 
 ```html
-<div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="10" data-thrivecart-embeddable="tc-adoptionssimplified-10-LB4DW4"></div>
-<script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-10-LB4DW4"></script>
+<div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="10" data-thrivecart-embeddable="tc-adoptionssimplified-10-X801EE"></div>
+<script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-10-X801EE"></script>
 ```
 
-Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssimplified-10-LB4DW4`. Paste at both CTA locations (Section 4.2 hero + Section 4.7 final CTA) during HTML build.
+Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssimplified-10-X801EE`. Paste at both CTA locations (Section 4.2 hero + Section 4.7 final CTA) during HTML build.
 
 **Two embed locations on the page:**
 1. Hero CTA (Section 4.2) — one ThriveCart embed
@@ -450,7 +450,7 @@ Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssim
 - ThriveCart's button styling can usually be customized in the ThriveCart admin — match brand colors there if possible, otherwise wrap their button in a styled container
 
 **Known wrinkles to watch for:**
-- **Duplicate-`id` consideration:** the snippet's `<script>` tag has `id="tc-adoptionssimplified-10-LB4DW4"`. Pasting it twice creates two `<script>` tags with the same `id`, which is invalid HTML and may cause the second embed to misbehave. If the second embed fails to render on test: (a) ask ThriveCart for a second-instance variant, or (b) manually unique-ify the `id` on the second `<script>` AND the matching `data-thrivecart-embeddable` attribute on its `<div>` (e.g., suffix both with `-2`)
+- **Duplicate-`id` consideration:** the snippet's `<script>` tag has `id="tc-adoptionssimplified-10-X801EE"`. Pasting it twice creates two `<script>` tags with the same `id`, which is invalid HTML and may cause the second embed to misbehave. If the second embed fails to render on test: (a) ask ThriveCart for a second-instance variant, or (b) manually unique-ify the `id` on the second `<script>` AND the matching `data-thrivecart-embeddable` attribute on its `<div>` (e.g., suffix both with `-2`)
 - ThriveCart popups sometimes interact poorly with site headers/footers that have `position: sticky` — test the popup overlay on mobile after deployment
 - The embedded ThriveCart cart may load slightly slower than the rest of the page; consider a "Loading checkout…" skeleton state during JS load
 
@@ -478,7 +478,7 @@ Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssim
 | 5 | Quiz routing logic | Open | The Typeform must be configured so that qualifying minor-child cases route here, qualifying adult cases route to the adult page, and disqualified visitors route to a disqualified-routing page. Need to verify quiz logic supports this. |
 | 6 | County-specific filing-fee accuracy | Open | $60–$90 range — Lucrece to confirm current Nebraska filing-fee range. |
 | 7 | Background check fee disclosure | Open | Current FAQ mentions "background-check fees if your county requires them" — confirm which counties require this and what the fee range is. |
-| 8 | ThriveCart embed snippet | ✅ Resolved 2026-04-30 | Production snippet captured verbatim in Section 8. Account: `adoptionssimplified` · Product `10` · Embed token `tc-adoptionssimplified-10-LB4DW4`. To be pasted at both CTA locations during HTML build. |
+| 8 | ThriveCart embed snippet | ✅ Resolved 2026-04-30 | Production snippet captured verbatim in Section 8. Account: `adoptionssimplified` · Product `10` · Embed token `tc-adoptionssimplified-10-X801EE`. To be pasted at both CTA locations during HTML build. |
 | 9 | ThriveCart success URL → intake form wiring | Open | After successful purchase, ThriveCart should redirect customer to a post-purchase intake form. Confirm the intake form tool (Typeform/JotForm/etc.) and configure the success URL in ThriveCart admin. Tied to Open Question #4. |
 | 10 | ThriveCart button styling | Open | Decide whether to (a) configure ThriveCart's native button styling in their admin to match site colors, or (b) wrap their button in a styled site container. Visual decision affecting hero + final CTA appearance. |
 
@@ -488,6 +488,8 @@ Account `adoptionssimplified` · Product ID `10` · Embed token `tc-adoptionssim
 
 | Date | Change | Author |
 |---|---|---|
+| 2026-09-18 | v2.20 — **Second ThriveCart token regen for product 10 on the same day — ninth regen overall for this product.** Tyler made a further change to the product in the ThriveCart admin after the v2.19 swap, regenerating the token again. Product ID unchanged (`10`), account unchanged, script src unchanged. **Old → new token:** `1ZYMMF` → `X801EE`. Swapped in `dfy-minor-child-checkout.html` (2 places) and in this doc's five current-spec references, same as v2.19. **Note on labeling:** Tyler described this snippet as "DIY minor," but the snippet itself carries `data-thrivecart-product="10"`, which is the **DFY** minor-child product ($499 Done-For-You) — DIY minor child is product `4`. The product ID in the snippet was treated as authoritative and the token applied to product 10's checkout page. Flagged to Tyler in case product 4 was also changed and needs its own swap. | Claude / Tyler |
+| 2026-09-18 | v2.19 — **ThriveCart token regen for product 10 — eighth overall for this product.** Triggered by Tyler setting the post-purchase success redirect to the new `/thank-you/` page in the ThriveCart admin; saving the product regenerated the embeddable token, consistent with every prior admin-side change on this account. Product ID unchanged (`10`), account unchanged (`adoptionssimplified`), script src unchanged (`//tinder.thrivecart.com/embed/v2/thrivecart.js`). **Old → new token:** `LB4DW4` → `1ZYMMF`. Swapped in `dfy-minor-child-checkout.html` (2 places — `data-thrivecart-embeddable` attr on the div + `id` on the script) and in this doc's five current-spec references (Section 8 snippet block ×2, the embed-token line, the duplicate-`id` note, the Section 8 duplicate-`id` consideration bullet, and the Section 9 Open Question #8 row). **Historical change-log entries in this doc that mention `LB4DW4` as a then-new token were deliberately left unchanged** so the regen history stays accurate — only current-spec references were updated. Other three products (8 / 4 / 7) not yet verified this round — Tyler is checking whether their tokens also regenerated. | Claude / Tyler |
 | 2026-04-28 | v1.0 — Initial DFY minor-child page spec drafted | Claude / Tyler |
 | 2026-04-29 | v1.1 — Section 4.3: removed "Waiver of Notice" from forms list; removed "Email access for follow-up questions" from guidance list; clarified the 2 attorney calls are scoped to questions about the forms package. Section 4.4: timeline updated from 2–4 months to 4–6 months (and matching reference in notes). Section 4.6 FAQ Q4: removed reference to email support to stay consistent with package change. | Claude / Tyler |
 | 2026-04-29 | v1.2 — Section 4.5 testimonials locked: Jennifer Jenkins (truncated — pull full from Google), Sarah Hall (full text), Kevin Shafer (full text). All Google-verified stepparent-adoption clients. Open Question #1 resolved. | Claude / Tyler |

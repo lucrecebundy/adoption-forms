@@ -6,8 +6,8 @@
 **Sister docs:**
 - `diy-minor-child-page-v1.md` (the structural template — DIY minor child)
 - `dfy-adult-page-v1.md` (the adult-content reference — DFY adult)
-**Version:** 1.10
-**Last updated:** May 12, 2026
+**Version:** 1.11
+**Last updated:** September 18, 2026
 **Status:** Built — `diy-adult.html` and `diy-adult-checkout.html` on disk; pending WordPress deploy
 
 ---
@@ -413,12 +413,12 @@ This page does NOT contain the ThriveCart embed. ThriveCart lives on the separat
 For the **checkout page** (`diy-adult-checkout.html`), use the production ThriveCart embed snippet for the DIY adult product:
 
 ```html
-<div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="7" data-thrivecart-embeddable="tc-adoptionssimplified-7-U90O73"></div>
-<script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-7-U90O73"></script>
+<div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="7" data-thrivecart-embeddable="tc-adoptionssimplified-7-I4RAVD"></div>
+<script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-7-I4RAVD"></script>
 ```
 
 ThriveCart product ID: 7
-Embeddable token: `tc-adoptionssimplified-7-U90O73`
+Embeddable token: `tc-adoptionssimplified-7-I4RAVD`
 
 ---
 
@@ -447,4 +447,5 @@ Embeddable token: `tc-adoptionssimplified-7-U90O73`
 | 2026-05-05 | v1.7 — Sales-page and checkout-page polish + refund policy formalized (mirrors the same change applied to all three sister docs this session). **Sales page (`diy-adult.html`) — two edits:** (1) Section 4.6 — new Q6 added at the end of the FAQ accordion: "What if I realize I selected the wrong package?" Locks the project-wide refund policy: refunds available between purchase and delivery; delivery happens only after buyer replies to confirmation email; if buyer doesn't reply within 7 days, purchase is considered final; no refunds after forms are sent. Same Q&A on all four sales pages. (2) Section 4.7 — final CTA reassurance line simplified from "Secure checkout · 7-day refund if your case isn't a fit" to just "Secure checkout"; the refund-line is now redundant on a gated post-quiz page where Q6 holds the canonical refund policy. **Checkout page (`diy-adult-checkout.html`) — two edits:** (1) Existing reassurance strip's "7-day refund if your case isn't a fit" middle clause removed to avoid contradicting the new refund policy — strip now reads "🔒 Secure ThriveCart checkout · Forms prepared by a licensed Nebraska adoption attorney". (2) New italic refund-note line added directly below the strip: "Wrong package? Email us before your forms are sent — we can refund." New `.refund-note` CSS class defined inside the page's `<style>` block (max-width 720px, font-size 0.85rem, var(--color-text-muted), italic, line-height 1.55). DIY-adult-specific note: this product had no Q1 about case-complexity refunds (DIY-adult Q1 is "What if I get stuck on a form?"), so unlike the DFY minor-child sister doc, no Q1 rewrite was needed. Reviewed and approved by Lucrece H. Bundy, Esq. as licensed attorney owner. | Claude / Lucrece |
 | 2026-05-12 | v1.8 — Contact email standardized site-wide. The nav-email mention in this spec doc (Section 3 page architecture) swapped from `adoptionformsexpress@gmail.com` to `info@adoptionformsexpress.com`; `diy-adult.html` + `diy-adult-checkout.html` updated to match. Part of the same site-wide standardization that resolves master Open Decision #18 (chose `info@…` over the originally recommended `support@…`). | Claude / Tyler |
 | 2026-05-12 | v1.9 — ThriveCart embed token regenerated for product 7 (DIY adult). Product ID unchanged. Old token: `F1ED0D` → new token: `8XP52F`. Token swapped in `diy-adult-checkout.html` and across all token references in this spec doc via `replace_all`. Part of a four-product regen batch this same day — Tyler made admin-side adjustments to all four ThriveCart products at once and all four products (4 / 7 / 8 / 10) received new tokens together. | Claude / Tyler |
+| 2026-09-18 | v1.11 — **ThriveCart token regen for product 7 (DIY adult) — third regen overall for this product.** Triggered by Tyler setting the post-purchase success redirect to the new `/thank-you/` page in the ThriveCart admin; saving the product regenerated the embeddable token, the same behavior seen after every prior admin-side change on this account. Product ID unchanged (`7`), account unchanged (`adoptionssimplified`), script src unchanged. **Old → new token:** `U90O73` → `I4RAVD`. Swapped in `diy-adult-checkout.html` (2 places — `data-thrivecart-embeddable` attr on the div + `id` on the script) and in this doc's three current-spec references (Section 8 snippet block ×2 + the embeddable-token line). Historical change-log entries naming the older tokens were deliberately left unchanged so the regen history stays accurate. | Claude / Tyler |
 | 2026-05-12 | v1.10 — Two changes in one batch. **(1) Token regen:** product 7 (DIY adult) second regen overall. Product ID unchanged. Old token: `8XP52F` → new token: `U90O73`. Token swapped in `diy-adult-checkout.html` and across all token references in this spec doc via `replace_all`. **(2) Purchase-agreement line added** to `diy-adult-checkout.html` immediately above the existing reassurance strip: *"By purchasing you agree to our refund policy."* with "refund policy" linked to `https://adoptionformsexpress.com/refund-policy/`. The link opens in a new tab (`target="_blank" rel="noopener"`) so it doesn't pull buyers away from completing their ThriveCart form. Reuses the existing `.refund-note` CSS class for visual consistency with the "Wrong package?" line below the strip. Same line was added uniformly to all four checkout HTML files in this same batch. | Claude / Tyler |
