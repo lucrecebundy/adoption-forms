@@ -5,7 +5,7 @@
 **URLs:** `/dfy-adult-sales-page/` (sales page — `dfy-adult.html`); `/dfy-adult-checkout-page/` (transactional checkout page — not yet built). The two pages will be sibling top-level pages in WordPress, mirroring the minor-child architecture.
 **Replaces:** `/customized-adoption-forms/` (split into two pages by audience)
 **Sister doc:** `dfy-minor-child-page-v1.md` (minor-child equivalent)
-**Version:** 1.20
+**Version:** 1.21
 **Last updated:** September 18, 2026
 **Status:** Built — `dfy-adult.html` (post-quiz sales page) and `dfy-adult-checkout.html` (transactional checkout housing the ThriveCart embed for product 8) both on disk, ready for WordPress deploy
 
@@ -403,7 +403,7 @@ No `FAQPage` schema. Page is gated; rich results aren't desired.
 
 - Two self-contained HTML files in the same style as `homepage.html` and the minor-child funnel
 - Sales page file: `dfy-adult.html` — URL: `/dfy-adult-sales-page/`
-- Checkout page file: `dfy-adult-checkout.html` — URL: `/dfy-adult-checkout-page/` — houses the ThriveCart embed (account `adoptionssimplified`, product `8`, embed token `tc-adoptionssimplified-8-DGBV8Y`)
+- Checkout page file: `dfy-adult-checkout.html` — URL: `/dfy-adult-checkout-page/` — houses the ThriveCart embed (account `adoptionssimplified`, product `8`, embed token `tc-adoptionssimplified-8-E122QL`)
 - WordPress: each is a separate top-level page using a "Custom HTML" block or custom page template; the two are sibling pages, not parent/child
 - Set to "noindex" in your SEO plugin (both pages)
 - Removed from primary nav menu
@@ -429,6 +429,7 @@ No `FAQPage` schema. Page is gated; rich results aren't desired.
 
 | Date | Change | Author |
 |---|---|---|
+| 2026-09-18 | v1.21 — **Second ThriveCart token regen for product 8 today — fifth overall.** Same cause as the product 10 entry: Tyler switched the post-purchase setup from a ThriveCart-hosted confirmation link to an automatic redirect to `/thank-you/`, which regenerated the token. Product ID, account, and script src unchanged. **Old to new token:** `DGBV8Y` to `E122QL`. Swapped in `dfy-adult-checkout.html` (2 places) and in the one current-spec reference in this doc (Section 8 checkout-page line). Historical change-log entries left intact. | Claude / Tyler |
 | 2026-04-28 | v1.0 — Initial DFY adult-adoption page spec drafted as sister page to DFY minor-child | Claude / Tyler |
 | 2026-04-29 | v1.1 — Cross-doc consistency edit: removed "Email access for follow-up questions throughout your case" from Section 4.3 Column 2 to match minor-child page (only 2 attorney calls included, scoped to questions about your forms). | Claude / Tyler |
 | 2026-04-29 | v1.2 — Section 4.5 testimonials locked: Catrice Jackson (full text, explicitly mentions adult adoption), Gary Boettcher (truncated — pull full from Google), Patty Bales (truncated — pull full from Google). All three are confirmed adult-adoption clients. Open Question #1 resolved. New open item: pull full Google text for Boettcher and Bales before HTML build. | Claude / Tyler |

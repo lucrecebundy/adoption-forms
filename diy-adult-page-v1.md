@@ -6,7 +6,7 @@
 **Sister docs:**
 - `diy-minor-child-page-v1.md` (the structural template — DIY minor child)
 - `dfy-adult-page-v1.md` (the adult-content reference — DFY adult)
-**Version:** 1.11
+**Version:** 1.12
 **Last updated:** September 18, 2026
 **Status:** Built — `diy-adult.html` and `diy-adult-checkout.html` on disk; pending WordPress deploy
 
@@ -413,12 +413,12 @@ This page does NOT contain the ThriveCart embed. ThriveCart lives on the separat
 For the **checkout page** (`diy-adult-checkout.html`), use the production ThriveCart embed snippet for the DIY adult product:
 
 ```html
-<div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="7" data-thrivecart-embeddable="tc-adoptionssimplified-7-I4RAVD"></div>
-<script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-7-I4RAVD"></script>
+<div class="tc-v2-embeddable-target" data-thrivecart-account="adoptionssimplified" data-thrivecart-tpl="v2" data-thrivecart-product="7" data-thrivecart-embeddable="tc-adoptionssimplified-7-EIPBWZ"></div>
+<script async src="//tinder.thrivecart.com/embed/v2/thrivecart.js" id="tc-adoptionssimplified-7-EIPBWZ"></script>
 ```
 
 ThriveCart product ID: 7
-Embeddable token: `tc-adoptionssimplified-7-I4RAVD`
+Embeddable token: `tc-adoptionssimplified-7-EIPBWZ`
 
 ---
 
@@ -437,6 +437,7 @@ Embeddable token: `tc-adoptionssimplified-7-I4RAVD`
 
 | Date | Change | Author |
 |---|---|---|
+| 2026-09-18 | v1.12 — **Second ThriveCart token regen for product 7 today — fourth overall.** Same cause as the sister products: Tyler switched the post-purchase setup from a ThriveCart-hosted confirmation link to an automatic redirect to `/thank-you/`, regenerating the token. Product ID, account, and script src unchanged. **Old to new token:** `I4RAVD` to `EIPBWZ`. Swapped in `diy-adult-checkout.html` (2 places) and in the three current-spec references in this doc (Section 8 snippet block x2 plus the embeddable-token line). Historical change-log entries left intact. | Claude / Tyler |
 | 2026-05-01 | v1.1 — Both DIY adult HTML files built. `diy-adult.html` (sales page) mirrors `diy-minor-child.html` structurally; DIY-adult-specific copy from spec (adult-aware signature block, FAQ with name-change use case, escape hatch acknowledging adult-specific wrinkles, testimonials Catrice/Patty/Ruby). `diy-adult-checkout.html` mirrors `diy-minor-child-checkout.html` structurally; ThriveCart product 7 embedded; testimonials Ruby Leonard (curated excerpt) + Patty Bales (same pair as DIY minor checkout). Both pages are noindex, no FAQPage schema. Both CTAs on the sales page link to `/diy-adult-check-out-page/`. **Mid-build copy correction:** qualification recap originally drafted as 4 items expanded to 5 — added the absent-biological-parent bullet ("deceased, consents to the adoption, or had their parental rights terminated before your stepchild turned 19") after Tyler caught that this is a real DIY-qualifying gate, not a missing-by-design simplification. Section 4.2 of this spec updated to match. The DIY adult funnel is feature-complete locally — pending WordPress deploy. The full four-product, eight-page conversion funnel is now feature-complete. | Claude / Tyler |
 | 2026-05-01 | v1.0 — Initial DIY adult sales page spec drafted. Modeled on `diy-minor-child-page-v1.md` (DIY structural patterns) with adult-content adaptations from `dfy-adult-page-v1.md` (qualification recap, consent dynamics, name-change FAQ, timeline, "make it official" framing). Key DIY-adult specifics: 4-item qualification recap (vs 5 for DIY minor due to fewer adult-adoption qualifying criteria), explicit "knowledgeable about adult adoption" reassurance in signature block, court hearing prep doc emphasizes adult-specific judge questions, FAQ leads with "what if I get stuck?" anxiety + Q4 surfaces name-change use case, escape hatch acknowledges adult-specific wrinkles (out-of-state adoptee, estate deadlines). Three-card testimonial trio is the most layered in the project: Catrice (adult-adoption authority), Patty (cost transparency), Ruby (DIY product validation). ThriveCart product 7 (token tc-adoptionssimplified-7-U90O73) confirmed as DIY adult product — embed lives on the checkout page, not this sales page. | Claude / Tyler |
 | 2026-05-05 | v1.2 — ThriveCart embed token updated for this product after logo change in ThriveCart admin. Product ID unchanged; only the embeddable token regenerated. Old token: A4PSQA → new token: F1ED0D. | Claude / Tyler |
